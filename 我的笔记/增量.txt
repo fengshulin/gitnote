@@ -1,0 +1,238 @@
+
+_http://wiki.ds.gome.com.cn/pages/viewpage.action?pageId=6259393
+_http://dubbo.live.ds.gome.com.cn/   guest/guest
+
+在dubbo管理页面 可以查询到对应的rhino机器以及端口
+
+在windows下打开cmd，输ip地址和端口号，执行Invoke命令,传入参数.如：
+
+
+
+telnet 10.58.51.31 20883 生产 
+
+
+telnet 10.126.45.28 20881   UAT
+	   
+=========================================
+product增量
+
+invoke com.gome.stage.interfaces.rhino.IProdDataService.updateProductByID("prod14390052")
+invoke  com.gome.stage.interfaces.rhino.IProdDataService.updateProductsByIDs(["9134560191","9134560193","9134560194","9134560196","9134560208","9134560211"])
+invoke  com.gome.stage.interfaces.rhino.IProdDataService.updateProductsByIDs(["prod14390052","prod20960100"])
+=========================================
+
+=========================================
+Category增量
+
+invoke com.gome.stage.interfaces.rhino.IProdDataService.updateCategoryByID("9100032194")
+=========================================
+
+=========================================
+全量SKU与product
+
+invoke com.gome.stage.interfaces.rhino.IProdDataService.transferProduct()
+invoke com.gome.stage.interfaces.rhino.IProdDataService.transferSku()
+=========================================
+
+=========================================
+sku增量
+
+invoke com.gome.stage.interfaces.rhino.IProdDataService.updateSkuByID("1123230573")
+//批量
+invoke com.gome.stage.interfaces.rhino.IProdDataService.updateSkusByIDs(["1123460743","1123460737","1123080281","1123460973","1123460756","1123461021"])
+=========================================
+
+=========================================
+店铺增量
+
+invoke com.gome.stage.interfaces.rhino.IProdDataService.updateMerchantByID("82000046")
+
+//批量
+invoke com.gome.stage.interfaces.rhino.IProdDataService.updateMerchantsByIDs(["",""])
+=========================================
+更新商家合同
+
+invoke com.gome.stage.interfaces.rhino.IProdDataService.updateShopContract("81012772")
+
+批量
+invoke com.gome.stage.interfaces.rhino.IProdDataService.updateShopContracts(["",""])
+
+根据促销对象id更新促销对象
+invoke com.gome.stage.interfaces.rhino.IGroupOnDataService.updatePromoCaseById("Q8800270521")
+
+invoke com.gome.stage.interfaces.item.IShopService.getShopInfoByShopId("80007143")
+
+
+========================================================================================
+价格服务
+1.区域价格增量
+telnet命令：
+invoke com.gome.stage.interfaces.rhino.IPriceDataService.updateAreaPrice(“”) //String priceId
+
+2.手机专享价格增量
+telnet命令：
+invoke com.gome.stage.interfaces.rhino.IPriceDataService.updatePalmPrice(“”)//String priceId
+
+3.会员价格增量
+telnet命令：
+invoke com.gome.stage.interfaces.rhino.IPriceDataService.updateMemberPrice(“”)//String priceId
+
+4.预售价格增量
+telnet命令：
+invoke com.gome.stage.interfaces.rhino.IPriceDataService.updatePreSellPrice(“”)//String priceId
+
+5.二手商品价格增量
+telnet命令：
+invoke com.gome.stage.interfaces.rhino.IPriceDataService.updateTaoPrice("D003000000147404")//String priceId
+invoke com.gome.stage.interfaces.rhino.IPriceDataService.updateTaoPrices(["D003000000147404",""])//String priceId
+
+6.延保价格增量
+telnet命令：
+invoke com.gome.stage.interfaces.rhino.IPriceDataService.updateWarrentPrice(“”)//String priceId
+
+7.唯品会价格增量
+telnet命令：
+invoke com.gome.stage.interfaces.rhino.IPriceDataService.updateVIPPrice(“”) //String priceId
+
+8.搭配购价格增量
+telnet命令：
+invoke com.gome.stage.interfaces.rhino.IPriceDataService.updatePerceTagePrice(“”)//String priceId
+
+9.线下微店价格增量
+telnet命令：
+invoke com.gome.stage.interfaces.rhino.IPriceDataService.updateOFFLinePrice(“”) //String priceId
+
+===========================================
+
+===========================================
+注：
+更多命令可以查看
+com.gome.stage.interfaces.rhino.IPriceDataService 价格增量服务
+com.gome.stage.interfaces.rhino.IProdDataService 商品增量服务
+transfer开头的是全量方法,请谨慎操作
+
+
+
+=========================================
+获取预售详情信息
+invoke com.gome.stage.interfaces.details.IPreSaleDetailService.getPreSaleDetail("prod21060029",null)
+=========================================
+
+
+=========================================
+
+=========================================
+
+
+商品服务：
+com.gome.stage.interfaces.item.IGomeProductService
+
+=========================================
+查Sku与prd状态：
+invoke com.gome.stage.interfaces.item.IGomeProductService.getSkuState("1122410439")
+invoke com.gome.stage.interfaces.item.IGomeProductService.getProudctState("9133623964")
+批量：
+invoke com.gome.stage.interfaces.item.IGomeProductService.getProductStates(["9133623964"])
+invoke com.gome.stage.interfaces.item.IGomeProductService.getSkuStates(["1122410439"])
+=========================================
+
+=========================================
+获取商品详情信息
+invoke com.gome.frontSe.interfaces.IProdDetailService.getProductDetail("9134520116","1123450077")
+invoke com.gome.frontSe.interfaces.IProdDetailService.getProductInfo("A0006193008","pop8009837611")
+invoke com.gome.frontSe.interfaces.IProdDetailService.getProductDetail("prod26270028","")
+invoke com.gome.frontSe.interfaces.IProdDetailService.getProductDetail("sku26260013",'')
+invoke com.gome.frontSe.interfaces.IProdDetailService.getProductDetail("A0005112588","pop8005188010")
+http://recsys.bigdata.api/gome/rec?callback=rec&boxid=box08&pid=9134047593&cid=1416967293973036&uid=72667545408&area=31020200&c1n=%E6%89%8B%E6%9C%BA&c3n=%E6%89%8B%E6%9C%BA%E9%80%9A%E8%AE%AF&brid=10000098&imagesize=100&c1id=cat31665542&c3id=cat10000070&shopid=&sid=1123040399&_=1477295639826
+合约机详情页
+invoke   com.gome.stage.interfaces.details.IProdMobileDetailService.getMobileDetail("A0000133268","pop8001023916")
+invoke com.gome.stage.interfaces.item.IGomeCheckService.checkMobile("pop8001023916")
+invoke com.gome.stage.interfaces.item.IGomeCheckService.checkGomeSuit("pop8001023916")
+
+套装详情页：
+invoke com.gome.stage.interfaces.details.IProdSuitDetailService.getSuitDetail("9100014612","tz10001668")
+
+
+根据productId获取Product对象 多属性数据
+invoke com.gome.frontSe.interfaces.IProdDetailService.getProductMultiProperties("9134076076",['brandItemId','thridCatItemId','skuItemIds'])
+
+invoke com.gome.frontSe.interfaces.IProdDetailService.getProductMultiProperties("9134076076",["brandItemId","thridCatItemId","skuItemIds"])
+
+根据skuid获取SKU对象 多属性数据
+invoke com.gome.frontSe.interfaces.IProdDetailService.getSkuMultiProperties("",["",""])
+获取商品排行列表（skuId，productId，thirdCatgoryId）
+invoke com.gome.frontSe.interfaces.IProdDetailService.getWebRanking("9134520062","1123460046","cat10000070")
+=========================================
+
+
+=========================================
+搭配购：
+com.gome.stage.interfaces.item.IGomeBundleService.getBundleProduct("9134091063","1123060180")
+=========================================
+
+invoke com.gome.stage.interfaces.item.IGomeProductService.getProductWarranty("9134262921")
+
+
+
+
+=====================================================================================
+真划算
+
+invoke com.gome.cheap.dubbo.rushbuy.IRushBuyInterface.getRushbuyIndexPageData("")
+=====================================================================================
+
+invoke com.gome.stage.interfaces.item.IGomeBundleService.getBundleProduct("9010000022","1000014728")
+
+
+海外购税费接口
+invoke com.gome.stage.interfaces.item.IGomeHwgService.hwgAfterTax(price,skuId)
+invoke com.gome.stage.interfaces.item.IGomeHwgService.hwgAfterTax(88.00,"pop8009411735")
+
+
+
+invoke com.gome.frontSe.interfaces.IProdDetailService.getSku(null, "pop8009676525", null)
+invoke com.gome.frontSe.interfaces.IProdDetailService.getSku(null, "pop8009372431", null)
+
+invoke com.gome.stage.interfaces.item.IPriceService.getGomePrice("sku20950015")
+invoke com.gome.stage.interfaces.item.IPriceService.getMemberPrice("prod25420042","sku20950015")
+
+200007036712
+
+
+给购物车提供的商品服务
+invoke com.gome.stage.interfaces.item.IGomeProductService.getProductInfo("9200000421","1000078126","")
+
+根据店铺Id查询公司名称
+invoke com.gome.stage.interfaces.whale.IMerchantService.findCompanyNameByMerId("80000738")
+
+
+invoke com.gome.stage.interfaces.whale.ITemplateService.getTemplateByKeyword("/gome-join")
+
+invoke com.gome.stage.interfaces.whale.ITemplateService.getTemplateByKeyword("/gome-join/banner")
+
+invoke com.gome.stage.interfaces.whale.ITemplateService.findFSLinkImgs("/gome-join/content/information","1000016590",2)
+getTemplateByKeyword
+invoke com.gome.stage.interfaces.whale.ITemplateService.getTemplateByKeyword("/gome-join/content")
+invoke com.gome.stage.interfaces.whale.ITemplateService.findTemplatesLikeKeyword("/gome-join/content","1000016590")
+
+invoke com.gome.stage.interfaces.item.IGomeProductService.getServiceTagByProdId("9134160037")
+invoke com.gome.stage.interfaces.item.IGomeProductService.getProductInfo("9134160037","1123050125","")
+
+
+invoke com.gome.stage.interfaces.whale.IMerchantService.findMerchantLicenseById("80008876")
+invoke com.gome.stage.interfaces.whale.IMerchantService.findMerchantLicenseById("80000814")
+
+
+invoke com.gome.stage.interfaces.item.ITelecomContractService.getTelecomContractInfo("688fb0eab6a7","11010000")
+
+invoke com.gome.stage.interfaces.whale.IProductInfoService.getGomeCatIdByCoo8CatId("", "cat18000071")
+invoke com.gome.stage.interfaces.whale.ICategoryDBService.getGomeCategoryByCoo8CatId("cat18001178")
+
+invoke com.gome.stage.interfaces.item.IPriceService.
+1957403-2185565
+1959095-2188171
+
+invoke com.gome.stage.interfaces.item.IPriceService.getGomePrice("1123460431")
+invoke com.gome.stage.interfaces.item.IPriceService.getMobileExclusivePrice("A0004646375","pop8003520742")
+invoke com.gome.stage.interfaces.item.IPriceService.getPalmPrice("A0004646375","pop8003520742")
+

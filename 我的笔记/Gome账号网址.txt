@@ -1,0 +1,142 @@
+Jiaonuoya2016届蓄水池共享文件夹
+10.144.4.65
+10.144.6.1
+10.144.6.8
+10.144.4.65deploysoft开发工具
+file
+
+ERM系统
+http://erm.atguat.com.cn/main.action
+账号：ermadmin  密码：aAbb2e33
+
+erm.ds.gome.com.cn（生产）
+账号：yanglei-ds5 密码：GWZX@8888
+
+SVN账号密码：shouanxin BcTu2deC
+
+uat diamond：
+http://diamond.uat.ds.gome.com.cn/diamond-server/login.do?method=login
+账号：abc 密码：123
+
+清除Nginx和Cdn缓存：
+http://cache.ds.gome.com.cn/index
+账号：admin 密码：admin
+
+bugzilla帐号已开通，请知晓
+帐号：shouanxin@yolo24.com
+密码：1-7（已更改）
+网址：_http://gbm.ds.gome.com.cn/bugzilla/index.cgi
+
+打包服务器：10.126.60.82
+账号：svnbuild(已失效)
+密码： SVNbuild
+
+https://code.ds.gome.com.cn/svn/
+看板：
+	https://www.leangoo.com
+	
+	
+UAT环境：http://www.atguat.com.cn/
+uat环境账号：gomeuat123456   a111111  （信息全）
+
+
+
+PRE环境：http://www.gomeprelive.com.cn/
+pre账号： gometet12 pre123456
+
+
+
+方便查找uat商品：_http://www.atguat.com.cn/top10/
+
+生产应用监控平台：_http://monitor.yolo24.com 
+
+国美云：http://logging.ds.gome.com.cn:8080/logger/login/loginPage.do
+账号：eclogger
+密码：admin
+
+
+wiki上面可以查找部分dubbo地址：
+	http://wiki.ds.gome.com.cn/display/resources/gome123.com
+	
+	
+
+4344价格IP：10.58.22.36
+4344商品信息IP：10.58.11.23
+
+
+通用账号密码：
+	账号：gome_guest
+	密码：searchlog678!
+	
+	
+
+热搜词获取：
+http://nlr.atguat.com.cn/seoservice/MINI  MINI：品牌或三级分类名称
+http://nlr.gome.com.cn/seoservice/MINI 生产
+
+
+生产查缓存：
+hget 1X:Category-cat31665542 tdkModelId 
+hget 1X:Category-cat8670034 tdkModelId
+_http://10.58.22.193:8888/gcache-admin/webcommand/read.vm
+use GPRODCACHE
+
+
+部署机器
+
+stage_web_seo
+	10.58.50.166,10.58.50.167,10.58.50.168,10.58.50.169,10.58.50.170,10.58.50.174'
+
+gome_detail_service_seo
+	10.58.50.166,10.58.50.167
+
+Jenkins发版
+http://10.58.22.45:8080/view/uat.ear.restart/job/uat-gome_detail_service_seo-jar-10.58.57.95-9022/
+
+SonarQube:
+http://10.126.45.56:9112/
+账号：gaoxu
+密码：gaoxu
+
+
+数据库：(uat_catb_6)
+IP：10.126.53.186 （oracle）
+用户名：ro_select
+密码：select_123
+
+后台数据库mysql：（pw_nbcc_uat）
+IP：10.126.44.55
+端口：6306 6307
+账号：pw_nbcc_uat
+密码：CS73sj8jscsdSG7
+
+userID:
+uat : 100019391911 
+生产：72170624052
+
+
+员工自助平台；
+账号：00017439
+密码：SAx_111111111
+
+
+diamond查询：（更改域名可查各种环境 如：http://diamond.live.ds.gome.com.cn/diamond-server）
+http://diamond.live.ds.gome.com.cn/diamond-server/config.co?group=item_diamond_group&dataId=item_dianmond_dataid
+
+
+wiki:
+用户名：shouanxin
+密码：Sax1398098343
+
+foxmail 服务器地址设置：
+ex2server.ds.gome.com.cn
+
+员工自助平台：
+账号：00017439
+密码：Forget@111111
+
+
+老项目，盘古：
+code.ds.gome.com.cn 
+https://repo.ds.gome.com.cn:8443/svn/atg_poc/30_Coding/pangu/uat/core-all-gome
+https://code.ds.gome.com.cn/svn/atg_poc/30_Coding/pangu/uat/core-all-gome

@@ -1,0 +1,777 @@
+{
+    "storeConfiguration": {
+        "newsUrl": "//news.atguat.com.cn/",
+        "qiangSite": "//q.atguat.com.cn",
+        "gome.stage.newsTopic": "newsCount_uat",
+        "gome.stage.newsTags": "newsCount_increment",
+        "errorUrl": "//www.atguat.com.cn/ec/errorpage.html",
+        "ssoLoginURL": "//login.atguat.com.cn/login",
+        "gccUrl": "//10.126.45.29:7013/",
+        "ssoRegisterURL": "//reg.atguat.com.cn/register/index/person",
+        "cssserver": "//css.atguat.com.cn/css",
+        "type": "ssi",
+        "qdsUrl": "//qds.atguat.com.cn",
+        "appserver": "//app.atguat.net.cn/images",
+        "imageserver": "//img.atguat.net.cn/images",
+        "reviewSite": "//review.atguat.com.cn",
+        "errorTuanUrl": "//www.atguat.com.cn/ec/errorpage.html",
+        "tuanSiteAjax": "//ajax.tuan.atguat.com.cn",
+        "jsserver": "//js.atguat.com.cn/js",
+        "tuanSite": "//tuan.atguat.com.cn",
+        "itemSite": "//item.atguat.com.cn",
+        "mallSite": "//mall.atguat.com.cn",
+        "popSite": "//pop.gome.com.cn",
+        "taoSite": "//tao.atguat.com.cn",
+        "secureURL": "//g.atguat.com.cn",
+        "dynSite": "//g.atguat.com.cn",
+        "jsonServer": "",
+        "stageImageServer": "//img.atguat.net.cn",
+        "stageJsServer": "//js.atguat.com.cn",
+        "gomehigo": "//www.gomehigo.hk",
+        "seoTuiJianSite": "tuijian.bigdata.api:8080",
+        "gccCacheUrl": "//10.126.45.28:7033/prdws/pages/pageData.jsp?keyword=gome-header&isShow=clean",
+        "stageCssServer": "//css.atguat.com.cn",
+        "preJsonURL": "",
+        "gome.stage.newsMQAdress": "10.58.50.204:9876",
+        "staSite": "//www.atguat.com.cn",
+        "cookieDomain": ".atguat.com.cn",
+        "pictureserver": "//img.atguat.net.cn/image",
+        "storeSite": "/ec/homeus",
+        "indexView": "false",
+        "ssSite": "//ss.atguat.com.cn"
+    },
+    "joinInfo": {
+        "process": {
+            "name": "入驻流程",
+            "img": {
+                "imgUrl": "/prodimg/promimg/topics/201412/20141222115236.jpg",
+                "alt": "入驻流程"
+            },
+            "url": "入住流程"
+        },
+        "content": [
+            {
+                "texts": [
+                    {
+                        "alt": "【功能优化】商品级广告语功能增加",
+                        "href": "//help.gome.com.cn/question/410.html"
+                    },
+                    {
+                        "alt": "【通知】商品规格参数数据维护工作安排",
+                        "href": "//help.gome.com.cn/question/434.html"
+                    },
+                    {
+                        "alt": "【功能优化】商品级广告语功能增加",
+                        "href": "//help.gome.com.cn/question/410.html"
+                    }
+                ],
+                "name": "信息公告",
+                "img": {
+                    "imgUrl": "/prodimg/promimg/topics/201412/20141222113505.jpg",
+                    "alt": "信息公告"
+                },
+                "url": "http://help.gome.com.cn/question/253.html"
+            },
+            {
+                "texts": [
+                    {
+                        "alt": "招商方向",
+                        "href": "//help.gome.com.cn/question/235.html"
+                    },
+                    {
+                        "alt": "招商政策",
+                        "href": "//help.gome.com.cn/question/200.html"
+                    },
+                    {
+                        "alt": "入驻资质",
+                        "href": "//help.gome.com.cn/question/233.html"
+                    }
+                ],
+                "name": "招商标准",
+                "img": {
+                    "imgUrl": "prodimg/promimg/topics/201412/20141222113832.jpg",
+                    "alt": "招商标准"
+                },
+                "url": "http://help.gome.com.cn/question/235.html"
+            },
+            {
+                "texts": [
+                    {
+                        "alt": "资费标准",
+                        "href": "//help.gome.com.cn/question/198.html"
+                    },
+                    {
+                        "alt": "入驻须知",
+                        "href": "//help.gome.com.cn/question/232.html"
+                    },
+                    {
+                        "alt": "代运资费",
+                        "href": "//help.gome.com.cn/question/242.html"
+                    }
+                ],
+                "name": "资费标准",
+                "img": {
+                    "imgUrl": "prodimg/promimg/topics/201412/20141222114426.jpg",
+                    "alt": "资费标准"
+                },
+                "url": "http://help.gome.com.cn/question/198.html"
+            },
+            {
+                "texts": [
+                    {
+                        "alt": "发展优势",
+                        "href": "//help.gome.com.cn/question/246.html"
+                    },
+                    {
+                        "alt": "物流优势",
+                        "href": "//help.gome.com.cn/question/239.html"
+                    },
+                    {
+                        "alt": "品牌优势",
+                        "href": "//help.gome.com.cn/question/245.html"
+                    }
+                ],
+                "name": "国美优势",
+                "img": {
+                    "imgUrl": "prodimg/promimg/topics/201412/20141222114116.jpg",
+                    "alt": "国美优势"
+                },
+                "url": "http://help.gome.com.cn/question/246.html"
+            },
+            {
+                "texts": [
+                    {
+                        "alt": "平台总则",
+                        "href": "//help.gome.com.cn/question/249.html"
+                    },
+                    {
+                        "alt": "业务规范",
+                        "href": "//help.gome.com.cn/question/113.html"
+                    },
+                    {
+                        "alt": "店铺促销",
+                        "href": "//help.gome.com.cn/question/131.html"
+                    }
+                ],
+                "name": "帮助中心",
+                "img": {
+                    "imgUrl": "prodimg/promimg/topics/201412/20141222114302.jpg",
+                    "alt": "帮助中心"
+                },
+                "url": "http://help.gome.com.cn/seller"
+            },
+            {
+                "texts": [
+                    {
+                        "alt": "招商电话点此链接111",
+                        "href": "//help.gome.com.cn/question/237.html"
+                    },
+                    {
+                        "alt": "入驻咨询QQ群：540385651",
+                        "href": "//www.gome.com.cn/join/"
+                    },
+                    {
+                        "alt": "caobaocang@yolo24.com",
+                        "href": "//www.gome.com.cn/join/"
+                    }
+                ],
+                "name": "联系方式",
+                "img": {
+                    "imgUrl": "/prodimg/promimg/topics/201509/20150922163747.jpg",
+                    "alt": "联系方式"
+                }
+            }
+        ],
+        "hotBrand": [
+            {
+                "imgs": [
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143623.jpg",
+                        "alt": "星期六"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143003.jpg",
+                        "alt": "暴龙"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143042.jpg",
+                        "alt": "海澜之家"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225142904.jpg",
+                        "alt": "海伦凯勒"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225142935.jpg",
+                        "alt": "奥康"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143414.jpg",
+                        "alt": "韩都衣舍"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143108.jpg",
+                        "alt": "九牧王"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143232.jpg",
+                        "alt": "马克华菲"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143451.jpg",
+                        "alt": "千百度"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143528.jpg",
+                        "alt": "七匹狼"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143556.jpg",
+                        "alt": "沙驰"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143134.jpg",
+                        "alt": "裂帛"
+                    }
+                ],
+                "name": "服饰鞋帽"
+            },
+            {
+                "imgs": [
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225154040.jpg",
+                        "alt": "尤尼克斯"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225154555.jpg",
+                        "alt": "新百伦"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225154532.jpg",
+                        "alt": "探路者"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225154436.jpg",
+                        "alt": "李宁"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225154506.jpg",
+                        "alt": "耐克"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225154230.jpg",
+                        "alt": "乐斯菲斯"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225154409.jpg",
+                        "alt": "郎爪"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225154344.jpg",
+                        "alt": "迪卡侬"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225154258.jpg",
+                        "alt": "阿迪达斯"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225154206.jpg",
+                        "alt": "麦斯卡"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225154137.jpg",
+                        "alt": "哥伦比亚"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225180527.jpg",
+                        "alt": "始祖鸟"
+                    }
+                ],
+                "name": "运动户外"
+            },
+            {
+                "imgs": [
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153955.jpg",
+                        "alt": "啄木鸟"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153644.jpg",
+                        "alt": "elle"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153924.jpg",
+                        "alt": "木鱼"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153313.jpg",
+                        "alt": "米缇贝蒂"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153745.jpg",
+                        "alt": "金利来"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153808.jpg",
+                        "alt": "丽嘉娜"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153846.jpg",
+                        "alt": "美旅"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153507.jpg",
+                        "alt": "皮尔卡丹"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153431.jpg",
+                        "alt": "8"
+                    },
+                    {
+                        "imgUrl": "prodimg/promimg/topics/201412/20141225164757.jpg",
+                        "alt": "aza"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153617.jpg",
+                        "alt": "desey"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153711.jpg",
+                        "alt": "浩顿"
+                    }
+                ],
+                "name": "箱包奢品"
+            },
+            {
+                "imgs": [
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225150344.jpg",
+                        "alt": "GNC"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225150533.jpg",
+                        "alt": "met"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225150600.jpg",
+                        "alt": "贝尔康"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225163657.jpg",
+                        "alt": "碧生源"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225150852.jpg",
+                        "alt": "慈铭体检"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225150926.jpg",
+                        "alt": "海王"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225150950.jpg",
+                        "alt": "惠氏"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151019.jpg",
+                        "alt": "康恩贝"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151047.jpg",
+                        "alt": "养生堂"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151115.jpg",
+                        "alt": "普丽普莱"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151141.jpg",
+                        "alt": "汤倍臣"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151214.jpg",
+                        "alt": "同仁堂"
+                    }
+                ],
+                "name": "健康医疗"
+            },
+            {
+                "imgs": [
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145404.jpg",
+                        "alt": "安信"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145446.jpg",
+                        "alt": "奥普"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145521.jpg",
+                        "alt": "多乐士"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145550.jpg",
+                        "alt": "飞利浦"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145614.jpg",
+                        "alt": "科勒"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145710.jpg",
+                        "alt": "立邦漆"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145739.jpg",
+                        "alt": "马可波罗"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145847.jpg",
+                        "alt": "美标"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145916.jpg",
+                        "alt": "欧塞洛斯"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225150010.jpg",
+                        "alt": "圣象地板"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225150114.jpg",
+                        "alt": "史丹利"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225150149.jpg",
+                        "alt": "正泰"
+                    }
+                ],
+                "name": "五金建材"
+            },
+            {
+                "imgs": [
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225142035.jpg",
+                        "alt": "罗技"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225142119.jpg",
+                        "alt": "清华同方"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225142151.jpg",
+                        "alt": "三星电子"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225142638.jpg",
+                        "alt": "sansui"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225142707.jpg",
+                        "alt": "神州"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225141514.jpg",
+                        "alt": "aoc"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225141733.jpg",
+                        "alt": "oki"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225141821.jpg",
+                        "alt": "昂达"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225142730.jpg",
+                        "alt": "台电"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225141859.jpg",
+                        "alt": "戴尔"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225141933.jpg",
+                        "alt": "惠普"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225142001.jpg",
+                        "alt": "蓝魔"
+                    }
+                ],
+                "name": "电脑oa"
+            },
+            {
+                "imgs": [
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151311.jpg",
+                        "alt": "FISHER-PRICE"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151452.jpg",
+                        "alt": "奥贝"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151607.jpg",
+                        "alt": "帮宝适"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151701.jpg",
+                        "alt": "孩之宝"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151636.jpg",
+                        "alt": "大王"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151728.jpg",
+                        "alt": "好奇"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151756.jpg",
+                        "alt": "花王"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151837.jpg",
+                        "alt": "惠氏"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151914.jpg",
+                        "alt": "乐高"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152018.jpg",
+                        "alt": "abbot"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225151942.jpg",
+                        "alt": "美素"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152052.jpg",
+                        "alt": "雀氏"
+                    }
+                ],
+                "name": "母婴玩具"
+            },
+            {
+                "imgs": [
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225144518.jpg",
+                        "alt": "123"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225144609.jpg",
+                        "alt": "埃森堡"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225144648.jpg",
+                        "alt": "八度"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225144717.jpg",
+                        "alt": "珀兰床垫"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225144940.jpg",
+                        "alt": "顾家家居"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145011.jpg",
+                        "alt": "临时木业"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145052.jpg",
+                        "alt": "路虎"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145125.jpg",
+                        "alt": "左右沙发"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145159.jpg",
+                        "alt": "全友家居"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225163908.jpg",
+                        "alt": "头等舱"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145258.jpg",
+                        "alt": "喜临门"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225145325.jpg",
+                        "alt": "雅琼家具"
+                    }
+                ],
+                "name": "家具"
+            },
+            {
+                "imgs": [
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143706.jpg",
+                        "alt": "苏泊尔"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143803.jpg",
+                        "alt": "收纳博士"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143833.jpg",
+                        "alt": "百易得"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225143919.jpg",
+                        "alt": "宝家洁"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225144017.jpg",
+                        "alt": "川木保健"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225144050.jpg",
+                        "alt": "大熊爸爸"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141226112235.jpg",
+                        "alt": "宝路"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225144216.jpg",
+                        "alt": "好太太"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225144252.jpg",
+                        "alt": "乐扣"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225144323.jpg",
+                        "alt": "skg"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225144405.jpg",
+                        "alt": "拓普"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225144437.jpg",
+                        "alt": "双立人"
+                    }
+                ],
+                "name": "家居家纺"
+            },
+            {
+                "imgs": [
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153121.jpg",
+                        "alt": "小米"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152702.jpg",
+                        "alt": "jvc"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152831.jpg",
+                        "alt": "宾得"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152855.jpg",
+                        "alt": "锤子"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152920.jpg",
+                        "alt": "华为"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152945.jpg",
+                        "alt": "佳能"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153007.jpg",
+                        "alt": "卡西欧"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153029.jpg",
+                        "alt": "酷派"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153051.jpg",
+                        "alt": "尼康"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153144.jpg",
+                        "alt": "苹果"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153207.jpg",
+                        "alt": "三星"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225153226.jpg",
+                        "alt": "索尼"
+                    }
+                ],
+                "name": "手机数码"
+            },
+            {
+                "imgs": [
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152131.jpg",
+                        "alt": "55"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152238.jpg",
+                        "alt": "包黑子"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152306.jpg",
+                        "alt": "倍耐力"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152331.jpg",
+                        "alt": "标榜"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152407.jpg",
+                        "alt": "朝阳轮胎"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225163504.jpg",
+                        "alt": "德国马牌"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152509.jpg",
+                        "alt": "HENKEL"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152542.jpg",
+                        "alt": "普利司通"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225180309.jpg",
+                        "alt": "asim"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225152613.jpg",
+                        "alt": "邓禄普"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225180423.jpg",
+                        "alt": "华克"
+                    },
+                    {
+                        "imgUrl": "/prodimg/promimg/topics/201412/20141225180457.jpg",
+                        "alt": "trw"
+                    }
+                ],
+                "name": "汽车用品"
+            }
+        ],
+        "banner": [
+            {
+                "imgUrl": "/prodimg/promimg/topics/201601/20160104102626.jpg",
+                "alt": "共建平台共赢未来"
+            }
+        ]
+    }
+}

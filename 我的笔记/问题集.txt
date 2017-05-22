@@ -1,0 +1,117 @@
+事件单
+
+一、详情页与列表页的广告语不一致：
+案例：
+店铺名：欧井官方授权旗舰店   店铺ID：80005340
+广告语不展示产品链接：_http://item.gome.com.cn/A0004695275-pop8003663217.html
+详情页有问题   列表页是正确的
+
+分析：联营的广告语是在productId和SkuId下；自营由GCC配置。
+解决方案：打sku增量和product增量
+
+
+二、列表页主图与详情页不一致  以详情页为准
+
+案例：
+列表页：_http://search.gome.com.cn/search?question=TG90-14510WDXG
+详情页：_http://item.gome.com.cn/9134360917-1123301119.html?intcmp=search-9000000700-1_1_1
+
+
+
+三、业务已配置团购，但详情页无团购入口
+案例：
+_http://item.gome.com.cn/9134160422-1000013129.html?intcmp=search-9000000700-1_4_1
+1000005526 9134160422 1000013129 九阳豆浆机DJ13B-D08D
+
+分析：经查redis（注1）发现，业务屏蔽团购与抢购从而导致详情页无入口
+
+
+
+大数据Nginx IP ： 10.58.50.70
+
+大数据猜你喜欢与推荐新地址：recsys.bigdata.api
+
+
+猜你喜欢接口：
+"http://bigd.gome.com.cn/gome/rec?callback=cb_807644715143714&boxid=box37&pid=9134401144&area=11010000&cid=null&uid=null&imagesize=130&brid=10000098&shopid=&c1id=cat31665542&c3id=cat10000070&sid=1123340517", productId,brandId,shopid,firstCatId,thirdCatId,skuId);
+
+
+其他类似接口：
+url=String.format("http://bigd.gome.com.cn/gome/rec?callback=jsonpname_qitaleisi&boxid=box38&pid=%s&area=11010100&cid=null&imagesize=130&brid=%s&shopid=%s&c1id=%s&c3id=%s&sid=%s", productId,brandId,shopid,firstCatId,thirdCatId,skuId);
+
+
+
+
+
+海外购新加字段：
+private String skuId;
+   
+    /**
+     * 发货地
+     */
+    private String shipAddress;
+   
+    /**
+     * 到货时间
+     */
+    private String arrivalTime;
+   
+    /**
+     * 税费提示  0不提示 1显示税费 2显示文字
+     */
+    private String taxPrompt;
+   
+    /**
+     * 税费注解文字
+     */
+    private String taxAnnotationText;
+   
+    /**
+     * 文字描述
+     */
+    private String textDescription;
+	
+	
+mindmanager：http://dwnld.mindjet.com/stubs/Builds/MindManager2017.1/MindManager_64bit_17.1.167.exe?__gda__=1481806861_658684b865f0942650a1fc1a1354f5c2&ext=.exe   
+
+官方版，纯净无污染，MindManager 17注册码：MP17-999-AP94-6339-2554
+
+四：
+这边有两个关联商品：
+PRODUCT_ID SKU_ID SKU_NO 商品名称
+9134561177 1123501918 100422583 大疆无人机精灵四Phantom 4 Pro
+9134561177 1123502005 100423362 大疆无人机精灵四Phantom 4 Pro +
+当商品链接为精灵4 pro+的时候：_http://item.gome.com.cn/9134561177-1123502005.html
+要切换到精灵4 pro，可是怎么也切换不过去，请帮忙查看一下原因，谢谢！
+这个问题麻烦看下
+
+
+五：
+有个移动端价格不一致的问题，这个需要前台他们打下价格增量 
+商品：_http://item.gome.com.cn/A0006045318-pop8009242012.html
+      _http://item.gome.com.cn/A0006080166-pop8009409297.html
+
+六、无售价
+
+http://item.gome.com.cn/A0006054353-pop8009626032.html
+
+涉及到的价格表：gome_sku_sap_price    gome_inf_sap_price_info
+
+
+
+注1：
+http://10.58.22.193:8888/gcache-admin/webcommand/read.vm
+打开一下这个地址
+use TWOELEMENT
+在褐色的输入框内输入
+之后在输入框内get 1g:9134400695_1123340239执行这个
+返回是1,2,6（状态码见注2）
+你看下
+
+注2：
+屏蔽类型: 团购  抢购  唯品惠  专享价   
+按顺序1234
+6是屏蔽详情页领券
+
+
+

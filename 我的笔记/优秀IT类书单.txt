@@ -1,0 +1,87 @@
+优秀IT类书单
+
+1.Clean Code
+2.The Clean Coder
+3.High Performance MySQL
+4.MySQL Cookbook
+
+5.Introduction to React
+6.Learning React Native
+7.Pro Angular JS
+8.TypeScript
+
+9.Linux Kernel Development
+10.The Linux Programming Interface
+11.Understanding the linux kernel
+12.Unix Network Programming
+
+13.Gradle in action
+14.Java8 in action
+15.Making Java Groovy
+16.Java Performance
+17.Java Performance the Definitive guide
+18.Java PUZZLERS
+19.Advanced Java@ EE Development with WildFly
+20.WildFly Cookbook
+21.Spring Boot IN ACTION
+22.Spring In Action
+23.Scala In Depth
+
+服务端书籍：
+24.Professional Java For Web Applications
+25.Hibernate Recipes
+26.Core Java I-II
+27.Java In A Nut shell
+28.Efffective Java
+29.Java Performance
+30.Java Concurrency InPractice
+31.Java EE 7 Performance Tuning and Optimization
+32.Practical Unit Testing With JUnit And Mockito
+33.Groovy In Action
+34.Programmin Groovy 2
+35.Pro JPA 2
+36.Spring In Action
+37.Pro Spring 4th Edition
+38.Pro ASP.NET MVC5
+
+数据库：
+39.High Performance MySQL
+40.MySQL Cook book
+41.HBase The Definitive Guide
+42.Hadoop The Definitive Guide 4th
+43.HBase In Action
+
+
+计算机科学方法论
+44.Continuous Delivery 
+45.Pro Git
+46.Version Control With Git
+47.Maven The Definitive Guide
+
+IOS
+48.Objective C Programming The Big Nerd Ranch Guide 2nd Edition
+49.Cocoa Programming for MacOSX 4th Edition
+50.Efffective Objective C
+51.iOS Programming The Big Nerd Ranch Guide 4th Edition
+52.Programming Objective C 6th
+53.Mac OSX and iOS Internals 2012
+54.OSX Mountain Lion TheMissing Manual
+
+前端：
+1.The Definitive Guide to HTML5
+2.CSS The Missing Manual
+3.Professional JavaScript For Web Developers
+4.JavaScript The Definitiv eGuide
+5.Efffective JavaScript
+6.Jump Start bootstrap
+7.JQueryUI Themes
+8.JQueryUI Cookbook
+9.JavaScript And JQuery
+10.JQuery In Action
+11.Pro JQuery
+12.JavaScript设计模式与开发实践
+13.Dreamweaver CS6 The Missing Manual
+14.Photoshop CS6 The Missing Manual
+15.Professional Node JS
+16.深入浅出NodeJS
+17.Single Pag Web Application

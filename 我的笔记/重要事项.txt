@@ -1,0 +1,824 @@
+重要事项
+
+Hi,all:
+还有其他非详情页的地址往原stage-web爬虫上打，例如：
+offer.gome.com.cn/stage-web/xzs/price_redirect.jsp
+comment.gome.com.cn/stage-web/xzs/appraise_redirect.jsp
+是否还有其他非详情页地址走爬虫服务器的，麻烦确认下，评估是否可以替换。
+给高旭袁野发过邮件
+就是现在的爬虫服务器不仅仅只有详情页爬虫，还有其他的，你们直接用详情页爬虫的包替换现在线上的爬虫可能存在问题
+这个是需要评估确认的
+
+大数据：
+
+Name:   recsys.bigdata.api
+Address: 10.58.25.40
+10.58.50.70
+uat:10.58.57.223:9080
+
+10.58.50.69:80
+10.58.50.70:80
+invoke com.gome.stage.interfaces.item.IProductInfoService.getGoodsInfosBySkuNo(["8009721887","8009672474","8009672394","8009672146","8009666698","8009646910","8009646881","8009646856","8009646331","8009646224","8009540148","8009540076","8009540053","8009539680","8009067158","8009066292","8009736407","8009665514","8009690243","8009690316","8009680256","8009679768","8009672474","8009672394","8009690243","8009690316","8009736407","8009736403","8009736389","8009722140","8009763049","8009764379"],"50")
+
+invoke com.gome.stage.interfaces.item.IProductInfoService.getGoodsInfosBySkuNo(["8009091512","8009072159"],"50")
+
+10.58.50.166
+10.58.50.167
+10.58.50.168
+10.58.50.169
+10.58.50.170
+10.58.50.174
+
+
+SEO热词：http://nlr.atguat.com.cn/seoservice/三级分类名称
+
+详情页
+http://10.58.50.166:3079/detail/9134076288-1123050522
+
+http://10.58.57.96:3071/detail/A0000120236-pop8001010972  (UAT)
+
+详情大图页
+http://10.58.50.166:3079/detail/bigimage/9134032698-1123030306
+
+同步数据
+http://10.58.57.96:3071/jsondata/bigImage/prod20960100-sku20890014
+http://10.58.57.96:3071/jsondata/detail/prod20960100-sku20890014
+
+itemseo-web 4344 服务器：10.58.22.35   端口3071
+itemseo-web UAT 服务器：10.58.57.96
+
+gome_detail_service_seo 4344 服务器：10.58.22.35:9020
+gcs.ds.gome.com.cn
+
+##闪购VIP    
+  rewrite "^/vipproduct/bigimage/(.*)/(.*)-(.*).html"       /vip/image/$1/$2-$3  last;
+  rewrite "^/vipproduct/bigimage/(.*)/(.*).html"            /vip/image/$1/$2       last;
+
+  rewrite "^/vipproduct/(.*)/(.*)-(.*).html"       /vip/$1/$2-$3  last;
+  rewrite "^/vipproduct/(.*)/(.*).html"            /vip/$1/$2       last;
+
+  ## 商品大图
+  rewrite "^/bigimage/(.*)-(.*).html"             /stage-web/prd/prdBigImage.jsp?productId=$1&skuId=$2 last;
+  rewrite "^/bigimage/(.*).html"                  /stage-web/prd/prdBigImage.jsp?productId=$1 last;
+
+#        rewrite "^/yushou/(.*).html"                   /ec/n/product/freemarker/prddetail/presellindex.jsp?itemId=$1?  last;
+  rewrite "^/yushou/(.*).html"                   /presell/$1                                                   last;
+
+
+  ##  匹配范围太大要放到最后
+
+  ##新item-web
+  #rewrite "^/(.*)-(.*).html"                      /detail/$1-$2      last;
+  #rewrite "^/(.*)C(.*).html"                      /detail/$1-$2       last;
+  #rewrite "^/([a-zA-Z]*[0-9]+).html"              /detail/$1-                last;
+
+  rewrite "^/(.*)C(.*).html$"                     _http://item.gome.com.cn/$1-$2.html                     permanent;
+  rewrite "^/([a-zA-Z]*[0-9]+).html$"             /stage-web/prd/product_redirect.jsp?productId=$1      last;
+  if ($request_uri !~ "-|_")
+  {
+    rewrite "^/(.*).html$"                        /stage-web/prd/product_redirect.jsp?productId=$1       last;
+  }
+
+商品详情：
+	
+	
+	http://10.58.50.166:3079/detail/A0006080232-pop8009409538
+	
+	
+《算法技术手册》（George T. Heineman、Gary Pollice、 Stanley Selkow（著）， 杨晨、 李明（译）， 机械工业出版社，
+2010 年 3 月）、《算法精解： C 语言描述》（Kyle Loudon（著）， 肖翔、 陈舸
+（译）， 机械工业出版社， 2012 年 9 月）
+
+
+绩效
+日常规范 30% 
+1：每月代码不规范次数超过3次，扣1分； 
+2：工作日志48小时内不填写和不合格，每次扣1分； 
+3：部门组织重要会议及培训不参加，每次扣1分； 
+4：工作态度、责任心较差，每发现一次扣1分； 
+5：服务台和数据分析部问题超48小时没有反馈的事件，每次扣1分； 
+6：没有进行代码评审反馈的bug，每剩余一个扣1分； 
+7：个体化工作差异日常表现（对工作中的优化和建议等），增加1分； 
+
+1：每月代码不规范次数超过3次 0个； 
+2：工作日志48小时内不填写和不合格 0次； 
+3：部门组织重要会议及培训不参加 0次； 
+4：工作态度、责任心较差 0次； 
+5：服务台和数据分析部问题超48小时的事件 0次； 
+6：没有进行代码评审的bug 0个； 
+7：个体化工作差异日常表现（对工作中的优化和建议等） 0次 
+  
+Bug发生率 30% 
+1：重大bug每发生一次扣3分； 
+2：一般bug重复发生超过2次开始扣分，每次扣1-3分； 
+3：同一bug申请发版次数每超过5次扣1分 
+
+1：本月重大bug 0次； 
+2：本月一般bug 0次； 
+3：本月同一bug申请发版超过5次 0个 
+
+月度需求完成指标 40% 
+1：按照排期完成需求； 
+2：协助配合完成组内分配任务 
+
+1：能够按照需求完成任务； 
+2：可以按照组内分配的任务及时完成，保证进度； 
+
+
+大家好：
+	2017年4月的打车报销单可以开始提了。
+	1、OA“加班车费报销”单子中，“部门费用上报人员”写我的名字（寿安新）；
+	2、贴发票可多人贴一张A4纸（个人发票少的情况下,需写明每个人的基本信息）。基本信息包括：部门、工号、姓名、银行卡号（兴业银行）、合计（所有发票总额），贴好后给我；
+	
+	注：a.需要胶水的可以到我这里拿
+			b.加班打车费用中"预约叫车费"不在报销范围内
+			c.纸质发票总额需与OA提报总额一致
+
+gome-detail-service 50% 理解学习gome-detail-service项目源码 1.整理出了项目中从Redis取出的数据 
+2.完成了对ProductItemPage属性的清理 商城技术部 90 18 编辑 删除 
+商品详情服务 50% 解决排查有关详情页问题 1.详情页价格不显示 
+2.详情页主图不对 
+3.详情页促销语显示与列表页不一致 
+
+
+
+
+虚拟主机
+
+主机管理控制台用户名： bxu2359520410
+
+主机管理控制台密码： ********     [重置密码]
+
+FTP登录用户名： bxu2359520410
+
+FTP登录密码： ********     [重置密码]
+
+FTP登录主机地址： bxu2359520410.my3w.com
+
+数据库名称： bdm262229291_db
+
+数据库类型： MySQL
+
+数据库连接地址： bdm262229291.my3w.com
+
+数据库用户名： bdm262229291
+
+数据库管理密码： ********     [重置密码]
+
+
+虚拟主机开通成功，以下是相关的资料
+用户的原金额：	9.9元
+用户的金额变化：	-9.9 元
+用户的新金额：	0 元
+FTP登陆用户名是：	shouanxin
+FTP密码是：	EBFFE626B942c9
+您的网址为：	http://shouanxin.host10.voipidc.com
+用户的FTP地址是：10.host10.voipidc.com
+现在的到期时间是:	2017/3/12 22:17:47
+
+
+
+对应关系如下：
+
+allowReturn
+
+原数值定义	
+0=不可退货， 
+1=可退货， 
+2=只可退不可换 ，
+3=不可退换货，	
+
+新数值定义（上线以后）-暂定2月25日上线
+0=可退货（不可换）；对应原数值的1和2；
+1=不可退货（可换货）； 对应原数值的0；
+2= 可退换货；此数值为新增；
+3=不可退换货；对应原数值的3；
+（PS：若传空值或其他值，我们仍默认按可退换货逻辑处理。）
+
+
+
+商家入驻Dubbo数据地址
+
+<dubbo:registry protocol="zookeeper" address="${gome.stage.dubbo.zookeeper.address}" id="zookeeper"/>
+
+com.gome.stage.join.MallLicenseService
+<bean id="mallLicenseService" class="com.gome.stage.join.MallLicenseService">
+	    <property name="merchantService" ref="merchantService" />
+	    <property name="shopService" ref="shopService" />
+</bean>
+
+
+
+<dubbo:reference id="merchantService" interface="com.gome.stage.interfaces.whale.IMerchantService" loadbalance="random" group="whale"  registry="zookeeper"/>
+<dubbo:reference id="shopService" interface="com.gome.stage.interfaces.item.IShopService" loadbalance="random" group="item"  registry="zookeeper"/>
+ 
+获取店铺详情
+com.gome.stage.join.MallLicenseService.getMerchantDetail(String merchantId)
+
+
+公司名称(companyName)：com.gome.stage.interfaces.whale.IMerchantService.findCompanyNameByMerId(String merchantId)
+
+
+详情页FTL模板对照表
+
+注：hide开头为归档页模板文件
+
+html目录
+	product_info目录
+	======================================================================
+		home目录
+		======================================================================
+			priceFormat.ftl---------------
+		======================================================================
+		include目录
+		======================================================================
+			hideproduct_dialogBox.ftl-----------------各种弹出层模板（主信息、分期付款、降价通知、添加购物车&添加收藏夹、友好提示层）
+			hideproduct_infoHelper.ftl-----------------
+			hideproduct_infoImg.ftl-----------------
+			hideproduct_infoPack.ftl-----------------主信息：包装与配送模板
+			hideproduct_infoService.ftl-----------------主信息：售后服务模板
+			hideproduct_infoSpec.ftl-----------------主信息：具体参数模板
+			product_infoHelper.ftl-----------------主信息：小助手模板
+			product_infoService.ftl-----------------
+			product_infoSpec.ftl-----------------
+		======================================================================
+		product_seven目录-----------------
+			product_seven.ftl-----------------
+		======================================================================
+		compareBar.ftl-----------------对比栏
+		hide_product_detailInfo.ftl-------------商品描述、参数、包装配送等（归档页）
+		hide_product_dtSider.ftl-----------------左侧栏推荐项目（同类其他品牌、排行榜 : 同价位 同品牌 同类别、浏览该商品的用户最终购买、）
+		hide_product_infoMain.ftl---------------商品其他模块
+		product_appraise.ftl-----------------商品评价、晒单
+		product_comment.ftl-----------------跳转全部评价
+		product_consult.ftl-----------------商品咨询
+		product_detailInfo.ftl-----------------商品描述、参数、包装配送等
+		product_dtSider.ftl-----------------
+		product_infoMain.ftl-----------------
+		product_mboxBrowsed.ftl-----------------
+		product_mboxBuyLook.ftl-----------------
+		product_mboxLookbrowsed.ftl-----------------
+		product_mboxLookBuy.ftl-----------------浏览该商品的用户最终购买
+		product_recommFittings.ftl--------------优惠套装、推荐配件
+		product_similar.ftl-----------------
+======================================================================
+	breadCrumb.ftl--------------面包屑
+	hideproduct.ftl-------------商品入口
+	prdappointmentInfo.ftl-----------------预约
+	prdbig_breadcrumb.ftl-----------------面包屑
+	prdbig_main.ftl-----------------大图页详情（包括大图、猜你喜欢等）
+	prdbigimage.ftl-----------------
+	prdInfo.ftl-----------------销售属性
+	product.ftl-----------------
+	product_main.ftl-----------------
+	product_main_center.ftl-----------------中间主信息（包括销售属性、降价通知、购买数据等信息）
+	product_main_left.ftl-----------------详情页主图
+	product_main_right.ftl-----------------右侧店铺信息与支持服务
+	productShop.ftl----------------- 
+
+
+	HTML是结构，css是样式，js是动作。最终能让页面出现的代码都是.html.   html里面可以引入css和js,ftl只是一个渲染数据的模板文件，比如有几百条数据，你总不能一条一条的写标签吧，所以用模板渲染方便
+
+
+
+	11:36shouanxin(寿安新.商城技术部.商品研发部)周末出去玩吗。不去的话，我提加班单了
+
+
+11:37dujiahui(杜佳桧.商城技术部.前端研发部)提吧，周末和小伙伴约饭了
+
+
+11:37shouanxin(寿安新.商城技术部.商品研发部)哎
+
+
+11:37dujiahui(杜佳桧.商城技术部.前端研发部)哎什么
+
+
+11:37shouanxin(寿安新.商城技术部.商品研发部)心塞塞
+
+
+此对话将保存在 Outlook 邮箱的“对话历史记录”文件夹中。
+
+
+16:13shouanxin(寿安新.商城技术部.商品研发部)忙吗
+
+
+16:13dujiahui(杜佳桧.商城技术部.前端研发部)不忙，
+
+
+16:14shouanxin(寿安新.商城技术部.商品研发部)html和ftl的性质是不是一样，都是用来渲染的？？
+
+
+16:14dujiahui(杜佳桧.商城技术部.前端研发部)html不是用来渲染的
+
+
+16:15shouanxin(寿安新.商城技术部.商品研发部)html该怎么理解
+
+
+16:15dujiahui(杜佳桧.商城技术部.前端研发部)ftl是渲染数据的模板。最后可以生成渲染好的HTML，页面呈现都是HTML
+
+
+16:16shouanxin(寿安新.商城技术部.商品研发部)ftl里面也是用的html标签，
+
+
+16:18dujiahui(杜佳桧.商城技术部.前端研发部)是呀，但是比如你要生成相同样式，不同数据的li,那用ftl可以直接用语法写一条HTML。
+但是你如果用HTML，就要写很多li标签
+
+
+此对话将保存在 Outlook 邮箱的“对话历史记录”文件夹中。
+
+
+16:43shouanxin(寿安新.商城技术部.商品研发部)理不清，哎
+
+
+16:43dujiahui(杜佳桧.商城技术部.前端研发部)这个有啥子理不清的
+
+
+16:43shouanxin(寿安新.商城技术部.商品研发部)我搞不清html、js、css、ftl、jsp他们之间的区别和联系
+
+
+16:48dujiahui(杜佳桧.商城技术部.前端研发部)对前端来说。HTML是结构，css是样式，js是动作。最终能让页面出现的代码都是.html.   html里面可以引入css和js,ftl只是一个渲染数据的模板文件，比如有几百条数据，你总不能一条一条的写标签吧，所以用模板渲染方便。jsp应该是java的 。我就不晓得了
+
+
+16:51dujiahui(杜佳桧.商城技术部.前端研发部)查了一哈，jsp作为模板引擎，最终还是会被编译成html的 
+jsp应该是后端渲染的模板
+HTML页面是静态页面，也就是事先由用户写好放在服务器上，由web服务器向客户端发送.
+.JSP页面是动态页,有JSP容器执行该页面的Java代码部分然后实时生成的页面.
+
+HTML（Hypertext Markup Language）文本标记语言，它是静态页面，和JavaScript一样解释性语言，为什么说是解释性 语言呢？因为，只要你有一个浏览器那么它就可以正常显示出来，而不需要指定的编译工具，只需在TXT文档中写上HTML标记就OK。
+JSP（Java Server Page）看这个意思就知道是Java服务端的页面，所以它是动态的，它是需要经过JDK编译后把内容发给客户端去显 示，我们都知道，Java文件编译后会产生一个class文件，最终执行的就是这个class文件，JSP也一样，它也要编译成class文件！JSP不 止要编译，它还得要转译，首先把JSP转译成一个Servlet文件，然后在编译成class文件。当用户访问JSP时就执行了class文件，最 终......
+
+
+	1.最简单的区别就是，HTML能直接打开，jsp只能发布到Tomact等服务器上才能打开 。
+ 	2.定义上HTML页面是静态页面可以直接运行，JSP页面是动态页它运行时需要转换成servlet。 
+	 3.他们的表头不同，这个是JSP的头“ <%@ page language="java" import="java.util.*" pageEncoding="gbk"%>”在表头中有编码格式和倒入包等。
+	 4.也是很好区分的在jsp中用<%%>就可以写Java代码了，而html没有<%%>
+
+这个解释的不错
+
+
+16:55shouanxin(寿安新.商城技术部.商品研发部)我理一下：html是主要的，相当于一条主线，css负责显示样式，ftl数据处理、事件处理，js动作是什么意思。jsp是后端渲染用的，这个我大概知道
+我看有的项目只能ftl、css、js，没有html。这是因为ftl里面有html标签，它就相当于一个html吗？
+
+
+16:57dujiahui(杜佳桧.商城技术部.前端研发部)ftl数据处理、事件处理，
+这个不对
+js动作就是，前端的界面都是一个一个的dom，就是节点，js就是操作这些节点的，
+
+
+17:01dujiahui(杜佳桧.商城技术部.前端研发部)ftl 就是java的一个渲染模板
+freemarker知道吗？
+
+
+17:01shouanxin(寿安新.商城技术部.商品研发部)我想知道它的职责是什么，通俗来说
+
+
+17:02dujiahui(杜佳桧.商城技术部.前端研发部)结合网页模板和数据结构
+ftl里面也有html的标签，就是网页模板，ftl里面可以加入同步的数据，就是数据
+
+
+17:06dujiahui(杜佳桧.商城技术部.前端研发部)明白了吗？真的是隔行如隔山
+
+
+17:07shouanxin(寿安新.商城技术部.商品研发部)我喜欢用在白话给我说，最好举个生动的例子
+我喜欢用大白话给我说，最好举个生动的例子
+不要带专业名词的那种
+
+
+17:07dujiahui(杜佳桧.商城技术部.前端研发部)这个已经很白话了
+这些名词你也知道啊，模板和数据
+
+
+17:08shouanxin(寿安新.商城技术部.商品研发部)你说得比较官方
+
+
+17:08dujiahui(杜佳桧.商城技术部.前端研发部)我去，这还官方
+.html是不能用变量的，是纯静态de，这个明白吗？
+
+
+17:09shouanxin(寿安新.商城技术部.商品研发部)我喜欢把一个东西从根上理解，具体的东西可以慢慢学。我得先明白它的构造
+你先理解，我是一个没学过前端的人。这就是考验你技术的时候到了
+
+
+17:10dujiahui(杜佳桧.商城技术部.前端研发部).html是不能用变量的，是纯静态de，这个明白吗？
+那一句一句来嘛
+这个明白不
+
+
+17:11shouanxin(寿安新.商城技术部.商品研发部)是说单纯用html写的东西是静态。
+
+
+17:12dujiahui(杜佳桧.商城技术部.前端研发部)比如有同步数据，在.html里面不能用${data.value}获取的
+
+
+17:12shouanxin(寿安新.商城技术部.商品研发部)好
+
+
+17:12dujiahui(杜佳桧.商城技术部.前端研发部)但是在ftl里面可以这样用，所以这样很省事
+
+
+17:13shouanxin(寿安新.商城技术部.商品研发部)用微信给你聊可好，可以画图》
+
+
+17:13dujiahui(杜佳桧.商城技术部.前端研发部)好
+
+
+
+店铺：
+MERCHANT_ID
+80001484
+80001775
+80001866
+80001893
+80001937
+80002016
+80002066
+80002073
+80002131
+80002176
+80002197
+80002287
+80002290
+80002364
+80002414
+80002509
+80002624
+80002904
+80002927
+80002970
+80003037
+80003095
+80003120
+80003125
+80003142
+80003151
+80003174
+80003312
+80003314
+80003328
+80003337
+80003350
+80003364
+80003379
+80003380
+80003405
+80003420
+80003437
+80003546
+80003565
+80003567
+80003571
+80003680
+80003694
+80003707
+80003719
+80003724
+80003755
+80003763
+80003784
+80003792
+80003834
+80003849
+80003883
+80003889
+80003946
+80003991
+80004088
+80005031
+80005148
+80005515
+80005808
+80006150
+80006195
+80006574
+80006583
+80006646
+80006956
+80007009
+80007222
+80007340
+80007348
+80007350
+80007391
+80007772
+80008057
+80008072
+80008074
+80008077
+80008086
+80008101
+80008107
+80008165
+80008205
+80008222
+80008234
+80008238
+80008316
+80008327
+80008347
+80008354
+80008357
+80008373
+80008375
+80008377
+80008383
+80008394
+80008407
+80008439
+80008446
+80008455
+80008484
+80008487
+80008499
+80008502
+80008508
+80008514
+80008515
+80008546
+80008550
+80008570
+80008581
+80008584
+80008607
+80008621
+80008630
+80008648
+80008655
+80008664
+80008672
+80008677
+80008689
+80008695
+80008714
+80008728
+80008773
+80008778
+80008782
+80008801
+80008814
+80008822
+80008823
+80008834
+80008851
+80008876
+80008877
+80008881
+80008887
+80008924
+80008926
+80008979
+80008981
+80008988
+80008997
+80009017
+80009020
+80009024
+80009038
+80009048
+80009050
+80009059
+80009061
+80009065
+80009066
+80009094
+80009098
+80009101
+80009108
+80009112
+80009120
+80009128
+80009132
+80009149
+80009151
+80009155
+80009156
+80009173
+80009190
+80009194
+80009240
+80009244
+80009266
+80009270
+80009277
+80009294
+80009308
+80009310
+80009317
+80009351
+80009354
+80009361
+80009368
+80009369
+80009375
+80009401
+80009403
+80009412
+80009440
+80009447
+80009461
+80009474
+80009487
+80009506
+80009510
+80009515
+80009531
+80009532
+80011074
+80011156
+80011268
+80011698
+80011728
+80011891
+80012033
+80012261
+80012269
+80012354
+80012634
+80012653
+80012722
+80012723
+80012724
+80012731
+80012733
+80012745
+80012746
+80012750
+80012753
+80012754
+80012755
+80012758
+80012759
+80012760
+80012761
+80012766
+80012769
+80012771
+80012778
+80012789
+80012816
+80012825
+82000042
+82000045
+82000046
+复店状态的，数据里面没有执照信息
+
+合同盖章：
+合同主体：
+北京国美在线是王雪，美信是王妍
+国美在线是段曼曼
+
+生产环境 dubbo 注册地址：10.58.51.57:2181,10.58.51.58:2181,10.58.51.59:2181
+
+
+由于现在gome_guest账号做了统一规划，所以看不了日志了，需要申请堡垒机权限，现统计一下每个人需要开的机器ip，统一申请权限。
+
+10.58.56.51
+10.58.57.34
+10.58.57.95
+10.58.57.96
+10.58.57.99
+10.58.57.230
+10.126.60.134
+10.126.60.135
+10.126.45.28
+
+10.58.57.96
+10.58.57.98
+10.58.56.96
+10.58.57.95
+
+10.58.56.51
+10.126.60.135
+10.126.45.28
+10.126.56.193
+
+10.58.56.51
+10.126.60.134
+10.58.57.98
+10.126.45.50
+10.126.60.135 
+
+10.126.60.135
+10.58.57.97
+
+10.58.56.35
+10.58.56.53
+10.126.56.41
+10.58.57.99
+10.126.56.38
+10.126.60.138
+
+10.58.57.99
+10.58.57.98
+10.58.57.97
+10.58.57.96
+10.58.57.95
+10.58.57.34
+10.58.57.230
+10.58.56.96
+10.58.56.68
+10.58.56.53
+10.58.56.51
+10.58.56.35
+10.126.60.138
+10.126.60.135 
+10.126.60.135
+10.126.60.134
+10.126.56.41
+10.126.56.38
+10.126.56.193
+10.126.45.50
+10.126.45.28
+
+IGomeProductService.getProductInfo|IGomeRebateService.getPrdsRebates|IProdDetailService.getProductMultiProperties|IProdDetailService.getSkuMultiProperties|IGomeRebateService.getPrdRebate|IProductInfoService.getGoodsInfos
+
+IPriceService.getAreaPrice|IPriceService.getGroupOnPrice|IPriceService.getRushBuyPrice|IPriceService.getGomePrice|IPriceService.getGomePrices|IGomePriceService.shoppingCartPrice|IPriceService.getMobileProdPrice|IPriceService.getFinalPalmAreaPrice|IPriceService.getPalmPrice|IPriceService.getMobileProdPrices
+
+
+IWirelessService.getFuseProductInfo|IWirelessService.getFuseAppraiseInfo
+
+IRushBuyInterface.getRushbuyIndexPageData|IGrouponInterface.getBrandDetailPageData|ICheapServiceInterface.getRushBuyStatus|ICheapServiceInterface.getGroupOnByItemId|ICheapServiceInterface.getGroupOnStatus|IGrouponInterface.getGrouponDetailPageData|IGrouponInterface.getGrouponIndexPageData|ICheapServiceInterface.getRushBuyByItemId
+
+
+
+
+00:90:fb:2c:2de 10.58.25.27     vlan.100             none
+00:90:fb:2c:2de 10.58.25.28     vlan.100             none
+00:90:fb:2c:2de 10.58.25.29     vlan.100             none
+00:90:fb:2c:2de 10.58.25.30     vlan.100             none
+00:90:fb:2c:2de 10.58.25.31     vlan.100             none
+00:90:fb:2c:2de 10.58.25.32     vlan.100             none
+00:90:fb:2c:2de 10.58.25.33     vlan.100             none
+00:90:fb:2c:2de 10.58.25.34     vlan.100             none
+00:90:fb:2c:2de 10.58.25.35     vlan.100             none
+00:90:fb:2c:2de 10.58.25.36     vlan.100             none
+00:90:fb:2c:2de 10.58.25.37     vlan.100             none
+00:90:fb:2c:2de 10.58.25.38     vlan.100             none
+00:90:fb:2c:2de 10.58.25.39     vlan.100             none
+00:90:fb:2c:2de 10.58.25.40     vlan.100             none
+00:90:fb:2c:2de 10.58.25.41     vlan.100             none
+00:90:fb:2c:2de 10.58.25.42     vlan.100             none
+00:90:fb:2c:2de 10.58.25.43     vlan.100             none
+00:90:fb:2c:2de 10.58.25.44     vlan.100             none
+00:90:fb:2c:2de 10.58.25.45     vlan.100             none
+00:90:fb:2c:2de 10.58.25.46     vlan.100             none
+00:90:fb:2c:2de 10.58.25.47     vlan.100             none
+00:90:fb:2c:2de 10.58.25.48     vlan.100             none
+00:90:fb:2c:2de 10.58.25.49     vlan.100             none
+00:90:fb:2c:2de 10.58.25.50     vlan.100             none
+00:90:fb:2c:2de 10.58.25.51     vlan.100             none
+00:90:fb:2c:2de 10.58.25.52     vlan.100             none
+00:90:fb:2c:2de 10.58.25.53     vlan.100             none
+00:90:fb:2c:2de 10.58.25.54     vlan.100             none
+00:90:fb:2c:2de 10.58.25.55     vlan.100             none
+00:90:fb:2c:2de 10.58.25.56     vlan.100             none
+00:90:fb:2c:2de 10.58.25.57     vlan.100             none
+00:90:fb:2c:2de 10.58.25.58     vlan.100             none
+00:90:fb:2c:2de 10.58.25.59     vlan.100             none
+00:90:fb:2c:2de 10.58.25.90     vlan.100             none
+00:90:fb:2c:2de 10.58.25.91     vlan.100             none
+00:90:fb:2c:2de 10.58.25.99     vlan.100             none
+00:90:fb:2c:2de 10.58.25.100    vlan.100             none
+00:90:fb:2c:2de 10.58.25.101    vlan.100             none
+00:90:fb:2c:2de 10.58.25.102    vlan.100             none
+00:90:fb:2c:2de 10.58.25.104    vlan.100             none
+00:90:fb:2c:2de 10.58.25.106    vlan.100             none
+00:90:fb:2c:2de 10.58.25.107    vlan.100             none
+00:90:fb:2c:2de 10.58.25.108    vlan.100             none
+00:90:fb:2c:2de 10.58.25.109    vlan.100             none
+00:90:fb:2c:2de 10.58.25.110    vlan.100             none
+00:90:fb:2c:2de 10.58.25.111    vlan.100             none
+00:90:fb:2c:2de 10.58.25.112    vlan.100             none
+00:90:fb:2c:2de 10.58.25.114    vlan.100             none
+00:90:fb:2c:2de 10.58.25.116    vlan.100             none
+00:90:fb:2c:2de 10.58.25.117    vlan.100             none
+00:90:fb:2c:2de 10.58.25.118    vlan.100             none
+00:90:fb:2c:2de 10.58.25.119    vlan.100             none
+00:90:fb:2c:2de 10.58.25.120    vlan.100             none
+00:90:fb:2c:2de 10.58.25.121    vlan.100             none
+00:90:fb:2c:2de 10.58.25.122    vlan.100             none
+00:90:fb:2c:2de 10.58.25.123    vlan.100             none
+
+
+看了又看：http://bigd.gome.com.cn/gome/rec?callback=pid=9134076288&size=9&boxid=box74&area=11010200&cid=78950533791797056&uid=&brid=10000008&shopid=&c1id=cat10000004&c3id=cat10000062&sid=100381119&imagesize=160
+猜你喜欢：http://10.58.57.223:9080/gome/rec?callback=null&boxid=box37&pid=A0000134026&area=11010100&cid=null&uid=null&imagesize=130&brid=121906&shopid=80007210&c1id=cat10000005&c3id=cat25961452&sid=pop8001025824
+其他类似：http://bigd.gome.com.cn/gome/rec?callback=jsonpname_qitaleisi&boxid=box38&pid=A0005890705&area=11010200&cid=146891242216302689&uid=72424692460&imagesize=130&brid=244608369&shopid=80008315&c1id=cat18596268&c3id=cat15985571&sid=pop8008895113&_=1472635988056
+排行榜：http://bigd.gome.com.cn/gome/rec?callback=rec&boxid=box08&pid=9134047593&cid=1416967293973036&uid=72667545408&area=31020200&c1n=%E6%89%8B%E6%9C%BA&c3n=%E6%89%8B%E6%9C%BA%E9%80%9A%E8%AE%AF&brid=10000098&imagesize=100&c1id=cat31665542&c3id=cat10000070&shopid=&sid=1123040399&_=1477295639826
+
+
+
+测试组,产品组,服务研发组,互联网装修研发组,评价咨询研发组,索引研发组,详情页敏捷组,
+
+其他类似：box38
+排行榜：  box09
+猜你喜欢：box37
+
+
+测试组,
+产品组,
+服务研发组,
+互联网装修研发组,
+评价咨询研发组,
+索引研发组,
+详情页敏捷组,
+
+uat测试,上线,开发中,联调中,未开始,未上线,暂停

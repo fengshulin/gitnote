@@ -1,0 +1,863 @@
+大家好！
+?
+       互联网的快速发展，对产业形态与企业发展产生巨大的影响。随着国美互联网生态圈的建立，整合原有细分业态中的各类资源和组织的融合势在必行。
+       很高兴能够与大家一起成为商城技术部的一员，并授命带领大家一起来完成集团下达的各项任务和目标。
+       未来的工作中，希望大家能够同心协力迎接各项挑战、面对困难勇往直前，我也必将尽我所能引领大家努力向前。
+       希望在公司辉煌发展的蓝图中，我们商城技术部能够书写浓妆重抹的一笔！
+?
+原国美在线EC开发部、EC产品部、测试部、订单系统部、订单产品部、UED、商品数据配置管理部，经过重组建立商城技术部。    
+对组织架构做如下升级：
+
+李定江为商场技术部副总监，负责需求管控部、UED部；                                 
+秦旭为商场技术部副总监，负责供应链技术部；
+解本齐为商场技术部副总监，负责供应链产品部；
+宫长明为商城技术部高级经理，负责促销应用部；
+栾家友为商场技术部高级经理，负责会员交易研发部；
+张飞云为商场技术部高级经理，负责订单研发部；
+刘金虎为商场技术部经理，负责测试部；
+王毅为商场技术部经理，负责商品数据配置管理部；
+雷佳为商场技术部经理，负责UED部；
+方珍为商城技术部经理，负责首页频道研发部；
+刘浏为商场技术部经理，负责过程改进部；
+魏磊为商场技术部经理，负责客服研发部；
+赵洪宝为商场技术部副经理，负责IO系统部；
+郭文环为商城技术部副经理，负责前端研发部；
+高旭为商城技术部副经理，负责商品研发部；
+刘迪负责主数据部；
+张志杰负责文件系统部；
+唐明坤负责基础服务部。
+
+以上决定即日起生效。  
+
+
+
+Revision: 455909
+Author: shouanxin
+Date: 2016年10月22日 16:36:55
+Message:
+123459:seo 大图、归档页面:gome_detail_service_seo
+
+
+1、公式 - 定义名称 - 输入自定义的名称：shname，在引用位置中输入公式：
+
+    =MID(GET.WORKBOOK(1),FIND("]",GET.WORKBOOK(1))+1,99)&T(NOW())
+
+
+在第1个工作表“资产负债表”的A列一单元格中输入公式并向下复制
+
+    =IFERROR(HYPERLINK("#"&INDEX(shname,ROW(A1))&"!A1",INDEX(shname,ROW(A1))),"")
+
+
+=================周5任务==============================================
+
+咨询：_http://ss.gome.com.cn/item/v1/prdadvice/productAdvice/9125281477/flag/advice/adviceData?callback=adviceData
+评价：_http://ss.gome.com.cn/item/v1/prdevajsonp/appraiseModuleAjax/9125281477/1/all/flag/appraise/evaluateData?callback=evaluateData
+
+
+9125281477 为变量  productId
+
+开发步骤：  
+
+            在 ProductItemPage 中新建如下 评价 和 资讯属性：
+
+private JSONObject appraise; //评价
+    
+        private JSONObject question; //资讯
+
+       
+       新建修饰类， 用上面的url获取的数据转换成JSONObject 赋值 。
+
+============================================================================
+http://ss.gome.com.cn/item/v1/prdevajsonp/appraiseModuleAjax/A0005745487/1/all/flag/appraise/evaluateData?callback=evaluateData&_=1473154399817
+
+
+http://recsys.bigdata.api/gome/rec?callback=jsonpname_qitaleisi&boxid=box38&pid=A0003810726&area=11010100&cid=null&imagesize=130&brid=97908952&shopid=80002425&c1id=cat18596268&c3id=cat15985614&sid=pop8002044692
+
+
+invoke IPriceDataService.updateMemberPrice("b8d0e3ca34684273bee24c5a1ac9defb")
+
+invoke IProdDetailService.getProductDetail("A0000122329","pop8001013913")
+invoke com.gome.frontSe.interfaces.IProdDetailService.getProductDetail("9134080855","1123342908")
+invoke com.gome.frontSe.interfaces.IProdDetailService.getProductDetail("9100028010","1000044150")
+invoke IProdDetailService.getProductDetail("9010000388","1000035731")
+inA0005587008-pop8007496389
+//A0005659671-pop8007894888
+invoke com.gome.frontSe.interfaces.IProdDetailService.getProductInfo("A0000124969","pop8001018642")
+invoke com.gome.stage.interfaces.item.IGomeProductService.getProductInfo("9134401144","1123340517",null)
+invoke com.gome.frontSe.interfaces.IProdDetailService.getProdDetailJSON("9134401144")
+invoke com.gome.frontSe.interfaces.IProdDetailService.getThirdCatByProdId("9134401144")
+invoke com.gome.frontSe.interfaces.IProdDetailService.getBrandDetailJSON("10000098")
+package:sh item-detail-service-seo-jar.sh gome_detail_service_seo 1.0.0.004
+
+yuanye-ds(袁野.信息技术中心.EC开发部) [19:58]: 
+_http://10.58.46.146:9081/gome/rec?callback=rec&boxid=box46&pid=9133578394&cid=1441764828439535&area=11011400&brid=&imagesize=100&shopid=&c1id=&c3id=&sid=1122380204&_=1441871307080
+
+yuanye-ds(袁野.信息技术中心.EC开发部) [21:35]: 
+发版seo 详情页服务：  sh item-detail-service-seo-jar.sh gome_detail_service_seo 1.0.0.004
+			
+10.126.60.82
+
+
+yuanye-ds(袁野.信息技术中心.EC开发部) [21:49]: 
+_http://gbm.ds.gome.com.cn/bugzilla/index.cgi
+Bug 123459 - seo 大图页评论资讯 
+ gome-detail-service-seo 
+
+
+
+
+ 账号
+ 
+值班：
+3号（周四）  刘永红
+4号（周五）  李志强
+5号（周六）  许立亢
+6号（周日）  刘  硕 
+ 
+ 
+ http://recsys.bigdata.api/gome/rec?callback=jsonpname_qitaleisi&boxid=box38&pid=A0004877640&area=11010100&cid=null&imagesize=130&brid=217008272&shopid=80006011&c1id=cat15045969&c3id=cat16035578&sid=pop8004194969
+
+
+
+yuanye-ds(袁野.信息技术中心.EC开发部) [22:04]: 
+_http://10.58.22.45:8080/view/pre.ear.restart/
+
+
+http://10.58.57.95:3254/stage_web_seo/dyn/admin/getPrdDetail.jsp?detail=detail&productId=A0000122293&skuId=pop8001013812
+
+
+http://10.58.57.95:9022/stage_web_seo/dyn/admin/getPrdDetail.jsp?detail=detail&productId=9010000388&skuId=1000035731
+
+
+http://10.58.57.95:3254/stage_web_seo/prd/compare/1122330645-pop8009314848-1123200849-0.html
+
+
+http://10.126.60.134:3242/hwg/A0000119140-pop8001009086.html
+
+https://repo.ds.gome.com.cn:8443/svn/atg_poc/30_Coding/NewDevMode/tags/gome-stage/gome_detail_service_seo/gome_detail_service_seo_1.0.0.004_BL
+
+
+
+
+
+
+dev（开发）      sit       uat(测试)     pre    43 44（准生产）  生产
+
+
+
+什么的，存着点，以后会用
+
+
+bugzilla地址_http://gbm.ds.gome.com.cn/bugzilla/show_bug.cgi?
+
+ 
+
+http://10.58.50.70/gome/rec?callback=jsonpname_qitaleisi&boxid=box38&pid=A0005153997&area=11010100&cid=null&imagesize=130&brid=10000084&shopid=8000id=cat10000070&sid=pop8005398211
+
+
+http://10.58.50.167:8080/stage_web_seo/prd/product.jsp?productId=9100018128&skuId=1000030044
+
+http://10.58.22.68:8080/stage-web/dyn/admin/home.jsp
+
+
+http://10.58.22.68:8080/stage-web/prd/product.jsp?productId=9100018128&skuId=1000030044
+http://10.58.50.167:8080/stage-web/dyn/admin/home.jsp
+
+yuanye-ds(袁野.信息技术中心.EC开发部) [12:03]: 
+_http://10.58.57.95/stage-web/prd/product.jsp?productId=9010000388&skuId=1000035731
+_http://10.58.57.95:3254/stage-web/prd/product.jsp?productId=9010000388&skuId=1000035731
+yuanye-ds(袁野.信息技术中心.EC开发部) [16:12]: 
+com.gome.stage.interfaces.item.IProductInfoService
+List<GoodsInfo> getGoodsInfos(List<String> skuIds, String imagesize)
+1.0.0.094  商品服务 product_item_service
+[19:30] yuanye-ds(袁野.信息技术中心.EC开发部) 已请求将文件“jMeterTest.rar”发送给您。 
+[19:31] 您成功地从 yuanye-ds(袁野.信息技术中心.EC开发部) 处接收了 jMeterTest.rar。该文件位于 D:javagomeseo 中。在打开该文件前，强烈建议您用防病毒程序对其进行扫描。 
+yuanye-ds(袁野.信息技术中心.EC开发部) [19:32]: 
+
+
+
+yuanye-ds(袁野.信息技术中心.EC开发部) [19:37]: 
+/app/stage/logs/item-app
+/app/weblogic/gome-price-service/logs
+ps -ef|grep price
+
+
+
+
+
+账号：gome_guest
+密码：searchlog678!
+
+今天把测试系统开发完毕，此测试系统只提供url请求参数验证，以及接口返回结果验证。
+         测试地址：http://10.58.56.164:9080/gome/rec?callback=rec&boxid=box13&pid=9133578394&cid=1441764828439535&area=11011400&brid=&imagesize=100&shopid=&c1id=&c3id=&sid=1122380204&_=1441871307080
+         请根据具体展位以及要求，更改参数进行测试
+
+
+PRE对比页测试： http://www.gomeprelive.com.cn/compare/pop8006920823-1000010230-0-0.html
+
+
+http://bigd.gome.com.cn/gome/rec?callback=cb_969251775927995&boxid=box37&pid=A0000124047&area=11010200&cid=147306225614050530&uid=100019947300&imagesize=130&brid=480001&shopid=80007143&c1id=&c3id=cat23941458&sid=pop8001017100&_=1473388482063
+
+
+
+item-web   /weblogic/atglogs/gcc*.log  
+
+
+SeoRecommendDec
+自营：http://item.atguat.com.cn/prod21010025-sku20860011.html
+_http://item.atguat.com.cn/prod25420045-sku25410021.html
+_http://item.atguat.com.cn/prod20980080-sku20910015.html
+
+http://item.atguat.com.cn/9010000388-1000035731.html(三级分类笔记本)
+
+联营：
+http://item.atguat.com.cn/A0000120236-pop8001010972.html
+http://item.atguat.com.cn/A0000133856-pop8001025605.html
+
+
+
+http://bigd.gome.com.cn/gome/rec?callback=cb_638638806871930&boxid=box37&pid=9131379108&area=11011400&cid=146891242216302689&uid=72356161762&imagesize=130&brid=10000445&shopid=&c1id=cat10000004&c3id=cat10000055&sid=1120360129&_=1473660295049
+
+
+{pop8001022752={"bn":"猜您喜欢","isSessionExpired":"N","maima_param":"show|1191448972|box37||0|0|0|0|0|0|0|0|0|-1|0|0|0","isSuccess":"Y","lst":[],"bid":"box37","size":0}}
+
+String productId  = map.get("productIds");
+			String brandId;
+			String shopid;
+			String firstCatId;
+			String thirdCatId;
+			String skuId;
+
+
+{brandItemId=10000156, productIds=A0000132560, skuId=pop8001022752, firstCatItemId=cat10000000, shopItemId=80007199, thridCatItemId=cat10385552}
+
+云平台：
+http://10.58.46.146:9090/gome/rec?callback=cb_711890171071301&boxid=box12&pid=9134269792&cid=146174814082334095&uid=64181631400&area=11010200&c1n=%E7%94%9F%E6%B4%BB%E7%94%B5%E5%99%A8+%E5%8E%A8%E5%8D%AB%E7%94%B5%E5%99%A8&c3n=%E6%B2%B9%E7%83%9F%E6%9C%BA&brid=10000581&imagesize=100&shopid=&c1id=cat10000005&c3id=cat10000199&sid=1123201799&_=1466231231717
+
+
+%SystemRoot%system32;%SystemRoot%;%SystemRoot%System32Wbem;%SYSTEMROOT%System32WindowsPowerShellv1.0;%JAVA_HOME%bin;%JAVA_HOME%jrebin
+
+
+question-service
+10.58.53.53 -- 58;
+
+price-item-service
+10.58.188.76  无
+10.58.53.141  无
+
+10.58.22.185
+10.58.22.186
+10.58.50.160
+10.58.50.161
+
+price-cart-service
+10.58.173.79
+10.58.173.80
+10.58.52.248
+10.58.52.249
+
+item-app
+10.58.173.81
+10.58.173.82
+10.58.22.66
+10.58.22.67
+10.58.51.31
+10.58.51.32
+10.58.51.34
+10.58.51.35
+10.58.51.36
+10.58.52.250
+10.58.52.251
+
+stage-whale
+10.58.22.185 
+10.58.22.187
+10.58.22.188
+10.58.51.34
+10.58.51.35
+10.58.51.36
+10.58.53.49 无
+10.58.53.50 无
+10.58.53.51 无
+
+hippo
+10.58.22.185
+10.58.22.186
+10.58.22.187
+10.58.50.50
+
+stage-seo 无
+10.58.53.59 无
+10.58.53.60 -- 64 无
+
+dolphin 无
+10.58.22.25 无
+
+stage-cheap-dubbo 无
+10.58.52.222 -- 224 无
+
+
+gome-detail-service 无
+10.58.188.82 -- 85 无
+
+10.58.22.68
+10.58.22.69
+10.58.22.70
+
+
+item-web
+10.58.50.1 无
+10.58.50.2 无
+
+item-hwg
+10.58.111.51
+10.58.111.52
+
+
+item-vip
+10.58.173.80
+10.58.173.81
+10.58.52.248
+10.58.52.249
+10.58.62.102
+10.58.62.111
+
+
+stage-groupon
+10.58.22.185
+10.58.22.186
+10.58.22.188
+10.58.52.222 -- 227 无
+
+
+stage-assistant 无
+10.58.53.59 无
+10.58.53.61 -- 64 无
+
+
+channel-web 无
+10.58.8.50 无
+
+
+member-web
+10.58.22.69
+10.58.22.70
+10.58.50.160
+10.58.50.161
+
+rushbuy_web
+10.58.173.10 无
+10.58.173.8 无
+10.58.173.9 无
+10.58.61.48 -- 50 无
+10.58.22.185 
+10.58.22.186
+10.58.22.187
+10.58.22.188
+
+single-web
+10.58.111.51
+10.58.111.52
+
+
+
+
+
+
+tapho
+10.58.22.185
+10.58.22.186
+10.58.22.187
+10.58.22.188
+10.58.50.50
+10.58.50.51
+10.58.50.64
+10.58.50.65
+10.58.51.32
+10.58.51.33
+
+gome-spec
+10.58.50.10
+10.58.50.11
+10.58.50.64
+10.58.50.65
+10.58.50.9
+
+rhino
+10.58.22.66
+10.58.22.67
+10.58.51.31
+10.58.51.32
+10.58.51.34
+10.58.51.35
+10.58.51.36
+
+
+
+stage-news 无 
+10.58.52.184 无
+10.58.52.185 无
+10.58.53.47  无
+10.58.53.48  无
+
+
+qds_console 无 i
+10.58.52.184 无
+
+qds_web
+10.58.52.184 无 i
+10.58.52.185 无
+
+stage-sfe 无
+10.58.22.25 无
+
+
+
+
+
+
+groupon-web  stage-groupon-dubbo2无
+10.58.52.222 -- 227 无
+
+
+rushbuy_ajax  rushbuy_dubbo无
+10.58.173.8 无
+10.58.173.9 无
+10.58.173.10 无
+10.58.61.48 -- 50无
+
+ 
+stage-cheap-web  stage-cheap-ajax无
+10.58.53.145 -- 47无
+10.58.62.32 无
+10.58.62.36 无
+10.58.62.37 无
+
+
+
+
+
+
+
+
+stage-mall-dubbo stage-mall-ajax无
+10.58.53.89 -- 92 无
+
+
+
+
+item-tao  defectware无
+10.58.52.222 无
+10.58.52.223 无
+
+
+
+
+home-web
+10.58.62.90 
+10.58.62.91 
+
+home-manager
+10.58.62.89
+
+
+
+
+
+search-portion
+10.58.53.65
+10.58.53.66
+
+search-dispatcher 无文件名称 /app/logs/search-dispatcher/search-dispatcher*.log
+10.58.22.17
+10.58.61.79
+10.58.61.80
+10.58.61.81
+
+search-newindex
+10.58.61.79
+10.58.22.17
+10.58.61.80
+10.58.61.81 
+
+javadoc -d apidoc -windowtitle 测试 -doctitle 学习javadoc工具的测试API文档 -header 我的类 *Test.java
+
+dpc-facade  dpc-persisted无
+10.58.188.77 无 进不去
+10.58.188.78 无
+10.58.62.175 无
+10.58.62.176 无
+
+
+
+121671_前台组_商品图片存储服务器变更
+
+
+home_service
+10.58.62.91 	
+10.58.62.90
+10.58.62.89
+
+page_http_service
+10.58.111.51
+10.58.111.52
+10.58.62.111
+10.58.62.102
+10.58.50.160
+
+pre_base_service
+10.58.188.76
+
+
+
+
+_http://item.atguat.com.cn/A0000125035-pop8001018667.html    
+"salesRate": 0.15, 
+        "vatRate": 0.13,
+
+ /** 消费税税率 */
+ private Double salesRate;
+
+ /** 增值税税率 */
+ private Double vatRate;
+
+
+{RULE_TWO_PRODUCT_TITLE=【brand,model,categoryName,colour,version】productName【图片 价格 品牌 报价】-国美在线merchant, 
+RULE_THREE_PRODUCT_TITLE=【regions,brand,class,categoryName】productName【图片 价格 品牌 报价】-国美在线merchant, 
+RULE_FOUR_PRODUCT_DESCRIPTION=国美在线（Gome.com.cn）图书频道网上销售正版《productName》，作者：(authors)。最新《productName》简介、书评、摘要、试读、价格、图片等相关信息，尽在gome.com.cn，网购《productName》，就到国美在线merchant, RULE_THREE_PRODUCT_DESCRIPTION=国美在线(gome.com.cn)为您提供brandcategoryName的购买信息，如regionsbrandclass的图片、报价、促销等，购买regionsbrandclasscategoryName就到国美在线, RULE_ONE_PRODUCT_KEYWORDS=brandmodelcategoryName, RULE_FIVE_PRODUCT_DESCRIPTION=国美在线提供productName,购买productName就到国美在线。有国美，生活美！, RULE_ONE_PRODUCT_DESCRIPTION=国美在线(gome.com.cn)为您提供brandcategoryName的购买信息，如brandmodelcategoryName的图片、报价、促销等，购买brandmodelcategoryName就到国美在线merchant, RULE_FOUR_PRODUCT_KEYWORDS=productName,authors, RULE_FOUR_PRODUCT_TITLE=《productName》(authors)【简介|评价|摘要|在线阅读】-国美在线merchant, RULE_ONE_PRODUCT_TITLE=【brandmodelcategoryName】productName【图片 价格 品牌 报价】-国美在线merchant, RULE_FIVE_PRODUCT_KEYWORDS=productName, RULE_FIVE_PRODUCT_TITLE=productName【图片 价格 品牌 报价】-国美在线, RULE_TWO_PRODUCT_DESCRIPTION=国美在线(gome.com.cn)为您提供brandcategoryName的购买信息，如brandmodelcategoryNamecolourversion的图片、报价、促销等，购买brandmodelcategoryName就到国美在线merchant, RULE_TWO_PRODUCT_KEYWORDS=brandmodelcategoryNamecolourversion, RULE_THREE_PRODUCT_KEYWORDS=regionsbrandclasscategoryName}
+
+
+
+ProductItemPage [prdInfo=FSGoods [name=乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）, brand=乐视, brandId=10001888, brandCode=01422, salesPromotionTitle=null, description=乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）, productId=9100034968, sku=1000055409, skuId=1000055409, skuNo=1000126777, shopNo=, shopName=, channel=, skuType=ZSP, shelfCtgy=AG02, selltype=0, goodsImgs=[FSLinkImg [alt=null, src=http://img4.atguat.net.cn/image/img/201201/10000066/1000126777/1000226294, ImgOtherAttr={}, href=http://item.atguat.com.cn/bigimage/9100034968-1000055409.html, LinkOtherAttr={}, title=null, target=null, id=null, modelId=null, elemenlTitle=null, content=null, elemenlDescribe=null, imgUrl=null, tolink=null, type=null, elemenlSequence=null, targetSource=null, extend=null, promoName=null, startTime=null, endTime=null, template=null, urlParam=null], FSLinkImg [alt=null, src=http://img4.atguat.net.cn/image/img/201201/10000066/1000126777/1000226295, ImgOtherAttr={}, href=http://item.atguat.com.cn/bigimage/9100034968-1000055409.html, LinkOtherAttr={}, title=null, target=null, id=null, modelId=null, elemenlTitle=null, content=null, elemenlDescribe=null, imgUrl=null, tolink=null, type=null, elemenlSequence=null, targetSource=null, extend=null, promoName=null, startTime=null, endTime=null, template=null, urlParam=null], FSLinkImg [alt=null, src=http://img4.atguat.net.cn/image/img/201201/10000066/1000126777/1000226296, ImgOtherAttr={}, href=http://item.atguat.com.cn/bigimage/9100034968-1000055409.html, LinkOtherAttr={}, title=null, target=null, id=null, modelId=null, elemenlTitle=null, content=null, elemenlDescribe=null, imgUrl=null, tolink=null, type=null, elemenlSequence=null, targetSource=null, extend=null, promoName=null, startTime=null, endTime=null, template=null, urlParam=null], FSLinkImg [alt=null, src=http://img4.atguat.net.cn/image/img/201201/10000066/1000126777/1000226297, ImgOtherAttr={}, href=http://item.atguat.com.cn/bigimage/9100034968-1000055409.html, LinkOtherAttr={}, title=null, target=null, id=null, modelId=null, elemenlTitle=null, content=null, elemenlDescribe=null, imgUrl=null, tolink=null, type=null, elemenlSequence=null, targetSource=null, extend=null, promoName=null, startTime=null, endTime=null, template=null, urlParam=null], FSLinkImg [alt=null, src=http://img4.atguat.net.cn/image/img/201201/10000066/1000126777/1000226298, ImgOtherAttr={}, href=http://item.atguat.com.cn/bigimage/9100034968-1000055409.html, LinkOtherAttr={}, title=null, target=null, id=null, modelId=null, elemenlTitle=null, content=null, elemenlDescribe=null, imgUrl=null, tolink=null, type=null, elemenlSequence=null, targetSource=null, extend=null, promoName=null, startTime=null, endTime=null, template=null, urlParam=null]], goodsModel=[], goodsColor=[], buyWay=[], manualImg=null, stats=1, price=1980.0, gomePrice=1980.0, bztType=-1, bztKey=null, bztText=null, detailHref=http://item.atguat.com.cn/9100034968-1000055409.html, htmlHref=http://desc.atguat.com.cn/html/desc/201201/desc297/1000126777.html, skuVersion=null, affixAttr={coo8Sign=true}, threeDxmlParam=null, threeDmodel=null, threeDflag=false, programId=111111111, vipShopFlag=0, templateId=m10004], productId=9100034968, skuId=1000055409, vipShopFlag=0, title=乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）【图片 价格 品牌 报价】-国美在线, keywords=乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）, description=国美在线提供乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）,购买乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）就到国美在线。有国美，生活美！, prdClass=[FSLinkText [href=http://list.atguat.com.cn/cat10000101.html, LinkOtherAttr={}, title=MID(移动互联网设备), target=_blank, urlParam=null, text=MID(移动互联网设备), TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000302.html, LinkOtherAttr={}, title=电子书, target=_blank, urlParam=null, text=电子书, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000066.html, LinkOtherAttr={}, title=高清播放器, target=_blank, urlParam=null, text=高清播放器, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000172.html, LinkOtherAttr={}, title=录音笔, target=_blank, urlParam=null, text=录音笔, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000173.html, LinkOtherAttr={}, title=收/录音机, target=_blank, urlParam=null, text=收/录音机, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000168.html, LinkOtherAttr={}, title=电子教育, target=_blank, urlParam=null, text=电子教育, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000166.html, LinkOtherAttr={}, title=电子词典, target=_blank, urlParam=null, text=电子词典, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000160.html, LinkOtherAttr={}, title=数码相框, target=_blank, urlParam=null, text=数码相框, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000161.html, LinkOtherAttr={}, title=耳机, target=_blank, urlParam=null, text=耳机, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000158.html, LinkOtherAttr={}, title=MP3/MP4/MP5, target=_blank, urlParam=null, text=MP3/MP4/MP5, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000159.html, LinkOtherAttr={}, title=播放器配件, target=_blank, urlParam=null, text=播放器配件, TextOtherAttr={}]], breadCrumbs=[FSLinkText [href=http://www.atguat.com.cn/, LinkOtherAttr={}, title=首页, target=, urlParam=null, text=首页, TextOtherAttr={}], FSLinkText [href=http://digital.atguat.com.cn/, LinkOtherAttr={}, title=手机、摄影、数码, target=, urlParam=null, text=手机、摄影、数码, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000066.html, LinkOtherAttr={}, title=高清播放器, target=, urlParam=null, text=高清播放器, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E4%B9%90%E8%A7%86, LinkOtherAttr={}, title=乐视高清播放器, target=, urlParam=null, text=乐视高清播放器, TextOtherAttr={}], FSLinkText [href=http://item.atguat.com.cn/9100034968-1000055409.html, LinkOtherAttr={}, title=乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）, target=, urlParam=null, text=乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）, TextOtherAttr={}]], bread=[FSLinkText [href=http://www.atguat.com.cn/, LinkOtherAttr={}, title=首页, target=, urlParam=null, text=首页, TextOtherAttr={}], FSLinkText [href=http://digital.atguat.com.cn/, LinkOtherAttr={}, title=手机、摄影、数码, target=, urlParam=null, text=手机、摄影、数码, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000066.html, LinkOtherAttr={}, title=高清播放器, target=, urlParam=null, text=高清播放器, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E4%B9%90%E8%A7%86, LinkOtherAttr={}, title=乐视高清播放器, target=, urlParam=null, text=乐视高清播放器, TextOtherAttr={}], FSLinkText [href=http://item.atguat.com.cn/9100034968-1000055409.html, LinkOtherAttr={}, title=乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）, target=, urlParam=null, text=乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）, TextOtherAttr={}]], breadName=FSLinkText [href=高清播放器, LinkOtherAttr={}, title=cat10000066, target=10001888, urlParam=null, text=乐视, TextOtherAttr={}], secCategoryName=FSLinkText [href=null, LinkOtherAttr={}, title=时尚数码, target=null, urlParam=null, text=时尚数码, TextOtherAttr={}], categoryName=FSLinkText [href=null, LinkOtherAttr={}, title=手机、摄影、数码, target=null, urlParam=null, text=手机、摄影、数码, TextOtherAttr={}], presellFlag=false, preDetailGoodsInfo=null, prdSpec=[], prdPack=PrdInformationBean [modeTit=null, modeData=null, modeTxt=null, modeInfo=产品*1、说明书*1、保修卡*1], prdService=PrdInformationBean [modeTit=null, modeData=null, modeTxt=null, modeInfo=全国联保，享受国家三包服务], prdHelper=null, seoShowLinks=null, seoNoShowLinks=null, wapShowLinks=null, seoAppraisal=null, seoAdvice=null, merchantInfo=null, firstCategoryId=cat10000000, secondCategoryId=cat10000013, thirdCategoryId=cat10000066, brandId=10001888, brandCode=01422, coo8thirdCategoryId=null, prdDescSpec=[PrdInformationBean [modeTit=null, modeData=null, modeTxt=商品名称, modeInfo=乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）]], prdDescription=null, categoryRank=null, relatedBrands=[], prodVideoInfo=ProdVideoBean [uu=null, vu=null, auto_play=null, videoFlag=null, videoPosition=null], shopCategory=null, serviceTags={back_no=不支持7天无理由退货, genuine=测试正品保障标签}, rankinglist=null, flagshipShop=null]
+
+
+
+
+Title -----------------------------------------
+乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）【图片 价格 品牌 报价】-国美在线
+Description -----------------------------------------
+国美在线提供乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）,购买乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）就到国美在线。有国美，生活美！
+KeyWords -----------------------------------------
+乐视LETV-S30云视频超清机（炫酷黑）（3D超清1080P）
+
+
+
+
+新增：ProdBigServiceImpl、ProdBigTDKDec
+
+
+忠县忠州镇行政审批大厅2楼
+
+
+热搜词获取：
+_http://nlr.atguat.com.cn/seoservice/晾衣架测试  MINI：品牌或三级分类名称
+_http://nlr.gome.com.cn/seoservice/MINI 生产
+
+
+生产查缓存：
+hget 1X:Category-cat31665542 tdkModelId 
+hget 1X:Category-cat8670034 tdkModelId
+_http://10.58.22.193:8888/gcache-admin/webcommand/read.vm
+use GPRODCACHE
+
+
+
+stage-web-seo
+gome-detail-service-seo
+
+
+stage-base-seo:
+stage-model
+stage-common
+
+你好：uat-stage_web_seo-tomcat-10.58.57.95-3254 发版报错，
+
+错误信息：
+正在连接 10.126.60.61:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 404 Not Found
+2016-10-17 19:39:02 错误 404：Not Found。
+
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
+
+
+
+{colour=海蓝色, authors=, categoryName=笔记本, model=, merchant=国美自营, introduce=, class=, brand=, regions=, productName=联想（lenovo）Z470At2330W42G750P7C(BE)笔记本电脑, version=}
+
+
+ [name=联想（lenovo）Z470At2330W42G750P7C(BE)笔记本电脑, brand=联想, brandId=10000085, brandCode=00169, salesPromotionTitle=null, description=联想（lenovo）Z470At2330W42G750P7C(BE)笔记本电脑, productId=9010000388, sku=1000035731, skuId=1000035731, skuNo=1000111567, shopNo=, shopName=, channel=, skuType=ZSP, shelfCtgy=AC01, selltype=0, goodsImgs=[FSLinkImg [alt=null, src=http://img4.atguat.net.cn/image/prodimg/production_image/201509/21/1000035731/1000001641, ImgOtherAttr={}, href=http://item.atguat.com.cn/bigimage/9010000388-1000035731.html, LinkOtherAttr={}, title=null, target=null, id=null, modelId=null, elemenlTitle=null, content=null, elemenlDescribe=null, imgUrl=null, tolink=null, type=null, elemenlSequence=null, targetSource=null, extend=null, promoName=null, startTime=null, endTime=null, template=null, urlParam=null], FSLinkImg [alt=null, src=http://img4.atguat.net.cn/image/prodimg/production_image/201509/21/1000035731/1000001639, ImgOtherAttr={}, href=http://item.atguat.com.cn/bigimage/9010000388-1000035731.html, LinkOtherAttr={}, title=null, target=null, id=null, modelId=null, elemenlTitle=null, content=null, elemenlDescribe=null, imgUrl=null, tolink=null, type=null, elemenlSequence=null, targetSource=null, extend=null, promoName=null, startTime=null, endTime=null, template=null, urlParam=null], FSLinkImg [alt=null, src=http://img4.atguat.net.cn/image/img/201109/10000092/1000111567/1000130827, ImgOtherAttr={}, href=http://item.atguat.com.cn/bigimage/9010000388-1000035731.html, LinkOtherAttr={}, title=null, target=null, id=null, modelId=null, elemenlTitle=null, content=null, elemenlDescribe=null, imgUrl=null, tolink=null, type=null, elemenlSequence=null, targetSource=null, extend=null, promoName=null, startTime=null, endTime=null, template=null, urlParam=null], FSLinkImg [alt=null, src=http://img4.atguat.net.cn/image/img/201109/10000092/1000111567/1000130825, ImgOtherAttr={}, href=http://item.atguat.com.cn/bigimage/9010000388-1000035731.html, LinkOtherAttr={}, title=null, target=null, id=null, modelId=null, elemenlTitle=null, content=null, elemenlDescribe=null, imgUrl=null, tolink=null, type=null, elemenlSequence=null, targetSource=null, extend=null, promoName=null, startTime=null, endTime=null, template=null, urlParam=null], FSLinkImg [alt=null, src=http://img4.atguat.net.cn/image/img/201109/10000092/1000111567/1000130824, ImgOtherAttr={}, href=http://item.atguat.com.cn/bigimage/9010000388-1000035731.html, LinkOtherAttr={}, title=null, target=null, id=null, modelId=null, elemenlTitle=null, content=null, elemenlDescribe=null, imgUrl=null, tolink=null, type=null, elemenlSequence=null, targetSource=null, extend=null, promoName=null, startTime=null, endTime=null, template=null, urlParam=null]], goodsModel=[], goodsColor=[], buyWay=[], manualImg=null, stats=1, price=3888.0, gomePrice=3899.0, bztType=-1, bztKey=null, bztText=null, detailHref=http://item.atguat.com.cn/9010000388-1000035731.html, htmlHref=http://desc.atguat.com.cn/html/desc/201112/desc257/1000111567.html, skuVersion=null, affixAttr={玛瑙粉&XL=1000035733, 海蓝色&L=1000035731, coo8Sign=true}, threeDxmlParam=null, threeDmodel=null, threeDflag=false, programId=111111111, vipShopFlag=0, templateId=m10005], productId=9010000388, skuId=1000035731, vipShopFlag=0, title=联想（lenovo）Z470At2330W42G750P7C(BE)笔记本电脑【图片 价格 品牌 报价】-国美在线, keywords=联想（lenovo）Z470At2330W42G750P7C(BE)笔记本电脑, description=国美在线提供联想（lenovo）Z470At2330W42G750P7C(BE)笔记本电脑,购买联想（lenovo）Z470At2330W42G750P7C(BE)笔记本电脑就到国美在线。有国美，生活美！, prdClass=[FSLinkText [href=http://list.atguat.com.cn/cat10000093.html, LinkOtherAttr={}, title=上网本, target=_blank, urlParam=null, text=上网本, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000094.html, LinkOtherAttr={}, title=平板电脑, target=_blank, urlParam=null, text=平板电脑, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat21431454.html, LinkOtherAttr={}, title=负卖及预售测试数据, target=_blank, urlParam=null, text=负卖及预售测试数据, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat20361465.html, LinkOtherAttr={}, title=区域售价测试数据, target=_blank, urlParam=null, text=区域售价测试数据, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat11360010.html, LinkOtherAttr={}, title=测试数据, target=_blank, urlParam=null, text=测试数据, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat25961452.html, LinkOtherAttr={}, title=性能测试专用分类, target=_blank, urlParam=null, text=性能测试专用分类, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat23281452.html, LinkOtherAttr={}, title=开仓测试商品数据, target=_blank, urlParam=null, text=开仓测试商品数据, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat23941458.html, LinkOtherAttr={}, title=购物流程优化, target=_blank, urlParam=null, text=购物流程优化, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat26961480.html, LinkOtherAttr={}, title=分类test, target=_blank, urlParam=null, text=分类test, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat26921508.html, LinkOtherAttr={}, title=自动化专用测试数据, target=_blank, urlParam=null, text=自动化专用测试数据, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10005442.html, LinkOtherAttr={}, title=超极本, target=_blank, urlParam=null, text=超极本, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000092.html, LinkOtherAttr={}, title=笔记本, target=_blank, urlParam=null, text=笔记本, TextOtherAttr={}]], breadCrumbs=[FSLinkText [href=http://www.atguat.com.cn/, LinkOtherAttr={}, title=首页, target=, urlParam=null, text=首页, TextOtherAttr={}], FSLinkText [href=http://computer.atguat.com.cn/, LinkOtherAttr={}, title=电脑、办公打印、文仪、礼品卡, target=, urlParam=null, text=电脑、办公打印、文仪、礼品卡, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000092.html, LinkOtherAttr={}, title=笔记本, target=, urlParam=null, text=笔记本, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E8%81%94%E6%83%B3, LinkOtherAttr={}, title=联想笔记本, target=, urlParam=null, text=联想笔记本, TextOtherAttr={}], FSLinkText [href=http://item.atguat.com.cn/9010000388-1000035731.html, LinkOtherAttr={}, title=联想（lenovo）Z470At2330W42G750P7C(BE)笔记本电脑, target=, urlParam=null, text=联想（lenovo）Z470At2330W42G750P7C(BE)笔记本电脑, TextOtherAttr={}]], bread=[FSLinkText [href=http://www.atguat.com.cn/, LinkOtherAttr={}, title=首页, target=, urlParam=null, text=首页, TextOtherAttr={}], FSLinkText [href=http://computer.atguat.com.cn/, LinkOtherAttr={}, title=电脑、办公打印、文仪、礼品卡, target=, urlParam=null, text=电脑、办公打印、文仪、礼品卡, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000092.html, LinkOtherAttr={}, title=笔记本, target=, urlParam=null, text=笔记本, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E8%81%94%E6%83%B3, LinkOtherAttr={}, title=联想笔记本, target=, urlParam=null, text=联想笔记本, TextOtherAttr={}], FSLinkText [href=http://item.atguat.com.cn/9010000388-1000035731.html, LinkOtherAttr={}, title=联想（lenovo）Z470At2330W42G750P7C(BE)笔记本电脑, target=, urlParam=null, text=联想（lenovo）Z470At2330W42G750P7C(BE)笔记本电脑, TextOtherAttr={}]], breadName=FSLinkText [href=笔记本, LinkOtherAttr={}, title=cat10000092, target=10000085, urlParam=null, text=联想, TextOtherAttr={}], secCategoryName=FSLinkText [href=null, LinkOtherAttr={}, title=笔记本, target=null, urlParam=null, text=笔记本, TextOtherAttr={}], categoryName=FSLinkText [href=null, LinkOtherAttr={}, title=电脑、办公打印、文仪、礼品卡, target=null, urlParam=null, text=电脑、办公打印、文仪、礼品卡, TextOtherAttr={}], presellFlag=false, preDetailGoodsInfo=null, prdSpec=[], prdPack=PrdInformationBean [modeTit=null, modeData=null, modeTxt=null, modeInfo=笔记本*1,适配器*1,电池*1,质保卡*1,说明书*1 ], prdService=PrdInformationBean [modeTit=null, modeData=null, modeTxt=null, modeInfo=本产品全国联保，享受三包服务，质保期为：二年质保 。售后服务电话：800-810-8888 。品牌官方网站：http://www.lenovo.com.cn/ 。特别说明：国美网上商城会尽力为您提供标准、全面的信息，但不对信 息中可能出现的错误或遗漏承担责任。产品图片仅供参考，请以销售实物为准。以上内容如有变动，恕不另行通知。], prdHelper=[PrdInformationBean [modeTit=问题来了, modeData=null, modeTxt=null, modeInfo=<a href="">我有问题我自豪</a><a href="">我有问题我自豪</a><a href="">我有问题我自豪</a><a href="">我有问题我自豪</a><a href="">我有问题我自豪</a>]], seoShowLinks=[FSLinkText [href=http://item.gomehigo.hk/, LinkOtherAttr={}, title=111, target=null, urlParam=null, text=null, TextOtherAttr={}]], seoNoShowLinks=[], wapShowLinks=[FSLinkText [href=null, LinkOtherAttr={}, title=null, target=null, urlParam=null, text=null, TextOtherAttr={}]], seoAppraisal=null, seoAdvice=null, merchantInfo=null, firstCategoryId=cat10000001, secondCategoryId=cat10000015, thirdCategoryId=cat10000092, brandId=10000085, brandCode=00169, coo8thirdCategoryId=null, prdDescSpec=[PrdInformationBean [modeTit=null, modeData=null, modeTxt=商品名称, modeInfo=联想（lenovo）Z470At2330W42G750P7C(BE)笔记本电脑]], prdDescription=null, categoryRank=null, relatedBrands=[], prodVideoInfo=ProdVideoBean [uu=null, vu=null, auto_play=null, videoFlag=null, videoPosition=null], shopCategory=null, serviceTags={back_no=不支持7天无理由退货, genuine=测试正品保障标签, warranty_180=测试保180天}, rankinglist=null, flagshipShop=null]
+**** INFO     2016-10-18 11:25:40,614  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:55)  -  
+
+
+
+
+
+com.gome.stage.interfaces.item.IProductInfoService
+
+
+16:12yuanye-ds(袁野.信息技术中心.EC开发部)List<GoodsInfo> getGoodsInfos(List<String> skuIds, String imagesize)
+1.0.0.094  商品服务 product_item_service
+
+
+
+
+
+**** INFO     2016-10-22 12:16:52,800  -  org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)  -  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@44980228: startup date [Sat Oct 22 12:16:52 CST 2016]; root of context hierarchy
+**** INFO     2016-10-22 12:16:52,857  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [application.xml]
+**** INFO     2016-10-22 12:16:53,149  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [application-config-all.xml]
+**** INFO     2016-10-22 12:16:53,166  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [application-config-for-global.xml]
+**** INFO     2016-10-22 12:16:53,189  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [application-config-for-env-props.xml]
+**** INFO     2016-10-22 12:16:53,204  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [application-config-for-diamond.xml]
+**** INFO     2016-10-22 12:16:53,219  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [application-util-all.xml]
+**** INFO     2016-10-22 12:16:53,232  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [application-util-common.xml]
+**** INFO     2016-10-22 12:16:53,247  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [application-util-for-cache.xml]
+**** INFO     2016-10-22 12:16:53,294  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [application-util-for-monitor.xml]
+**** INFO     2016-10-22 12:16:53,318  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [application-util-for-timeout.xml]
+**** INFO     2016-10-22 12:16:53,335  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [application-common-redis.xml]
+**** INFO     2016-10-22 12:16:53,480  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [dubbo-registry.xml]
+**** INFO     2016-10-22 12:16:53,522  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [dubbo-customer.xml]
+**** INFO     2016-10-22 12:16:53,545  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [dubbo-provider-all.xml]
+**** INFO     2016-10-22 12:16:53,553  -  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)  -  Loading XML bean definitions from class path resource [dubbo-provider-detail.xml]
+**** INFO     2016-10-22 12:16:53,726  -    -  using logger: com.gome.stage.logger.log4j.Log4jLoggerAdapter
+**** INFO     2016-10-22 12:16:53,734  -  org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)  -  Loading properties file from URL [file:/weblogic/simulate/item-global-config.properties]
+**** WARN     2016-10-22 12:16:53,735  -  org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:181)  -  Could not load properties from URL [file:/weblogic/simulate/item-global-config.properties]: weblogicsimulateitem-global-config.properties (系统找不到指定的路径。)
+**** WARN     2016-10-22 12:16:53,757  -  com.taobao.diamond.utils.LoggerInit.initLogFromBizLog(LoggerInit.java:70)  -  上层业务层没有在ROOT LOGGER上设置FileAppender!!!
+**** WARN     2016-10-22 12:16:53,758  -  com.taobao.diamond.utils.LoggerInit.setFileAppender(LoggerInit.java:93)  -  成功为DiamondConfigDataLog添加Appender. 输出路径:C:Usersshouanxindiamondlogsdiamond_config_data.log
+**** WARN     2016-10-22 12:16:53,767  -  com.taobao.diamond.utils.PropertiesUtils.setValueFromConf(PropertiesUtils.java:21)  -  file not exsits,/conf/conf.properties
+**** INFO     2016-10-22 12:16:53,768  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.addDataId(DefaultDiamondSubscriber.java:1155)  -  diamond client start:2016年10月22日   12:16:53
+**** INFO     2016-10-22 12:16:53,769  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.addDataId(DefaultDiamondSubscriber.java:1175)  -  添加了DataID[item_dianmond_dataid]，其Group为item_diamond_group
+**** INFO     2016-10-22 12:16:53,838  -  com.taobao.diamond.client.processor.ServerAddressProcessor.synAcquireServerAddress(ServerAddressProcessor.java:171)  -  在同步获取服务器列表时，向线上ConfigServer服务器获取到了服务器列表
+**** INFO     2016-10-22 12:16:53,845  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.start(DefaultDiamondSubscriber.java:154)  -  当前使用的域名有：[10.58.57.58, 10.58.57.54]
+**** INFO     2016-10-22 12:16:53,847  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.getConfigureInfomation(DefaultDiamondSubscriber.java:581)  -  /diamond-server/config.co?dataId=item_dianmond_dataid&group=item_diamond_group
+**** INFO     2016-10-22 12:16:53,847  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.getConfigureInfomation(DefaultDiamondSubscriber.java:588)  -  设定的获取配置数据的重试次数为：214748364
+**** INFO     2016-10-22 12:16:53,847  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.getConfigureInfomation(DefaultDiamondSubscriber.java:599)  -  获取配置数据，第1次尝试, waitTime:0
+**** INFO     2016-10-22 12:16:53,872  -  com.gome.stage.config.diamond.StageDiamondPropertyPlaceholderConfigurer.fetchPropertiesFromDiamondServer(StageDiamondPropertyPlaceholderConfigurer.java:54)  -   [Gome-Stage] diamond配置信息初始化.
+**** INFO     2016-10-22 12:16:53,944  -  org.springframework.context.support.AbstractApplicationContext$BeanPostProcessorChecker.postProcessAfterInitialization(AbstractApplicationContext.java:1374)  -  Bean '(inner bean)' of type [class org.springframework.aop.aspectj.AspectJAroundAdvice] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+**** INFO     2016-10-22 12:16:54,041  -  org.springframework.context.support.AbstractApplicationContext$BeanPostProcessorChecker.postProcessAfterInitialization(AbstractApplicationContext.java:1374)  -  Bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0' of type [class org.springframework.aop.aspectj.AspectJPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+**** INFO     2016-10-22 12:16:54,043  -  org.springframework.context.support.AbstractApplicationContext$BeanPostProcessorChecker.postProcessAfterInitialization(AbstractApplicationContext.java:1374)  -  Bean '(inner bean)#2' of type [class org.springframework.aop.aspectj.AspectJAroundAdvice] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+**** INFO     2016-10-22 12:16:54,044  -  org.springframework.context.support.AbstractApplicationContext$BeanPostProcessorChecker.postProcessAfterInitialization(AbstractApplicationContext.java:1374)  -  Bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1' of type [class org.springframework.aop.aspectj.AspectJPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+**** INFO     2016-10-22 12:16:54,045  -  org.springframework.context.support.AbstractApplicationContext$BeanPostProcessorChecker.postProcessAfterInitialization(AbstractApplicationContext.java:1374)  -  Bean '(inner bean)#4' of type [class org.springframework.aop.aspectj.AspectJAroundAdvice] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+**** INFO     2016-10-22 12:16:54,046  -  org.springframework.context.support.AbstractApplicationContext$BeanPostProcessorChecker.postProcessAfterInitialization(AbstractApplicationContext.java:1374)  -  Bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2' of type [class org.springframework.aop.aspectj.AspectJPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+**** INFO     2016-10-22 12:16:54,132  -  org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:596)  -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6e9cf32: defining beans [com.gome.stage.config.GlobalConfig#0,com.gome.stage.properties.RefreshableProperties#0,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,com.gome.stage.config.diamond.StageDiamondPropertyPlaceholderConfigurer#0,com.gome.stage.spring.BeanFactoryExporter#0,com.gome.stage.spring.BeanSelfProcessor#0,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.aspectj.AspectJPointcutAdvisor#0,aroundServiceCacheable,serviceCacheableInterceptor,com.gome.stage.cache.StageCache#0,org.springframework.aop.aspectj.AspectJPointcutAdvisor#1,aroundServiceMonitorable,serviceMonitorableInterceptor,org.springframework.aop.aspectj.AspectJPointcutAdvisor#2,aroundTimeoutRecordable,timeoutRecordableInterceptor,basicConverter,timeConverter,hashConverter,propertyResolver,redisCacheManipulator,redisCacheClientManipulator,redisMultiQuery,redisMultiQueryV2,mongoService,redisServiceWorker,superProductService,superProductServiceV2,priceGcacheClient,prodGcacheClient,palmGcacheClient,promprdGcacheClient,bbcSkuSalePriceCheckGcacheClient,ranklistgome,warrantyGcacheClient,WithOutPayGcacheClient,reserveBuyGcacheClient,promotionPresellGcacheClient,mobileGcacheClient,sLoganGcacheClient,c2mGcacheClient,twoElementGcacheClient,reserveClient,redisCacheClient,upgradeService,itemConstant,proxyServiceTag,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,gome-detail-service-seo,com.alibaba.dubbo.config.ProviderConfig,dubbo,itemRegistry,cacheRegistry,mongoRegistry,com.alibaba.dubbo.config.ConsumerConfig,cacheService,priceService,productInfoService,dataBaseService,categoryService,prodSpecService,com.gome.frontSe.interfaces.IProdDetailService,com.gome.frontSe.interfaces.IProdDetailService2,com.gome.stage.interfaces.details.IProdC2MDetailService,productDetailService,productBigDetailService,c2MDetailService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+当前环境是：uat
+当前环境 dubbo 注册地址：10.58.57.58:2181,10.58.57.54:2181,10.58.57.48:2181
+**** INFO     2016-10-22 12:16:54,399  -  com.gome.stage.cache.StageCache.reload(StageCache.java:60)  -  [service_cache_5_minutes, associate_cat_brand_cache, service_cache_30_minutes, service_tag_cache, item, service_cache_15_minutes, service_cache_one_minute, service_collection_cache_one_minute, brand_facetid_cache, associate_cat_cache, cat_rule_cache, prod_model_cache, service_cache_10_minutes]
+**** INFO     2016-10-22 12:16:55,033  -  org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)  -  Starting ZkClient event thread.
+**** INFO     2016-10-22 12:16:55,074  -  org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)  -  zookeeper state changed (SyncConnected)
+**** INFO     2016-10-22 12:16:58,503  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/GPRICECACHE,data=cluster:common_cluster|namespace:1A|loadbalance:ramdom|master:r1|slave:r0|clusterstate:simple|permits:10000
+**** INFO     2016-10-22 12:16:58,613  -  redis.gcache.core.ZookeeperWatcher.createJedisCluster(ZookeeperWatcher.java:284)  -  create jedis cluster with nodes:[10.126.59.66:8302, 10.126.59.66:8303, 10.126.59.66:8304, 10.126.59.66:8305, 10.126.59.66:8300, 10.126.59.66:8301, 10.126.59.66:8311, 10.126.59.66:8310, 10.126.59.66:8307, 10.126.59.66:8306, 10.126.59.66:8309, 10.126.59.66:8308]
+**** INFO     2016-10-22 12:16:58,962  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/BCCSKUSALEPRICECHECK,data=cluster:common_cluster|namespace:T|loadbalance:ramdom|master:r1|slave:r0|clusterstate:simple|permits:10000
+**** INFO     2016-10-22 12:16:58,972  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/GPRODCACHE,data=cluster:common_cluster|namespace:b|loadbalance:ramdom|master:r1|slave:r0|clusterstate:simple|permits:10000
+**** INFO     2016-10-22 12:16:58,980  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/PALM_VIP_CASE,data=cluster:common_cluster|namespace:V|loadbalance:ramdom|master:r1|slave:r0|clusterstate:simple|permits:10000
+**** INFO     2016-10-22 12:16:58,990  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/PROM_PRD_SERVICES,data=cluster:common_cluster|namespace:1/|loadbalance:ramdom|master:r1|slave:r0|clusterstate:simple|permits:100
+**** INFO     2016-10-22 12:16:58,998  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/LONGTEXT,data=cluster:common_cluster|namespace:1o|loadbalance:ramdom|master:r1|slave:r0|clusterstate:simple|permits:100
+**** INFO     2016-10-22 12:16:59,007  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/RESERVEBUY,data=cluster:common_cluster|namespace:O|loadbalance:ramdom|master:r1|slave:r1|clusterstate:simple|permits:100
+**** INFO     2016-10-22 12:16:59,016  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/PRICE_BRAND_TYPE_RANKLIST_GOME,data=cluster:common_cluster|namespace:3i|loadbalance:random|master:r1|slave:r1|clusterstate:simple|permits:1000
+**** INFO     2016-10-22 12:16:59,024  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/GCC_BAI_NA,data=cluster:common_cluster|namespace:3p|loadbalance:random|master:r1|slave:r1|clusterstate:simple|permits:1000
+**** INFO     2016-10-22 12:16:59,031  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/GCC_MOBILE_NUMBER,data=cluster:common_cluster|namespace:3M|loadbalance:random|master:r1|slave:r0|clusterstate:simple|permits:1000
+**** INFO     2016-10-22 12:16:59,038  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/GCC_PROD_SLOGAN_CONFIG,data=cluster:common_cluster|namespace:3J|loadbalance:random|master:r1|slave:r1|clusterstate:simple|permits:1000
+**** INFO     2016-10-22 12:16:59,045  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/GCC_C2M_CONFIG,data=cluster:common_cluster|namespace:3Z|loadbalance:random|master:r1|slave:r0|clusterstate:simple|permits:1000
+**** INFO     2016-10-22 12:16:59,053  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/TWOELEMENT,data=cluster:common_cluster|namespace:15|loadbalance:ramdom|master:r1|slave:r0|clusterstate:simple|permits:100
+**** INFO     2016-10-22 12:16:59,060  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/RESERVEBUY,data=cluster:common_cluster|namespace:O|loadbalance:ramdom|master:r1|slave:r1|clusterstate:simple|permits:100
+**** INFO     2016-10-22 12:16:59,282  -  redis.gcache.core.ZookeeperWatcher.initBusinessWatcher(ZookeeperWatcher.java:234)  -  businessWathcer init: path=/gcache/businesses/GCC_PROMOTIONPRESE,data=cluster:common_cluster|namespace:3t|loadbalance:random|master:r1|slave:r1|clusterstate:simple|permits:1000
+Logger file D:catmonitorapplogscatcat_20161022.log
+**** INFO     2016-10-22 12:17:00,366  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.addDataId(DefaultDiamondSubscriber.java:1155)  -  diamond client start:2016年10月22日   12:17:00
+**** INFO     2016-10-22 12:17:00,366  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.addDataId(DefaultDiamondSubscriber.java:1175)  -  添加了DataID[gcat-client-config]，其Group为gcat
+**** INFO     2016-10-22 12:17:00,366  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.getConfigureInfomation(DefaultDiamondSubscriber.java:581)  -  /diamond-server/config.co?dataId=gcat-client-config&group=gcat
+**** INFO     2016-10-22 12:17:00,366  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.getConfigureInfomation(DefaultDiamondSubscriber.java:588)  -  设定的获取配置数据的重试次数为：214748364
+**** INFO     2016-10-22 12:17:00,366  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.getConfigureInfomation(DefaultDiamondSubscriber.java:599)  -  获取配置数据，第1次尝试, waitTime:0
+[10-22 12:17:01.001] [WARN] [cat] Cat is lazy initialized!
+**** INFO     2016-10-22 12:17:01,742  -  com.gome.item.product.decorator.AppraiseAndEvaluateDec.setAppraiseData(AppraiseAndEvaluateDec.java:36)  -   [Gome-Stage] http://ss.gome.com.cn/item/v1/prdevajsonp/appraiseModuleAjax/prod25420045/1/all/flag/appraise/evaluateData?callback=evaluateData
+**** INFO     2016-10-22 12:17:02,031  -  com.gome.item.product.decorator.SeoHotWordsDec.setHotWordsData(SeoHotWordsDec.java:50)  -   [Gome-Stage] categoryName: GSM手机
+**** INFO     2016-10-22 12:17:02,032  -  com.gome.item.product.decorator.SeoHotWordsDec.getHotWordsUtil(SeoHotWordsDec.java:83)  -   [Gome-Stage] http://nlr.atguat.com.cn/seoservice/GSM手机
+**** INFO     2016-10-22 12:17:02,070  -  com.gome.item.product.decorator.SeoHotWordsDec.getHotWordsUtil(SeoHotWordsDec.java:89)  -   [Gome-Stage] result: {"state":"0","remark":"暂无数据"}
+
+**** INFO     2016-10-22 12:17:02,085  -  com.gome.item.product.decorator.SeoHotWordsDec.getHotWordsUtil(SeoHotWordsDec.java:95)  -   [Gome-Stage] 热词：{"remark":"暂无数据","state":"0"}
+**** INFO     2016-10-22 12:17:02,085  -  com.gome.item.product.decorator.SeoHotWordsDec.setHotWordsData(SeoHotWordsDec.java:59)  -   [Gome-Stage] brandName: 先科
+**** INFO     2016-10-22 12:17:02,085  -  com.gome.item.product.decorator.SeoHotWordsDec.getHotWordsUtil(SeoHotWordsDec.java:83)  -   [Gome-Stage] http://nlr.atguat.com.cn/seoservice/先科
+**** INFO     2016-10-22 12:17:02,112  -  com.gome.item.product.decorator.SeoHotWordsDec.getHotWordsUtil(SeoHotWordsDec.java:89)  -   [Gome-Stage] result: {"state":"1","html":"[{"hotwordsUrl":"http://www.gome.com.cn/hotwords/20160819/79/","title":"先科小音响"},{"hotwordsUrl":"http://www.gome.com.cn/hotwords/20160819/279/","title":"先科小音响"},{"hotwordsUrl":"http://www.gome.com.cn/hotwords/20160819/479/","title":"先科小音响"}]","remark":""}
+
+**** INFO     2016-10-22 12:17:02,114  -  com.gome.item.product.decorator.SeoHotWordsDec.getHotWordsUtil(SeoHotWordsDec.java:95)  -   [Gome-Stage] 热词：{"remark":"","state":"1","html":[{"title":"先科小音响","hotwordsUrl":"http://www.gome.com.cn/hotwords/20160819/79/"},{"title":"先科小音响","hotwordsUrl":"http://www.gome.com.cn/hotwords/20160819/279/"},{"title":"先科小音响","hotwordsUrl":"http://www.gome.com.cn/hotwords/20160819/479/"}]}
+**** INFO     2016-10-22 12:17:02,115  -  com.gome.item.product.decorator.SeoRecommendDec.setTuiJianDate(SeoRecommendDec.java:67)  -   [Gome-Stage] http://tuijian.bigdata.api:8080/gome/rec?callback=jsonpname_qitaleisi&boxid=box38&pid=prod25420045&area=11010000&cid=null&imagesize=130&brid=10000064&shopid=null&c1id=cat10000000&c3id=cat10000070&sid=null
+**** INFO     2016-10-22 12:17:02,215  -  com.gome.item.product.decorator.SeoRecommendDec.setCaiNiXiHuan(SeoRecommendDec.java:120)  -   [Gome-Stage] http://bigd.gome.com.cn/gome/rec?callback=null&boxid=box37&pid=prod25420045&area=11010000&cid=null&uid=null&imagesize=130&brid=10000064&shopid=null&c1id=cat10000000&c3id=cat10000070&sid=null
+**** INFO     2016-10-22 12:17:02,300  -  com.gome.item.services.ProdDetailServiceImpl.getProductDetail(ProdDetailServiceImpl.java:229)  -   [Gome-Stage] 处理客户端商品 id: prod25420045 请求总时长超过2s，时长为>>>：2 秒
+**** INFO     2016-10-22 12:17:02,300  -  com.gome.item.services.ProdDetailServiceImpl.getProductDetail(ProdDetailServiceImpl.java:237)  -   [Gome-Stage] 详情HotWords数据：
+**** INFO     2016-10-22 12:17:02,301  -  com.gome.item.services.ProdDetailServiceImpl.getProductDetail(ProdDetailServiceImpl.java:238)  -   [Gome-Stage] {"remark":"","state":"1","html":[{"title":"先科小音响","hotwordsUrl":"http://www.gome.com.cn/hotwords/20160819/79/"},{"title":"先科小音响","hotwordsUrl":"http://www.gome.com.cn/hotwords/20160819/279/"},{"title":"先科小音响","hotwordsUrl":"http://www.gome.com.cn/hotwords/20160819/479/"}]}
+**** INFO     2016-10-22 12:17:02,301  -  com.gome.item.services.ProdDetailServiceImpl.getProductDetail(ProdDetailServiceImpl.java:239)  -   [Gome-Stage] 详情Introduce数据：
+**** INFO     2016-10-22 12:17:02,301  -  com.gome.item.services.ProdDetailServiceImpl.getProductDetail(ProdDetailServiceImpl.java:240)  -   [Gome-Stage] "手机GSM2-3pp???GSM手机"
+**** INFO     2016-10-22 12:17:02,301  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:52)  -  基本信息 -----------------------------------------
+**** INFO     2016-10-22 12:17:02,301  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:53)  -  ProductItemPage [prdInfo=FSGoods [name=手机GSM2-3pp, brand=先科, brandId=10000064, brandCode=00274, salesPromotionTitle=null, description=手机GSM2-3pp, productId=prod25420045, sku=sku25410021, skuId=sku25410021, skuNo=1000195481, shopNo=, shopName=, channel=, skuType=ZSP, shelfCtgy=AA01, selltype=5, goodsImgs=[], goodsModel=[], goodsColor=[], buyWay=[], manualImg=null, stats=1, price=1900.0, gomePrice=1900.0, bztType=-1, bztKey=null, bztText=null, detailHref=http://item.atguat.com.cn/prod25420045-sku25410021.html, htmlHref=http://desc.atguat.com.cn/html/null, skuVersion=null, affixAttr={coo8Sign=true}, threeDxmlParam=null, threeDmodel=null, threeDflag=false, programId=111111111, vipShopFlag=0, templateId=m10004], productId=prod25420045, skuId=sku25410021, vipShopFlag=0, title=手机GSM2-3pp【图片 价格 品牌 报价】-国美在线, keywords=手机GSM2-3pp, description=国美在线提供手机GSM2-3pp,购买手机GSM2-3pp就到国美在线。有国美，生活美！, prdClass=[FSLinkText [href=http://list.atguat.com.cn/cat10000070.html, LinkOtherAttr={}, title=GSM手机, target=_blank, urlParam=null, text=GSM手机, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000075.html, LinkOtherAttr={}, title=双模手机, target=_blank, urlParam=null, text=双模手机, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000076.html, LinkOtherAttr={}, title=对讲机, target=_blank, urlParam=null, text=对讲机, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000072.html, LinkOtherAttr={}, title=移动3G手机, target=_blank, urlParam=null, text=移动3G手机, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000073.html, LinkOtherAttr={}, title=联通3G手机, target=_blank, urlParam=null, text=联通3G手机, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000074.html, LinkOtherAttr={}, title=电信3G手机, target=_blank, urlParam=null, text=电信3G手机, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10385552.html, LinkOtherAttr={}, title=业务用户测试专场, target=_blank, urlParam=null, text=业务用户测试专场, TextOtherAttr={}]], breadCrumbs=[FSLinkText [href=http://www.atguat.com.cn/, LinkOtherAttr={}, title=首页, target=, urlParam=null, text=首页, TextOtherAttr={}], FSLinkText [href=http://digital.atguat.com.cn/, LinkOtherAttr={}, title=手机、摄影、数码, target=, urlParam=null, text=手机、摄影、数码, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000070.html, LinkOtherAttr={}, title=GSM手机, target=, urlParam=null, text=GSM手机, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E5%85%88%E7%A7%91, LinkOtherAttr={}, title=先科GSM手机, target=, urlParam=null, text=先科GSM手机, TextOtherAttr={}], FSLinkText [href=http://item.atguat.com.cn/prod25420045-sku25410021.html, LinkOtherAttr={}, title=手机GSM2-3pp, target=, urlParam=null, text=手机GSM2-3pp, TextOtherAttr={}]], bread=[FSLinkText [href=http://www.atguat.com.cn/, LinkOtherAttr={}, title=首页, target=, urlParam=null, text=首页, TextOtherAttr={}], FSLinkText [href=http://digital.atguat.com.cn/, LinkOtherAttr={}, title=手机、摄影、数码, target=, urlParam=null, text=手机、摄影、数码, TextOtherAttr={}], FSLinkText [href=http://list.atguat.com.cn/cat10000070.html, LinkOtherAttr={}, title=GSM手机, target=, urlParam=null, text=GSM手机, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E5%85%88%E7%A7%91, LinkOtherAttr={}, title=先科GSM手机, target=, urlParam=null, text=先科GSM手机, TextOtherAttr={}], FSLinkText [href=http://item.atguat.com.cn/prod25420045-sku25410021.html, LinkOtherAttr={}, title=手机GSM2-3pp, target=, urlParam=null, text=手机GSM2-3pp, TextOtherAttr={}]], breadName=FSLinkText [href=GSM手机, LinkOtherAttr={}, title=cat10000070, target=10000064, urlParam=null, text=先科, TextOtherAttr={}], secCategoryName=FSLinkText [href=null, LinkOtherAttr={}, title=手机, target=null, urlParam=null, text=手机, TextOtherAttr={}], categoryName=FSLinkText [href=null, LinkOtherAttr={}, title=手机、摄影、数码, target=null, urlParam=null, text=手机、摄影、数码, TextOtherAttr={}], presellFlag=false, preDetailGoodsInfo=null, prdSpec=[PrdInformationBean [modeTit=主体, modeData=[PrdInformationBean [modeTit=null, modeData=null, modeTxt=品牌, modeInfo=???], PrdInformationBean [modeTit=null, modeData=null, modeTxt=换气, modeInfo=详情页面包屑修改]], modeTxt=null, modeInfo=null], PrdInformationBean [modeTit=规格, modeData=[PrdInformationBean [modeTit=null, modeData=null, modeTxt=厚度, modeInfo=15mm以下, 15.0-16.9mm, 17.0-19.9mm, 20.0-22.0mm]], modeTxt=null, modeInfo=null]], prdPack=PrdInformationBean [modeTit=null, modeData=null, modeTxt=null, modeInfo=packingListDefault], prdService=PrdInformationBean [modeTit=null, modeData=null, modeTxt=null, modeInfo=serviceDefault], prdHelper=[PrdInformationBean [modeTit=常见问题, modeData=null, modeTxt=null, modeInfo=<a href="http://www.gome.com.cn">常见问题</a>], PrdInformationBean [modeTit=名词解释, modeData=null, modeTxt=null, modeInfo=大沙发沙发撒], PrdInformationBean [modeTit=侧四是, modeData=null, modeTxt=null, modeInfo=送达人发生], PrdInformationBean [modeTit=一字真言, modeData=null, modeTxt=null, modeInfo=谚语都是古人说的], PrdInformationBean [modeTit=四个字么, modeData=null, modeTxt=null, modeInfo=<a href="">四个字的介绍</a><a href="">四个字的介绍</a><a href="">四个字的介绍</a><a href="">四个字的介绍</a>], PrdInformationBean [modeTit=实用指南, modeData=null, modeTxt=null, modeInfo=<div>
+	<strong>服务承诺：</strong><br />
+	京东商城向您保证所售商品均为正品行货，京东自营商品自带机打发票，与商品一起寄送。凭质保证书及京东商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由京东联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。京东商城还为您提供具有竞争力的商品价格和<a href="http://www.jd.com/help/kdexpress.aspx" target="_blank">运费政策</a>，请您放心购买！
+	<br /><br />
+	注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！ 
+</div>
+<div>
+	<strong>权利声明：</strong><br />京东商城上的所有商品信息、客户评价、商品咨询、网友讨论等内容，是京东商城重要的经营资源，未经许可，禁止非法转载使用。
+	<p><b>注：</b>本站商品信息均来自于厂商，其真实性、准确性和合法性由信息拥有者（厂商）负责。本站不提供任何保证，并不承担任何法律责任。</p>
+</div>], PrdInformationBean [modeTit=长度测试1, modeData=null, modeTxt=null, modeInfo=长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1], PrdInformationBean [modeTit=长度测试2, modeData=null, modeTxt=null, modeInfo=长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度测试1长度??试1长度测试1长度测试1长度测试122222222222222222222222222222], PrdInformationBean [modeTit=购买须知, modeData=null, modeTxt=null, modeInfo=<a href="http://www.gome.com.cn">购买须知</a>], PrdInformationBean [modeTit=深夜测试, modeData=null, modeTxt=null, modeInfo=<a href="">深夜测试</a>]], seoShowLinks=[FSLinkText [href=http://item.gome.com.cn/9133892956.html, LinkOtherAttr={}, title=1, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=http://item.gome.com.cn/9133892956.html, LinkOtherAttr={}, title=dad, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=http://item.gomehigo.hk/9133892956.html, LinkOtherAttr={}, title=s, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=http://item.gome.com.cn/90000000-232323.html, LinkOtherAttr={}, title=ad, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=http://item.gomehigo.hk/A0005565395-pop8007380765.html, LinkOtherAttr={}, title=cat10000070, target=null, urlParam=null, text=null, TextOtherAttr={}]], seoNoShowLinks=[], wapShowLinks=[FSLinkText [href=null, LinkOtherAttr={}, title=null, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=null, LinkOtherAttr={}, title=null, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=null, LinkOtherAttr={}, title=null, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=null, LinkOtherAttr={}, title=null, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=null, LinkOtherAttr={}, title=null, target=null, urlParam=null, text=null, TextOtherAttr={}]], seoAppraisal=null, seoAdvice=null, merchantInfo=null, firstCategoryId=cat10000000, secondCategoryId=cat10000012, thirdCategoryId=cat10000070, brandId=10000064, brandCode=00274, coo8thirdCategoryId=null, prdDescSpec=[PrdInformationBean [modeTit=null, modeData=null, modeTxt=商品名称, modeInfo=手机GSM2-3pp], PrdInformationBean [modeTit=null, modeData=null, modeTxt=品牌, modeInfo=???], PrdInformationBean [modeTit=null, modeData=null, modeTxt=换气, modeInfo=详情页面包屑修改], PrdInformationBean [modeTit=null, modeData=null, modeTxt=厚度, modeInfo=15mm以下, 15.0-16.9mm, 17.0-19.9mm, 20.0-22.0mm]], prdDescription=null, categoryRank=null, relatedBrands=[FSLinkText [href=http://search.atguat.com.cn/search?question=OPPO, LinkOtherAttr={}, title=OPPO, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E5%A4%A7%E6%98%BE, LinkOtherAttr={}, title=大显, target=null, urlParam=null, text=DAXIAN, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E4%B8%89%E7%9B%9F, LinkOtherAttr={}, title=三盟, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E4%BC%98%E6%80%9D, LinkOtherAttr={}, title=优思, target=null, urlParam=null, text=Uniscope, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E6%96%97%E7%A0%B4%E8%8B%8D%E7%A9%B9, LinkOtherAttr={}, title=斗破苍穹, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E9%94%8B%E8%BE%BE%E9%80%9A, LinkOtherAttr={}, title=锋达通, target=null, urlParam=null, text=Fadar, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E5%B0%8F%E8%BE%A3%E6%A4%92, LinkOtherAttr={}, title=小辣椒, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E5%B0%8F%E6%82%A6%E6%82%A6, LinkOtherAttr={}, title=小悦悦, target=null, urlParam=null, text=Xiaoyueyue, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E8%AF%BA%E5%9F%BA%E4%BA%9A%EF%BC%88NOKIA%EF%BC%89, LinkOtherAttr={}, title=诺基亚（NOKIA）, target=null, urlParam=null, text=rxm, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E7%BE%8E%E5%9B%BE, LinkOtherAttr={}, title=美图, target=null, urlParam=null, text=null, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=HTC%E6%89%8B%E6%9C%BA, LinkOtherAttr={}, title=HTC手机, target=null, urlParam=null, text=HTC, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E9%9B%85%E9%BC%8E%E5%8D%AB%E6%B5%B4, LinkOtherAttr={}, title=雅鼎卫浴, target=null, urlParam=null, text=YATIN, TextOtherAttr={}], FSLinkText [href=http://search.atguat.com.cn/search?question=%E5%9B%BD%E4%B9%8B%E7%BE%8E, LinkOtherAttr={}, title=国之美, target=null, urlParam=null, text=null, TextOtherAttr={}]], prodVideoInfo=ProdVideoBean [uu=null, vu=null, auto_play=null, videoFlag=null, videoPosition=null], shopCategory=null, serviceTags={back_no=不支持7天无理由退货}, rankinglist=null, flagshipShop=null]
+**** INFO     2016-10-22 12:17:02,302  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:55)  -  商品信息 -----------------------------------------
+**** INFO     2016-10-22 12:17:02,330  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:57)  -  {"affixAttr":{"coo8Sign":"true"},"brand":"先科","brandCode":"00274","brandId":"10000064","buyWay":[],"bztType":-1,"channel":"","description":"手机GSM2-3pp","detailHref":"http://item.atguat.com.cn/prod25420045-sku25410021.html","energyState":0,"gomePrice":1900,"goodsColor":[],"goodsImgs":[],"goodsModel":[],"htmlHref":"http://desc.atguat.com.cn/html/null","name":"手机GSM2-3pp","operADHref":"","price":1900,"productId":"prod25420045","productType":"auxiliary-prd","programId":"111111111","salesProperty":[],"sapSkuType":"ZSP","selltype":"5","shelfCtgy":"AA01","shopName":"","shopNo":"","sku":"sku25410021","skuId":"sku25410021","skuNo":"1000195481","skuNoMap":{"sku25410021":"1000195481"},"skuType":"ZSP","stats":1,"suitSku":[],"templateId":"m10004","threeDflag":false,"vipShopFlag":"0"}
+**** INFO     2016-10-22 12:17:02,330  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:59)  -  面包屑 -----------------------------------------
+**** INFO     2016-10-22 12:17:02,334  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:61)  -  [{"href":"http://www.atguat.com.cn/","linkOtherAttr":{},"target":"","text":"首页","textOtherAttr":{},"title":"首页"},{"href":"http://digital.atguat.com.cn/","linkOtherAttr":{},"target":"","text":"手机、摄影、数码","textOtherAttr":{},"title":"手机、摄影、数码"},{"href":"http://list.atguat.com.cn/cat10000070.html","linkOtherAttr":{},"target":"","text":"GSM手机","textOtherAttr":{},"title":"GSM手机"},{"href":"http://search.atguat.com.cn/search?question=%E5%85%88%E7%A7%91","linkOtherAttr":{},"target":"","text":"先科GSM手机","textOtherAttr":{},"title":"先科GSM手机"},{"href":"http://item.atguat.com.cn/prod25420045-sku25410021.html","linkOtherAttr":{},"target":"","text":"手机GSM2-3pp","textOtherAttr":{},"title":"手机GSM2-3pp"}]
+**** INFO     2016-10-22 12:17:02,334  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:63)  -  店铺   -----------------------------------------
+**** INFO     2016-10-22 12:17:02,334  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:67)  -  相关分类   -----------------------------------------
+**** INFO     2016-10-22 12:17:02,334  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:69)  -  [{"href":"http://list.atguat.com.cn/cat10000070.html","linkOtherAttr":{},"target":"_blank","text":"GSM手机","textOtherAttr":{},"title":"GSM手机"},{"href":"http://list.atguat.com.cn/cat10000075.html","linkOtherAttr":{},"target":"_blank","text":"双模手机","textOtherAttr":{},"title":"双模手机"},{"href":"http://list.atguat.com.cn/cat10000076.html","linkOtherAttr":{},"target":"_blank","text":"对讲机","textOtherAttr":{},"title":"对讲机"},{"href":"http://list.atguat.com.cn/cat10000072.html","linkOtherAttr":{},"target":"_blank","text":"移动3G手机","textOtherAttr":{},"title":"移动3G手机"},{"href":"http://list.atguat.com.cn/cat10000073.html","linkOtherAttr":{},"target":"_blank","text":"联通3G手机","textOtherAttr":{},"title":"联通3G手机"},{"href":"http://list.atguat.com.cn/cat10000074.html","linkOtherAttr":{},"target":"_blank","text":"电信3G手机","textOtherAttr":{},"title":"电信3G手机"},{"href":"http://list.atguat.com.cn/cat10385552.html","linkOtherAttr":{},"target":"_blank","text":"业务用户测试专场","textOtherAttr":{},"title":"业务用户测试专场"}]
+**** INFO     2016-10-22 12:17:02,335  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:71)  -  包装与配送 -----------------------------------------
+**** INFO     2016-10-22 12:17:02,337  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:73)  -  {"modeInfo":"packingListDefault"}
+**** INFO     2016-10-22 12:17:02,338  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:75)  -  售后服务 -----------------------------------------
+**** INFO     2016-10-22 12:17:02,338  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:77)  -  {"modeInfo":"serviceDefault"}
+**** INFO     2016-10-22 12:17:02,338  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:79)  -  商品规格参数 -----------------------------------------
+**** INFO     2016-10-22 12:17:02,338  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:81)  -  [{"modeData":[{"modeInfo":"???","modeTxt":"品牌"},{"modeInfo":"详情页面包屑修改","modeTxt":"换气"}],"modeTit":"主体"},{"modeData":[{"modeInfo":"15mm以下, 15.0-16.9mm, 17.0-19.9mm, 20.0-22.0mm","modeTxt":"厚度"}],"modeTit":"规格"}]
+**** INFO     2016-10-22 12:17:02,338  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:83)  -  类似商品 -----------------------------------------
+**** INFO     2016-10-22 12:17:02,339  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:85)  -  {"bn":"其他类似商品","isSessionExpired":"N","maima_param":"show|1478827194|box38|9134262816,9134269713,9134242786,9134262744,9134400582,A0006045947,A0006045955,A0006045861,A0006045609,A0006045596|0|0|0|0|0|0|0|0|103|-1|0|0|0","isSuccess":"Y","lst":[{"sid":"1123240506","weight":0.2976,"price":"1788.00","purl":"http://item.gome.com.cn/9134262816-1123240506.html","maima_param":"click|1478827194|box38|10|9134262816|0|0|0|0|0|0|0|0|103|0|0|0|0","priceType":"PALMPRICE","pn":"小米 5 全网通高配版 3GB内存 64GB ROM 淡紫色 移动联通电信4G手机","pid":"9134262816","iurl":"http://gfs1.gomein.net.cn/T1F.VTBjKT1RCvBVdK_130.jpg","gprice":"1799.00"},{"sid":"1123240921","weight":0.2649,"price":"3688.00","purl":"http://item.gome.com.cn/9134269713-1123240921.html","maima_param":"click|1478827194|box38|10|9134269713|0|0|0|0|0|0|0|0|103|0|0|0|0","priceType":"GOMEPRICE","pn":"华为 HUAWEI P9 4GB+64GB版 全网通版（陶瓷白）","pid":"9134269713","iurl":"http://gfs.gomein.net.cn/T1MEbTBQhT1RCvBVdK_130.jpg","gprice":"3688.00"},{"sid":"1123231339","weight":0.1912,"price":"5988.00","purl":"http://item.gome.com.cn/9134242786-1123231339.html","maima_param":"click|1478827194|box38|10|9134242786|0|0|0|0|0|0|0|0|103|0|0|0|0","priceType":"GOMEPRICE","pn":"三星 Galaxy S7 Edge（G9350）铂光金 64G 全网通4G手机 双卡双待","pid":"9134242786","iurl":"http://gfs4.gomein.net.cn/T16.ETBvdT1RCvBVdK_130.jpg","gprice":"5988.00"},{"sid":"1123200484","weight":0.1859,"price":"2499.00","purl":"http://item.gome.com.cn/9134262744-1123200484.html","maima_param":"click|1478827194|box38|10|9134262744|0|0|0|0|0|0|0|0|103|0|0|0|0","priceType":"GOMEPRICE","pn":"OPPO R9全网通4G手机 （金色）","pid":"9134262744","iurl":"http://gfs1.gomein.net.cn/T1ykhTBXZv1RCvBVdK_130.jpg","gprice":"2499.00"},{"sid":"1123340296","weight":0.1692,"price":"909.00","purl":"http://item.gome.com.cn/9134400582-1123340296.html","maima_param":"click|1478827194|box38|10|9134400582|0|0|0|0|0|0|0|0|103|0|0|0|0","priceType":"GOMEPRICE","pn":"小米 红米Note4 标准全网通版 2GB+16GB 银色 移动联通电信4G手机 双卡双待","pid":"9134400582","iurl":"http://gfs2.gomein.net.cn/T1QECTB5xv1RCvBVdK_130.jpg","gprice":"909.00"},{"sid":"pop8009244335","weight":0.1707,"price":"99.00","purl":"http://item.gome.com.cn/A0006045947-pop8009244335.html","maima_param":"click|1478827194|box38|10|A0006045947|0|0|0|0|0|0|0|0|103|0|0|0|0","priceType":"GOMEPRICE","pn":"Newman/纽曼C5 直板老人手机长待机 电信手机老年机 大字体 大音量老人机 支持QQ 学生手机纽曼c5(红色)","pid":"A0006045947","iurl":"http://img.gomein.net.cn/image/bbcimg/production_image/nimg/201609/14/12/31/386119c33a1355213d7_130.jpg","gprice":"99.00"},{"sid":"pop8009244371","weight":0.1538,"price":"139.00","purl":"http://item.gome.com.cn/A0006045955-pop8009244371.html","maima_param":"click|1478827194|box38|10|A0006045955|0|0|0|0|0|0|0|0|103|0|0|0|0","priceType":"GOMEPRICE","pn":"纽曼 D618 触摸屏直板大屏老年机大字体老年手机 双卡移动联通2G老人手机大声音老人机 长待机(红色)","pid":"A0006045955","iurl":"http://img4.gomein.net.cn/image/bbcimg/production_image/nimg/201609/14/12/51/1911c19c34b16e44ba8f_130.jpg","gprice":"139.00"},{"sid":"pop8009244066","weight":0.1532,"price":"267.00","purl":"http://item.gome.com.cn/A0006045861-pop8009244066.html","maima_param":"click|1478827194|box38|10|A0006045861|0|0|0|0|0|0|0|0|103|0|0|0|0","priceType":"GOMEPRICE","pn":"纽曼N5300 滑板老人手机 老年人手机 触屏手写 超长待机 滑盖学生儿童手机 老年手机N5300(红色)","pid":"A0006045861","iurl":"http://img1.gomein.net.cn/image/bbcimg/production_image/nimg/201609/14/10/56/1b26e19c2e6b719bbed7_130.jpg","gprice":"267.00"},{"sid":"pop8009242959","weight":0.1411,"price":"313.00","purl":"http://item.gome.com.cn/A0006045609-pop8009242959.html","maima_param":"click|1478827194|box38|10|A0006045609|0|0|0|0|0|0|0|0|103|0|0|0|0","priceType":"GOMEPRICE","pn":"ZTE/中兴 V88翻盖手机移动联通2G大按键大音量大字体 双屏老人手机老年机(红色)","pid":"A0006045609","iurl":"http://img4.gomein.net.cn/image/bbcimg/production_image/nimg/201609/13/19/09/265519bfac0715498bf_130.jpg","gprice":"313.00"},{"sid":"pop8009242854","weight":0.1308,"price":"257.00","purl":"http://item.gome.com.cn/A0006045596-pop8009242854.html","maima_param":"click|1478827194|box38|10|A0006045596|0|0|0|0|0|0|0|0|103|0|0|0|0","priceType":"GOMEPRICE","pn":"中兴（ZTE）L628 移动/联通2G 三防手机 老人手机防摔 大字大声大按键户外(橙色)","pid":"A0006045596","iurl":"http://img1.gomein.net.cn/image/bbcimg/production_image/nimg/201609/13/18/38/2a27319bf9106f641e97_130.jpg","gprice":"257.00"}],"bid":"box38","size":10}
+**** INFO     2016-10-22 12:17:02,339  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:87)  -  猜你喜欢 -----------------------------------------
+**** INFO     2016-10-22 12:17:02,340  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:89)  -  {"bn":"猜您喜欢","isSessionExpired":"N","maima_param":"show|1478826294|box37|A0006045947,A0006045955,9134066507,A0005772055,A0005993353,A0006045596,9132986854,A0006045963,A0005752493,A0006047509,A0005840281,A0005909117,A0005661652,A0006045580,A0006045883|0|0|0|0|0|0|0|0|124|-1|0|0|0","isSuccess":"Y","lst":[{"sid":"pop8009244335","weight":0.9,"price":"99.00","purl":"http://item.gome.com.cn/A0006045947-pop8009244335.html","maima_param":"click|1478826294|box37|15|A0006045947|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"Newman/纽曼C5 直板老人手机长待机 电信手机老年机 大字体 大音量老人机 支持QQ 学生手机纽曼c5(红色)","pid":"A0006045947","iurl":"http://img.gomein.net.cn/image/bbcimg/production_image/nimg/201609/14/12/31/386119c33a1355213d7_130.jpg","gprice":"99.00"},{"sid":"pop8009244371","weight":0.8837,"price":"139.00","purl":"http://item.gome.com.cn/A0006045955-pop8009244371.html","maima_param":"click|1478826294|box37|15|A0006045955|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"纽曼 D618 触摸屏直板大屏老年机大字体老年手机 双卡移动联通2G老人手机大声音老人机 长待机(红色)","pid":"A0006045955","iurl":"http://img4.gomein.net.cn/image/bbcimg/production_image/nimg/201609/14/12/51/1911c19c34b16e44ba8f_130.jpg","gprice":"139.00"},{"sid":"1123040677","weight":2.9,"price":"69.00","purl":"http://item.gome.com.cn/9134066507-1123040677.html","maima_param":"click|1478826294|box37|15|9134066507|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"利仁（Liven）电火锅HG-X1001【学生锅】304不锈钢内胆 1L容量 两档火力调节","pid":"9134066507","iurl":"http://gfs2.gomein.net.cn/T1W5ETB7Jv1RCvBVdK_130.jpg","gprice":"99.00"},{"sid":"pop8008525015","weight":2.9,"price":"128.00","purl":"http://item.gome.com.cn/A0005772055-pop8008525015.html","maima_param":"click|1478826294|box37|15|A0005772055|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"爱薇牛 澳洲原装进口爱薇牛麦卢卡蜂蜜全脂奶粉800g 适合青少年学生女士男士中老年奶粉","pid":"A0005772055","iurl":"http://img.gomein.net.cn/image/bbcimg/production_image/nimg/201605/24/09/55/51001691690bdeab1da_130.jpg","gprice":"188.00"},{"sid":"pop8009239747","weight":0.8347,"price":"1495.00","purl":"http://item.gome.com.cn/A0005993353-pop8009239747.html","maima_param":"click|1478826294|box37|15|A0005993353|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"魅族 MX6/mx6 32GB 4G全网通手机（5.5英寸屏幕 4GB大运存 10核处理器）(星空灰)","pid":"A0005993353","iurl":"http://img2.gomein.net.cn/image/bbcimg/production_image/nimg/201609/12/20/16/2ff116e7d1f66a5c0e1_130.jpg","gprice":"1495.00"},{"sid":"pop8009242854","weight":0.8184,"price":"257.00","purl":"http://item.gome.com.cn/A0006045596-pop8009242854.html","maima_param":"click|1478826294|box37|15|A0006045596|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"中兴（ZTE）L628 移动/联通2G 三防手机 老人手机防摔 大字大声大按键户外(橙色)","pid":"A0006045596","iurl":"http://img1.gomein.net.cn/image/bbcimg/production_image/nimg/201609/13/18/38/2a27319bf9106f641e97_130.jpg","gprice":"257.00"},{"sid":"1121870336","weight":2.9,"price":"99.00","purl":"http://item.gome.com.cn/9132986854-1121870336.html","maima_param":"click|1478826294|box37|15|9132986854|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"美的（Midea）WH415E2g电水壶（1.5L外塑内刚，304不锈钢，无缝内胆）","pid":"9132986854","iurl":"http://gfs4.gomein.net.cn/T1KCKTB4Ev1RCvBVdK_130.jpg","gprice":"99.00"},{"sid":"pop8009244440","weight":0.7694,"price":"277.00","purl":"http://item.gome.com.cn/A0006045963-pop8009244440.html","maima_param":"click|1478826294|box37|15|A0006045963|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"纽曼F516电信老人机翻盖老人机老年人手机大屏大音量大字体老年机(红色)","pid":"A0006045963","iurl":"http://img.gomein.net.cn/image/bbcimg/production_image/nimg/201609/14/13/07/416e19c358c13eba077_130.jpg","gprice":"277.00"},{"sid":"pop8009205210","weight":0.7531,"price":"819.00","purl":"http://item.gome.com.cn/A0005752493-pop8009205210.html","maima_param":"click|1478826294|box37|15|A0005752493|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"Meizu/魅族 魅蓝Note3/魅蓝note3/NOTE3 移动/联通/电信 全网通 双卡双待 4G智能手机(白色 全网2GB+16GB版)","pid":"A0005752493","iurl":"http://img.gomein.net.cn/image/bbcimg/production_image/nimg/201610/07/20/05/361e2186938328b2cd93_130.jpg","gprice":"819.00"},{"sid":"pop8009254996","weight":2.9,"price":"38.00","purl":"http://item.gome.com.cn/A0006047509-pop8009254996.html","maima_param":"click|1478826294|box37|15|A0006047509|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"朵迪雅尚 秋冬季加绒加厚打底裤外穿女冬高腰大码女装女裤子长裤小脚裤踩脚裤(酒红色 均码)","pid":"A0006047509","iurl":"http://img1.gomein.net.cn/image/bbcimg/production_image/nimg/201609/18/14/54/29c495b87621835396_130.jpg","gprice":"38.00"},{"sid":"pop8009205176","weight":0.6878,"price":"663.00","purl":"http://item.gome.com.cn/A0005840281-pop8009205176.html","maima_param":"click|1478826294|box37|15|A0005840281|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"Meizu/魅族 魅蓝3S 全网通4G手机（八核，5.0英寸，双卡，16G/32G可选）魅蓝3S/魅族3S/魅蓝3s(银色 全网通16GB)","pid":"A0005840281","iurl":"http://img1.gomein.net.cn/image/bbcimg/production_image/nimg/201609/13/15/56/19cc16ebd7eae006389_130.jpg","gprice":"799.00"},{"sid":"pop8009136692","weight":0.6714,"price":"2015.00","purl":"http://item.gome.com.cn/A0005909117-pop8009136692.html","maima_param":"click|1478826294|box37|15|A0005909117|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"华为（Huawei） 荣耀8 全网通4G手机（双镜头 双指纹）华为荣耀8/荣耀8(流光金 移动联通公开版)","pid":"A0005909117","iurl":"http://img3.gomein.net.cn/image/bbcimg/production_image/nimg/201607/20/17/03/362078354b1490f806e_130.jpg","gprice":"2399.00"},{"sid":"pop8007902858","weight":2.9,"price":"99.00","purl":"http://item.gome.com.cn/A0005661652-pop8007902858.html","maima_param":"click|1478826294|box37|15|A0005661652|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"【真5折预售】乾越2不锈钢保温水壶真空保温瓶(银色)","pid":"A0005661652","iurl":"http://img3.gomein.net.cn/image/bbcimg/production_image/nimg/201601/06/10/23/3829a1320a298e5ede36_130.jpg","gprice":"99.00"},{"sid":"pop8009242792","weight":0.5735,"price":"229.00","purl":"http://item.gome.com.cn/A0006045580-pop8009242792.html","maima_param":"click|1478826294|box37|15|A0006045580|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"TCL 121 移动联通2G老年人手机 双卡双待 大字体 支持语音播报 收音机外放(白色)","pid":"A0006045580","iurl":"http://img3.gomein.net.cn/image/bbcimg/production_image/nimg/201609/13/17/59/3bf919bf6f37b48864f_130.jpg","gprice":"229.00"},{"sid":"pop8009244157","weight":0.5571,"price":"268.00","purl":"http://item.gome.com.cn/A0006045883-pop8009244157.html","maima_param":"click|1478826294|box37|15|A0006045883|0|0|0|0|0|0|0|0|124|0|0|0|0","priceType":"GOMEPRICE","pn":"纽曼(Newman) E6 移动/联通 3.5英寸触摸屏 老人手机 大音量大字体 老年人手机 学生机 支持SOS(红色)","pid":"A0006045883","iurl":"http://img2.gomein.net.cn/image/bbcimg/production_image/nimg/201609/14/11/10/2e3019c2f334fc098ff_130.jpg","gprice":"268.00"}],"bid":"box37","size":15}
+**** INFO     2016-10-22 12:17:02,340  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:91)  -  评价 -----------------------------------------
+**** INFO     2016-10-22 12:17:02,340  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:93)  -  {"evaList":{"Evalist":[]},"totalCount":0,"good":0,"mid":0,"bad":0,"validgood":0,"totalpage":0}
+**** INFO     2016-10-22 12:17:02,340  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:95)  -  咨询 -----------------------------------------
+**** INFO     2016-10-22 12:17:02,340  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:97)  -  {"adviceList":[{"pageData":{"msize":""},"listData":[]},{"pageData":{"msize":""},"listData":[]},{"pageData":{"msize":""},"listData":[]},{"pageData":{"msize":""},"listData":[]},{"pageData":{"msize":""},"listData":[]}]}
+**** INFO     2016-10-22 12:17:02,340  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:99)  -  Title -----------------------------------------
+**** INFO     2016-10-22 12:17:02,340  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:101)  -  手机GSM2-3pp【图片 价格 品牌 报价】-国美在线
+**** INFO     2016-10-22 12:17:02,341  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:102)  -  Description -----------------------------------------
+**** INFO     2016-10-22 12:17:02,341  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:104)  -  国美在线提供手机GSM2-3pp,购买手机GSM2-3pp就到国美在线。有国美，生活美！
+**** INFO     2016-10-22 12:17:02,341  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:105)  -  KeyWords -----------------------------------------
+**** INFO     2016-10-22 12:17:02,341  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:107)  -  手机GSM2-3pp
+**** INFO     2016-10-22 12:17:02,341  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:108)  -  introduce -----------------------------------------
+**** INFO     2016-10-22 12:17:02,341  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:110)  -  手机GSM2-3pp???GSM手机
+**** INFO     2016-10-22 12:17:02,341  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:111)  -  hotwords -----------------------------------------
+**** INFO     2016-10-22 12:17:02,341  -  com.gome.item.service.TestProdDetailService.TestGetProdDetailService(TestProdDetailService.java:113)  -  {"remark":"","state":"1","html":[{"title":"先科小音响","hotwordsUrl":"http://www.gome.com.cn/hotwords/20160819/79/"},{"title":"先科小音响","hotwordsUrl":"http://www.gome.com.cn/hotwords/20160819/279/"},{"title":"先科小音响","hotwordsUrl":"http://www.gome.com.cn/hotwords/20160819/479/"}]}
+**** INFO     2016-10-22 12:17:02,343  -  redis.gcache.core.ZookeeperWatcher.destroyGcache(ZookeeperWatcher.java:299)  -  gcache close wait ... 
+shutdown task TcpSocketSender
+shutdown task TcpSocketSender-ChannelManager
+shutdown task merge-atomic-task
+shutdown task StatusUpdateTask
+**** WARN     2016-10-22 12:17:02,343  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.close(DefaultDiamondSubscriber.java:412)  -  开始关闭DiamondSubscriber
+**** WARN     2016-10-22 12:17:02,344  -  com.taobao.diamond.client.impl.DefaultDiamondSubscriber.close(DefaultDiamondSubscriber.java:420)  -  关闭DiamondSubscriber完成
+**** INFO     2016-10-22 12:17:02,377  -  org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:82)  -  Terminate ZkClient event thread.
+**** INFO     2016-10-22 12:17:02,382  -  redis.gcache.core.ZookeeperWatcher.destroyGcache(ZookeeperWatcher.java:308)  -  gcache closed ! 
+
+
+invoke com.gome.frontSe.interfaces.IProdDetailService.getProductDetail("9010000388","1000035731")
+
+
+
+
+123254  1100
+
+
+
+
+10.58.51.32 20887
+
+
+
+
+
+做增量
+---------------------------------------------------------------------
+_http://wiki.ds.gome.com.cn/pages/viewpage.action?pageId=6259393
+_http://dubbo.live.ds.gome.com.cn/   guest/guest
+
+在dubbo管理页面 可以查询到对应的rhino机器以及端口
+
+ 
+
+在windows下打开cmd，输ip地址和端口号，执行Invoke命令,传入参数.如：
+
+telnet 10.58.51.31 20882
+
+product增量
+
+invoke  com.gome.stage.interfaces.rhino.IProdDataService.updateProductByID("productId")
+
+sku增量
+
+invoke com.gome.stage.interfaces.rhino.IProdDataService.updateSkuByID("9134360917")
+invoke com.gome.stage.interfaces.rhino.IProdDataService.updateProductByID("9134360917")
+
+ "pop8006255540","pop8007134444","pop8007584500","pop8007584490","pop8008138637","pop8008579998","pop8009125557"
+
+更多命令可以查看
+com.gome.stage.interfaces.rhino.IPriceDataService 价格增量服务
+com.gome.stage.interfaces.rhino.IProdDataService 商品增量服务
+transfer开头的是全量方法,请谨慎操作
+
+invoke com.gome.stage.interfaces.rhino.IProdDataService.updateSkusByIDs(["pop8006457751","pop8008526965","pop8008526968","pop8008526966","pop8008526967"])
+
+invoke com.gome.stage.interfaces.rhino.IProdDataService.updateSkusByIDs(["pop8007294045","pop8007294046","pop8007362458","pop8007307516","pop8007307517","pop8007335169","pop8007345241","pop8007345242","pop8007334972","pop8007335166","pop8007335167","pop8007335168","pop8007335170","pop8007335171","pop8007297212","pop8007297213","pop8007297211","pop8007297214","pop8007552707","pop8007366029","pop8007366030","pop8007366031","pop8007353074","pop8007353075","pop8007316774","pop8007316775","pop8007363719","pop8007552487","pop8007552350","pop8007552351","pop8007552486","pop8007552704","pop8007552705","pop8007552706","pop8007552708","pop8007552709","pop8007552760","pop8007552761","pop8007554398","pop8007554399","pop8007554414","pop8007554415","pop8007554429","pop8007554430","pop8007554461","pop8007425319","pop8007425320","pop8007385739","pop8007385740","pop8007552827","pop8007552828","pop8007552829","pop8007554497","pop8007554498","pop8007554462","pop8007867630","pop8007867631","pop8007814148","pop8007867354","pop8007867355","pop8007778137","pop8007778138","pop8007814145","pop8007814146","pop8007814147","pop8007801330","pop8007801331","pop8007777416","pop8007777417","pop8008483384","pop8007820424","pop8007802313","pop8007802314","pop8007820421","pop8007820422","pop8007820423","pop8008483385","pop8008112825","pop8008481622","pop8008481623","pop8008371443","pop8007707279","pop8008371444","pop8008370711","pop8008370712","pop8008263964","pop8008263965","pop8009349969","pop8009349968","pop8008885047","pop8009083889","pop8009316898","pop8009349971","pop8009349970","pop8009224974","pop8009316896","pop8009316897","pop8009344710","pop8009113294","pop8008945206","pop8009349836"])
+
+---------------------------------------------------------------------
+
+
+
+301100000443 
+
+
+
+应用：gome_detail_service_seo
+
+
+129839 
+001_需求_E 	02_前台页面 	shouanxin@yo... 	已发 UAT 	--- 	【前台组】大图页面和归档页面底部增加热搜词模块和一段话介绍和大图页TDK修改 
+10:05:28 
+
+
+Bug 129839 - 【前台组】大图页面和归档页面底部增加热搜词模块和一段话介绍和大图页TDK修改 gome_detail_service_seo
+
+
+部署机器
+
+10.58.50.166,10.58.50.167,10.58.50.168,10.58.50.169,10.58.50.170,10.58.50.174'
+
+gome_detail_service_seo
+10.58.50.166,10.58.50.167
+
+http://10.58.50.166:8080/stage-web/prd/prdBigImage.jsp?productId=9100027772&skuId=1000042416
+
+
+http://10.58.22.193:8888/gcache-admin/webcommand/read.vm
+打开一下这个地址
+use TWOELEMENT
+在褐色的输入框内输入
+之后在输入框内get 1g:9134400695_1123340239执行这个
+返回是1,2,6
+你看下
+
+
+http://ss.gome.com.cn/search/v1/price/single/9134400695/1123340239/11010200/flag/item
+
+http://item.gome.com.cn/9134049233-1123040603.html?intcmp=search-9000000700-1_3_1
+http://item.gome.com.cn/9134400695-1123340239.html?intcmp=search-9000000700-1_1_1
+http://item.gome.com.cn/9134401909-1123341502.html?intcmp=search-9000000700-1_1_1
+http://item.gome.com.cn/9131380040-1120270168.html?intcmp=search-9000000700-1_1_1
+
+
+
+三星（SAMSUNG）300E5K-L03 15.6英寸笔记本电脑 CEL_3215U 4G 1T 集显 象牙白		9134520827	1123460762
+取消隐藏
+三星（SAMSUNG）300E5K-L05 15.6英寸笔记本电脑 CEL_3215U 4G 1T 集显 曜月黑
+9134520839
+1123460765
+ 取消隐藏 谢谢
+
+ 
+ 【科大讯飞】#科大讯飞2016年度发布会邀请函#人工智能诞生60周年，终于迎来新的爆发。随着万物互联时代的到来，人机交互会有怎样的新方式？2016年，科大讯飞又取得了哪些技术进展？11月23日下午2点，科大讯飞2016年度发布会"人工智能+ 共创新世界"将在北京国家会议中心一楼AB厅举办。人工智能，下一种可能在哪里？我们为您揭晓！ 报名请戳：http://t.cn/Rfwu7gE 回N退订
+ 
+ 
+ 
+ 
+Blueair/布鲁雅尔 瑞典家用空气净化器 303 除PM2.5甲醛雾霾粉尘
+productId:9133624148	SkuId:1122400072
+团购ID：T8800237777 
+
+
+http://ss.atguat.com.cn/item/v1/d/m/store/9200000421/1000078126/N/11010200/110102002/null/flag/item/allStores?callback=allStores&_=1484553614831
+
+
+
+
+:
+韩杨   23012319840714046X
+:
+张鹏  230123198107060011

@@ -1,0 +1,96 @@
+注册中心：10.58.57.58:2181,10.58.57.54:2181
+
+<dubbo:reference id="merchantService" interface="com.gome.stage.interfaces.whale.IMerchantService" loadbalance="random" group="whale"  registry="zookeeper"/>
+<dubbo:reference id="shopService" interface="com.gome.stage.interfaces.item.IShopService" loadbalance="random" group="item"  registry="zookeeper"/>
+
+
+MerchantInfo下的字段
+/**店铺Id*/
+private String merchantId;
+/**店铺名称*/
+private String merchantName;
+/**店铺编号*/
+private String supplierNo;
+/**时效评分*/
+private Double goodsMatch;
+/** 发货速度 */
+private Double deliverySpeed;
+/**  服务质量 */
+private Double serviceScore;
+/** 时效评分同行平均分 */
+private Double goodsMatchCmp;
+/** 服务质量同行平均分 */
+private Double serviceScoreCmp;
+/** 发货速度同行平均分 */
+private Double deliverySpeedCmp;
+/**热线*/
+private String shopHotLine;
+/**省*/
+private String province;
+/**城市*/
+private String city;
+/**总评分*/
+private Double totalScore;
+/**公司名称*/
+private String companyName;
+/**海外购店铺Id*/
+private String haiwaigouId;
+/** 店铺logo地址*/
+private String shopLogo;
+
+公司名称(companyName)：com.gome.stage.interfaces.whale.IMerchantService.findCompanyNameByMerId(String merchantId)
+
+public MerchantInfo getMerchantInfo(String merchantId){
+		MerchantInfo merInfo = new MerchantInfo();
+		try {
+			ShopItem shopItem = shopService.getShopInfoByShopId(merchantId);
+			if(shopItem == null || shopItem.getShopId() == null){
+				return merInfo;
+			}
+			//com.gome.stage.interfaces.item.IShopService
+			merInfo.setMerchantId(merchantId);
+			merInfo.setSupplierNo(shopItem.getSupplierNo()); 
+			merInfo.setMerchantName(shopItem.getShopName());
+			merInfo.setGoodsMatch(shopItem.getGoodsMatch());
+			merInfo.setGoodsMatchCmp(shopItem.getGoodsMatchCmp());
+			merInfo.setServiceScore(shopItem.getServiceScore());
+			merInfo.setServiceScoreCmp(shopItem.getServiceScoreCmp());
+			merInfo.setDeliverySpeed(shopItem.getDeliverySpeed());
+			merInfo.setDeliverySpeedCmp(shopItem.getDeliverySpeedCmp());
+			merInfo.setShopHotLine(shopItem.getShopHotLine());
+			merInfo.setProvince(shopItem.getProvince());
+			merInfo.setCity(shopItem.getCity());
+			merInfo.setShopLogo(shopItem.getShopLogoUrl());
+			
+			Double match = 0.0;
+			int count = 0;
+			if(merInfo.getGoodsMatch() != null){
+				match = merInfo.getGoodsMatch();
+				count = count + 1;
+			}
+			Double speed = 0.0;
+			if(merInfo.getDeliverySpeed() != null){
+				speed = merInfo.getDeliverySpeed();
+				count = count + 1;
+			}
+			Double score = 0.0;
+			if(merInfo.getServiceScore() != null){
+				score = merInfo.getServiceScore();
+				count = count + 1;
+			}
+			Double totalScore = 4.5;
+			if(count != 0){
+				totalScore = (match + speed + score)/count;
+			}else {
+				totalScore = 4.5;
+				merInfo.setGoodsMatch(4.5);
+				merInfo.setServiceScore(4.5);
+				merInfo.setDeliverySpeed(4.5);
+			}
+			merInfo.setTotalScore(totalScore);
+			
+		} catch (Exception e) {
+			logger.error(e+"");
+		}
+		return merInfo;
+	}

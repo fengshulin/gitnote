@@ -1,0 +1,334 @@
+private String itemId;
+
+/** sku id */
+private String id;
+
+/** sku 名称 */
+private String displayName;
+
+/** sku 描述 */
+private String description;
+
+private String longDesc;
+
+/** 商品ids 包含多个以":"分割 */
+private String productIds;
+
+/** sku 版本 */
+private String version;
+
+/** sku 创建时间 */
+private Timestamp creationDate;
+
+/** sku 开始时间 */
+private Timestamp startDate;
+
+/** sku 结束时间 */
+private Timestamp endDate;
+
+/** sku 类型 */
+private Integer skuType;
+
+/** 批发价格 */
+private Double wholesalePrice;
+
+/** 国美价 */
+private Double listPrice;
+
+/** 直降价格 */
+private Double salePrice;
+
+/** 直降状态 */
+private Integer onSale;
+
+/** 提交 */
+private Integer fulfiller;
+
+/** 项目ACL */
+private String itemAcl;
+
+/** 不可退货 */
+private String nonReturnAble;
+
+/** 纳税状态 */
+private Integer taxStatus;
+
+/** SKU编号 */
+private String skuNo = "1000010001";
+
+/** SAP SKU 类型 */
+private String sapSkuType;
+
+/** 销售类型 */
+private Integer sellType;
+
+/** 积分 */
+private Integer points;
+
+/** 品牌id */
+private Double brandId;
+
+/** 产地 */
+private String origin;
+
+/** 生产厂商 */
+private String manufacturer;
+
+/** 型号 */
+private String skuModel;
+
+/** 保质期天数 */
+private Integer slDate;
+
+/** 毛重 */
+private String grossWeight;
+
+/** 毛重单位 */
+private String gWeightUnit;
+
+/** 包装尺寸 */
+private String measurement;
+
+/** 包装尺寸单位 */
+private String measUnit;
+
+/** 是否需开箱验证 */
+private Integer customerInspect;
+
+/** 是否可开增值税发票 */
+private Integer taxNecce;
+
+/** 是否需安装服务 */
+private Integer isInstall;
+
+/** 是否国美专供 */
+private Integer onlyGome;
+
+/** SAP三级分类ID */
+private String shelfCtgy3;
+
+/** 规格 */
+private String spec;
+
+/** SKU单位 */
+private String unit;
+
+/** 是否支持航空运输 */
+private Integer airEmbargoFlag;
+
+/** 配送类型 */
+private String deliveryType;
+
+/** 商品组(拆单品类) */
+private String partGroup;
+
+/** 税率 */
+private String taxRate;
+
+/** 节能标识 */
+private Integer allowanceFlag;
+
+/** 节能补贴金额 */
+private Double allowanceAmout;
+
+/** 超大超重标示 */
+private String overWeightSku;
+
+/** 3G上网卡 */
+private String threeGCardCityCode;
+
+/** 固定价格 */
+private Double fixedPrice;
+
+/** 长尾标示 */
+private String distributionFlag;
+
+/** sim卡类型 */
+private String cardType;
+
+/** 运营商 */
+private String telecomOperators;
+
+/** 号段归属地 */
+private String segmentLocation;
+
+/** 开始号段 */
+private String segmentStart;
+
+/** 结束号段 */
+private String segmentEnd;
+
+/** 广告语 */
+private String promoDesc;
+
+/** 套购skuid */
+private String suitSku;
+
+/** 阶段性促销语 */
+private String periodPromoDesc;
+
+/** 阶段性促销语有效开始时间 */
+private Timestamp ppdStartDate;
+
+/** 阶段性促销语有效结束时间 */
+private Timestamp ppdEndDate;
+
+/** 直降开始时间 */
+private Timestamp onSaleStartDate;
+
+/** 直降结束时间 */
+private Timestamp onSaleEndDate;
+
+/** 商品状态 根据时间来计算 商品状态(1=导入，2=已分类，3=已补录，4=已上架，5=已下架，6=已归档，7=已冻结)*/
+private Integer state;
+
+/** 冻结状态 */
+private Integer freezeState;
+
+/** 是否支持货到付款 */
+private Integer isCashDelivery;
+
+/** 包装清单 */
+private String packingList;
+
+/** 售后服务 */
+private String service;
+
+/** sku 尺寸 */
+private String skuSize;
+
+/** 颜色 */
+private String color;
+
+/** 颜色图片 */
+private String colorSwatch;
+
+/** 店铺商品id */
+private String shopGoodsId;
+
+/** 条形码 */
+private String barcode;
+
+/** 更新时间 */
+private Timestamp modifyDate;
+
+/** sku广告图片 */
+private String skuAdImage;
+
+/** vip价格标示 */
+private String palmVipPriceFlag;
+
+/** 免运费开始时间 */
+private Timestamp freeShippingStartTime;
+
+/** 免运费结束时间 */
+private Timestamp freeShippingEndTime;
+
+/** 用费模版 */
+private String shippingTemplate;
+
+/** 是否3D商品 */
+private Integer is3D;
+
+/** sku 图片地址 */
+private String skuMedia;
+
+private String siteIds;
+
+/** sku 3D地址 */
+private String modelUrl3D;
+
+/** sku 3D图片地址 */
+private String imageUrl3D;
+
+/** sku 3D模板间 */
+private Integer isModelRoom3D;
+
+/** 视频用户唯一标识 */
+private String videoUU;
+/** 视频ID */
+private String videoVU;
+/** 是否自动播放 自动播放 Y:N */
+private String videoAutoPlay;
+/** 视频播放位置 1顶部 2底部 */
+private String videoPosition;
+
+/**
+    * 套餐标识
+    */
+private String skuBizType;
+
+/** 商品阶段性售价 */
+private String gomeStagePrice;
+
+/** 国美商品限购价 */
+private String gomeLimitPrice;
+
+/** 国美商品保护价 */
+private String gomeProtectPrice;
+
+/** 销售模式 */
+private String salesModel;
+
+/** 海外购税率 */
+private String hwgTaxRate;
+
+/** 店铺标识 */
+private String shopFlag;
+
+/** 公司代码 */
+private String companyCode;        
+
+/** 促销sku信息  团购 ，抢购， 闪购 */
+private String skuGroupOn;
+
+private String skuRushBuy;
+
+private String skuVipProgram;
+
+
+/** 节能减排 */
+
+/** 节能减排状态 */
+private int energyState;
+/** 能效级别 */
+private int energyLeavel;
+/** 补贴标准 */
+private double energyStandard;
+/** 补贴限额 */
+private double energyMoney;
+/** 开始时间 */
+private String energyStartDate;
+/** 结束时间 */
+private String energyEndDate;
+/** 报备价 */
+private double recordPrice ;
+
+/** 海外购 5.83接口新增字段 */
+
+/** 关税税率*/
+private String tariffRate;
+/** 消费税税率 */
+private String salesRate;
+/** 增值税税率 */
+private String vatRate;
+
+private String splitType;
+
+/** 现金预存款 */
+private String cashDeposits;
+
+/**税率计算模式 */
+private Integer taxModel;
+/** 计税单位 */
+private Integer taxUnit;
+/** 计税数量 */
+private Double taxQuantity;
+/** 计税比较额 */
+private Double amount;
+/** 活动价*/
+private String activityPrice;
+/** 销售组织(,分隔) */
+private String orgCode;
+/** 特殊商品标识     0 代表 FMP  1代码 MP*/
+private Integer specialType;

@@ -1,0 +1,37 @@
+
+
+
+打包IP：10.126.60.82	账号/密码：svnbuild/SVNbuild
+
+
+sh item-detail-service-seo-jar.sh gome_detail_service_seo 1.0.0.004
+sh stage-web-seo.sh stage_web_seo 1.0.0.004
+
+
+手动deploy:（CMD模式，进入需要deploy的目录下）
+mvn clean deploy
+
+
+pp命令查看：端口
+
+
+ps -ef|grep price
+
+mvn package   打包
+
+less gome-detail-service_20161118.log |grep A0005797032
+
+
+
+部署机器
+stage_web_seo
+10.58.50.166,10.58.50.167,10.58.50.168,10.58.50.169,10.58.50.170,10.58.50.174'
+
+gome_detail_service_seo
+10.58.50.166,10.58.50.167
+
+
+javac -encoding UTF-8 *.java
+
+
+123123:mysvn test-svn

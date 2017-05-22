@@ -1,0 +1,173 @@
+首页：tuan.gome.com.cn
+
+后台系统：erm.ds.gome.com.cn（生产）账号：yanglei-ds5 密码：GWZX@8888
+        http://erm.atguat.com.cn（UAT）账号：ermadmin  密码：aAbb2e33
+
+UAT为例，主要为两个模块：1.GCC后台管理系统--频道模板配置（模板首页--真划算）；2.GCC后台管理系统--频道数据配置
+
+
+抢购接口：https://ajaxtuan.gome.com.cn/cheap/getRushBuyTimeGoods?timeCode=1&callback=currentRushbuy&callbackparam=currentRushbuy&_=1493956318910
+共3个场次：08:00，14:00，20:00，通过修改timeCode的值来控制。
+
+
+首焦抢购商品：
+接口：https://ajaxtuan.gome.com.cn/cheap/getTimeAndStatus?itemIds=Q8800425314&callback=jQuery171011788746766899627_1493956515239&_=1493956515251
+
+精选商品：
+接口:https://ajaxtuan.gome.com.cn/cheap/getCategoryGoods?cateId=1&callback=callback_product&_=1493956515255
+通过cateId的值来控制不同tab的显示。
+
+==============================================================================
+团抢抢详情页异步接口：
+
+价格接口：http://ajaxtuan.gome.com.cn/cheap/getSkuPrice?callback=getSkuPrice&skuId=1123180222&code=11010000&_=1494382260319
+
+获取真划算状态数据：http://ajaxtuan.gome.com.cn/cheap/getCheapItemsStatus?itemIds=T8800129308&callback=currentTime&_=1494382260080
+
+改版提供接口：http://10.144.34.99:8989/stage-cheap-ajax/cheap/getCheapItemInfosStatus?itemIds=Q8800010961,Q8800010802
+改版场次提供接口：http://10.144.34.99:8989/stage-cheap-ajax/cheap/getRushBuyTimeGoods?timeCode=1&callback=currentRushbuy&callbackparam=currentRushbuy
+Q8800010961 
+猜你喜欢：http://bigd.gome.com.cn/gome/rec?pid=9134231141&size=5&imagesize=260&boxid=box71&sid=1123180222&cid=102603897494168255&area=11010200&shopid=&brid=&uid=&c1n=&c2n=%E6%89%8B%E6%9C%BA%E6%95%B0%E7%A0%81&c3n=&c1id=&c3id=&c2id=cat18486722&callback=viewAndViewList&_=1494382260072
+
+（提供 预计送达时间,是否自提,货到付款,免运费）：http://ss.gome.com.cn/item/v1/grouponDetailAsyn/stockdelivery/A0006040951/pop8009218084/N/11010200/110102002/flag/item/exact?callback=exact&_=1494383420128
+
+获取区域：http://ss.gome.com.cn/item/v1/region/12010000/3/flag/item_web/gcity_callbackarea?callback=gcity_callbackarea
+
+根据分类获取子分类：
+SELECT
+      dc.category_id categoryId,
+      dc.display_name categoryName,
+      dcc.sequence_num sequence
+    FROM ${gome.stage.jdbc.catb.prefix}.dcs_category dc
+    LEFT JOIN
+      ${gome.stage.jdbc.catb.prefix}.dcs_cat_chldcat dcc
+    ON dc.category_id=dcc.child_cat_id
+    WHERE dcc.category_id = #{categoryId}
+    ORDER BY dcc.sequence_num
+    
+=================================================================================
+闪购：
+热搜词：
+businessName :TWOELEMENT
+key: get 1g:/gome-groupon/hotkeyword （生产）
+key: get 15:/gome-groupon/hotkeyword （UAT）
+
+
+导航条：
+use TWOELEMENT
+get 1g:/gome-groupon/mainnav （生产）
+get 15:/gome-groupon/mainnav （UAT）
+
+场次：
+use TWOELEMENT
+get 1g:/gome-cheap/rushbuy/tab （生产）
+get 15:/gome-cheap/rushbuy/tab （UAT）
+
+明日预告：
+use TWOELEMENT
+楼层名称：get 1g:/gome-cheap/rushbuy/day/20170504/tomorrow/name （生产）
+商品：get 1g:/gome-cheap/rushbuy/day/20170504/tomorrow/item （生产）
+get 15:/gome-cheap/rushbuy/day/20170504/tomorrow/item （UAT）
+
+找优惠：
+use TWOELEMENT
+找优惠名称：get 1g:/gome-cheap/rushbuy/benefit/name （生产）
+左一：get 1g:/gome-cheap/rushbuy/benefit/leftone
+左二：get 1g:/gome-cheap/rushbuy/benefit/lefttwo 
+右一：get 1g:/gome-cheap/rushbuy/benefit/rightone 
+右二：get 1g:/gome-cheap/rushbuy/benefit/righttwo 
+
+当前场次商品：
+use TWOELEMENT
+get 1g:/gome-cheap/rushbuy/day/20170505/20 自行修改时间与场次（生产）
+get 15:/gome-cheap/rushbuy/day/20170505/20 （UAT）
+
+
+分类查询：
+ SELECT
+      dc.category_id categoryId,
+      dc.display_name categoryName,
+      dcc.sequence_num sequence
+    FROM ${gome.stage.jdbc.catb.prefix}.dcs_category dc
+    LEFT JOIN
+      ${gome.stage.jdbc.catb.prefix}.dcs_cat_chldcat dcc
+    ON dc.category_id=dcc.child_cat_id
+    WHERE dcc.category_id = #{categoryId}
+    ORDER BY dcc.sequence_num
+
+uat分类ID：cat18601456
+=============================================================================
+
+团抢：
+根据团抢id获取商品详情：
+businessName: PROM_TQ_DATA
+key:hgetall N:Q8800413876
+
+
+预算列表：
+PROM_BUDGET_DATA
+hgetall l:Q8800418030（promoCaseId）
+============================================================================
+首页
+
+热搜词：
+businessName :TWOELEMENT
+key: get 1g:/gome-groupon/hotkeyword （生产）
+key: get 15:/gome-groupon/hotkeyword （UAT）
+
+
+导航条：
+use TWOELEMENT
+get 1g:/gome-groupon/mainnav （生产）
+get 15:/gome-groupon/mainnav （UAT）
+
+主广告首焦：
+use TWOELEMENT
+get 1g:/gome-cheap/groupOn/slide
+
+首焦下三小图：
+use TWOELEMENT
+get 1g:/gome-cheap/groupOn/ad 
+
+精选品牌：
+use TWOELEMENT
+get 1g:/gome-cheap/groupOn/mprom
+
+精选品牌Logo：
+use TWOELEMENT
+get 1g:/gome-cheap/groupOn/mprom
+
+分类查询：
+ SELECT
+      dc.category_id categoryId,
+      dc.display_name categoryName,
+      dcc.sequence_num sequence
+    FROM ${gome.stage.jdbc.catb.prefix}.dcs_category dc
+    LEFT JOIN
+      ${gome.stage.jdbc.catb.prefix}.dcs_cat_chldcat dcc
+    ON dc.category_id=dcc.child_cat_id
+    WHERE dcc.category_id = #{categoryId}
+    ORDER BY dcc.sequence_num
+
+
+商品团购tab名称（最多7个）：
+use TWOELEMENT
+get 1g:/gome-cheap/groupOn/tab
+
+底部广告（最多4条）：
+use TWOELEMENT
+get 1g:/gome-cheap/groupOn/footAd 
+
+首焦抢购商品：
+use TWOELEMENT
+get 1g:/gome-cheap/groupOn/rush 
+
+精选品牌楼层名称：
+use TWOELEMENT
+get 1g:/gome-cheap/groupOn/mpromName 
+
+商品团购楼层名称：
+use TWOELEMENT
+get 1g:/gome-cheap/groupOn/itemFloorName
+
+==========================================================================

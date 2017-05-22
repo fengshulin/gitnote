@@ -1,0 +1,149 @@
+private String itemId;
+/** 店铺编码 */
+private String merchantId;
+
+/** 供应商编码 */
+private Integer version;
+
+/** 版本 */
+private String supplierNo;
+
+/** 店铺名称 */
+private String merchantName;
+
+/** 店铺类型 1旗舰店 2专卖 3专营 */
+private String shopType;
+
+/** 配送类型 1自存自发 2代存代发 */
+private String distrMode;
+
+/** 店铺地址 */
+private String shopAddress;
+
+/** 邮政编码 */
+private String zipCode;
+
+/** 店铺联系人 */
+private String shopContatcPerson;
+
+/** 联系电话 */
+private String shopPhoneNo;
+
+/** 联系手机 */
+private String shopMobileNo;
+
+/** 热线电话 */
+private String shopHotLine;
+
+/** 邮箱(电子邮件) */
+private String shopEmail;
+
+/** 传真号码 */
+private String shopFaxNo;
+
+/** 退货地址 */
+private String shopReturnAddress;
+
+/** 退货联系电话 */
+private String shopReturnPhoneNo;
+
+/** 退货邮编 */
+private String shopReturnZipCode;
+
+/** 店铺根目录 */
+private String shopRootNavigationCategory;
+
+/** 店铺状态 0复店 1休店 2关店 */
+private String shopStatus;
+
+/** 休店类型 0卖家申请 1平台强制 */
+private String shopSuspendType;
+
+/** 店铺状态起始生效时间 */
+private Timestamp shopStatusStartDate;
+
+/** 店铺备注 */
+private String shopRemark;
+
+/** 商品详情页中旗舰店的头部 */
+private String PDPHeader;
+
+/** 商品详情页中旗舰店的头部 是否启用 */
+private String PDPHeaderEnable;
+
+/** 搜索结果页旗舰店的logo url */
+private String flagShipBrandIMGURI;
+
+/** 搜索结果页旗舰店的logo url 是否启用 */
+private String flagShipBrandIMGEnabled;
+
+/** 店铺是否支持货到付款 */
+private Boolean supportCOD;
+
+/** 商品页-联营商品增加店铺所在地（商品页展示） */
+private String province;
+
+/** 城市 */
+private String city;
+
+/** 店铺公告内容 */
+private String shopNoticeTxt;
+
+/** 商品与描述相符 */
+private Double goodsMatch;
+
+/** 商家服务态度 */
+private Double serviceScore;
+
+/** 商家发货速度 */
+private Double deliverySpeed;
+
+/** 商品与描述相符行业对比 */
+private Double goodsMatchCmp;
+
+/** 商家服务态度行业对比 */
+private Double serviceScoreCmp;
+
+/** 商家发货速度行业对比 */
+private Double deliverySpeedCmp;
+
+/** 店铺等级 几星几钻 */
+private String shopLevel;
+
+/** 店铺可开发票类型 */
+private String invoiceTypes;
+
+private String shopCategorys;
+
+/** 公司 */
+private String companyName;
+
+/** 店铺logoUrl */
+private String shopLogoUrl;
+
+/** 店铺简介 */
+private String shopIntroductionTxt;
+
+/** 是否显示店铺装修. */
+private Boolean decorationVisible;
+/** 店铺装修文件头存放路径. */
+private String decorationFilePath;
+/** 海外购店铺类型 */
+private String shopFlag;
+
+private String cssUrl;	
+
+
+/** 公司代码 */
+private String companyCode; 
+
+
+
+
+/** 服务开始时间 */
+private String shopHotlineStartTime;
+/** 服务结束时间 */
+private String shopHotlineEdnTime;
+
+/** 邀请码(返利相关) */
+private String inviteCode;

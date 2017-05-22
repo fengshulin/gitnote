@@ -1,0 +1,129 @@
+UAT测试URL：
+
+http/item.atguat.com.cn/prod20210046-sku20140021.html(评价与咨询)
+http://item.atguat.com.cn/A0000122329-pop8001013913.html
+
+自营：
+http://item.atguat.com.cn/prod21010025-sku20860011.html
+http://item.atguat.com.cn/prod25420045-sku25410021.html
+http://item.atguat.com.cn/prod20980080-sku20910015.html
+http://item.atguat.com.cn/9200000381-1000078105.html
+
+//配置15天无理由
+http://item.atguat.com.cn/prod20960100-sku20890014.html
+http://item.atguat.com.cn/	-sku20890015.html
+//7天无理由
+http://item.atguat.com.cn/prod14390052-sku14320016.html
+http://item.atguat.com.cn/9100022011-1000034031.html
+
+http://item.atguat.com.cn/9010000388-1000035731.html(三级分类笔记本)
+
+联营：
+http://item.atguat.com.cn/A0000120236-pop8001010972.html
+带有销售属性：
+http://item.atguat.com.cn/A0000133856-pop8001025605.html
+
+
+UAT 海外购
+http://item.uathigo.hk/A0000123839-pop8001016687.html
+http://item.uathigo.hk/A0000124969-pop8001018642.html
+http://item.uathigo.hk/A0000119140-pop8001009086.html 
+http://item.uathigo.hk/A0000123001-pop8001015247.html
+http://item.uathigo.hk/A0000120839-pop8001011934.html
+
+搭配购：
+	联营：http://item.atguat.com.cn/A0000122631-pop8001014532.html
+	自营：http://item.atguat.com.cn/9010000022-1000014728.html  
+http://item.atguat.com.cn/A0000123613-pop8001016260.html
+http://item.atguat.com.cn/prod24330188-sku24320017.html
+http://item.atguat.com.cn/9100014048-1000023684.html
+
+
+http://bin.ds.gome.com.cn/atg_poc/gome-stage/itemseo-web/itemseo-web_1.0.0.2.482240.tar.gz
+
+生产搭配购
+item.gome.com.cn/9134080855-1123342904.html
+http://item.gome.com.cn/9134129684-1123230777.html
+
+归档商品：
+http://item.gome.com.cn/A0003889923-pop8002226493.html
+http://item.gome.com.cn/A0000124829-N8000213034.html
+http://item.gome.com.cn/A0005516030-pop8007070771.html
+http://item.gome.com.cn/A0005516030-pop8007070771.html
+http://item.gome.com.cn/A0003495558-pop8001434530.html
+http://item.gome.com.cn/A0004604460-pop8003407887.html
+http://item.gome.com.cn/A0004966769-pop8004573952.html 
+http://item.gome.com.cn/A0005568307-pop8007397240.html 
+
+
+归档 _http://item.atguat.com.cn/A0000120235-pop8001010970.html
+归档 _http://item.atguat.com.cn/A0000119005-pop8001008855.html
+归档 _http://item.atguat.com.cn/A0000127283-pop8001022491.html
+归档 _http://item.atguat.com.cn/A0000127283-pop8001022490.html
+归档 _http://item.atguat.com.cn/A0000134026-pop8001025824.html
+
+uat屏蔽团购：
+http://item.atguat.com.cn/prod21020030-sku20880024.html
+屏蔽的团购的哈 _http://tuan.atguat.com.cn/deal/T8800009159.html
+
+http://item.atguat.com.cn/A0000133395-pop8001024939.html 
+
+UAT带gfs图片的URL
+http://item.atguat.com.cn/prod21500056-sku21420027.html
+
+
+生产销售属性3行（华为手机属性多）
+http://item.gome.com.cn/9134561595-1123502465.html
+http://item.gome.com.cn/9134402605-1123502416.html
+http://item.gome.com.cn/A0005210972-pop8006544476.html
+http://item.gome.com.cn/A0005916161-pop8008921809.html
+http://item.gome.com.cn/A0006070484-pop8009365252.html
+
+4行
+http://item.gome.com.cn/A0006056096-pop8009526166.html
+http://item.gome.com.cn/A0006061437-pop8009420285.html
+
+套装：
+http://item.atguat.com.cn/9100014612-tz10001668.html
+
+UAT动态测试：
+其他类似：
+http://10.58.32.55:8080/gome/rec?callback=jsonpname_qitaleisi&boxid=box38&pid=9010000388&area=11010000&cid=null&imagesize=130&brid=10000085&shopid=null&c1id=cat10000001&c3id=cat10000092&sid=1000035731
+
+
+stage-web-seo
+http://10.58.57.95:3254/stage-web/prd/product.jsp?productId=9010000388&skuId=1000035731
+
+http://10.58.57.95:3254/stage_web_seo/prd/product.jsp?productId=9010000388&skuId=1000035731
+
+http://10.58.57.95:3254/stage-web/prd/product.jsp?productId=9010000388&skuId=1000035731
+
+http://10.58.57.95:3254/stage-web/prd/prdBigImage.jsp?productId=9010000388&skuId=1000035731
+
+
+http://10.58.57.95:3254/stage-web/dyn/admin/getPrdDetail.jsp?detail=detail&productId=9010000388&skuId=1000035731
+
+http://10.58.57.95:3254/stage-web/dyn/admin/getPrdDetail.jsp?detail=detail&productId=prod20210036&skuId=sku20140029
+
+http://10.58.57.95:9022/stage_web_seo/dyn/admin/getPrdDetail.jsp?detail=detail&productId=9010000388&skuId=1000035731
+
+
+PRE对比页测试： http://www.gomeprelive.com.cn/compare/pop8006920823-1000010230-0-0.html
+
+
+_http://item.atguat.com.cn/A0000125035-pop8001018667.html    
+"salesRate": 0.15, 
+        "vatRate": 0.13,
+
+ /** 消费税税率 */
+ private Double salesRate;
+
+ /** 增值税税率 */
+ private Double vatRate;
+
+
+
+ 营业执照：http://mall.gome.com.cn/storelisence/80005967.html 
+
+ 小助手：http://10.126.60.135:8070/stage-web/xzs/xzs.jsp?pageType=price&catId=cat10000070&brandId=10000098
+ stage-web:10.126.60.135:8070

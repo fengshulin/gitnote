@@ -1,0 +1,7 @@
+1.热搜排行榜数据：
+    select * from ${gome.stage.jdbc.prodx.prefix}.GOME_KEYWORD_TOP t  where t.top_type=#{topType} and ROWNUM<=12  order by t.top_no  ASC
+    注：gome.stage.jdbc.prodx.prefix=uat_prodx_6
+        topType = "1","7","30" (日周月)
+
+2.热点排行榜数据：
+select * from  GOME_PRD_HITSTOP t where  t.top_type=#{topType}   order by  t.prd_clicks  DESC   LIMIT 0,10 

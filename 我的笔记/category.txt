@@ -1,0 +1,53 @@
+private String itemId;
+
+/** 分类id */
+private String categoryId;
+
+/** 分类版本 */
+private String version;
+
+/** cataglog id */
+private String catalogId;
+
+/** 创建时间 */
+private Timestamp creationDate;
+
+/** 开始时间 */
+private Timestamp startDate;
+
+/** 结束时间 */
+private Timestamp endDate;
+
+/** 分类名称 */
+private String displayName;
+
+/** 分类描述 */
+private String description;
+
+/** 分类描述 (长描述)*/
+private String logDescription;
+
+/** 分类类型 */
+private Integer type;
+
+/** 分类地址 */
+private String catURL;
+
+/** 父分类id */
+private String parentCatId;
+
+/** 根分类id */
+private String rootCategory;
+
+/** 子分类对象id */
+private String chldItemCatIds;
+
+private Integer sequenceNum;
+
+private String ancCategoryId;
+
+/** 分类相关品牌 */
+private String associateBrands;
+
+/** 分类对应的tdk model id */
+private String tdkModelId;

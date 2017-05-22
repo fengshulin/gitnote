@@ -1,0 +1,593 @@
+Diamond配置信息
+
+dataId: 	item_dianmond_dataid
+group: 	item_diamond_group
+
+item_tdk_server=start
+item_compare_server=start
+item_mongo_server=start
+item_brandfacetId_server=start
+item_gomeprice_server=start
+item_prodmodelspec_server=start
+item_brandfacetids_server=start
+
+
+# driver configuration
+gome.stage.jdbc.driverclass.oracle=oracle.jdbc.OracleDriver
+gome.stage.jdbc.driverclass.mysql=com.mysql.jdbc.Driver
+
+# configuration env
+gome.stage.env=uat
+
+# cookie config
+gome.stage.cookie.region.domain=.atguat.com.cn
+gome.stage.cookie.region.domain.hwg=.uathigo.hk
+
+# redisson ext lock
+gome.stage.appraise.lock.businessname=APPRAISE_LOCK
+
+# catb write configuration
+gome.stage.jdbc.catb.writable.jdbcurl=jdbc:oracle:thin:@10.126.53.186:1521:orcl
+gome.stage.jdbc.catb.writable.username=UAT_CATB_6
+gome.stage.jdbc.catb.writable.password=1351UGjqimy4239
+gome.stage.jdbc.catb.writable.prefix=uat_catb_6
+
+# catb configuration
+gome.stage.jdbc.catb.jdbcurl=jdbc:oracle:thin:@10.126.53.186:1521:orcl
+gome.stage.jdbc.catb.username=ro_select
+gome.stage.jdbc.catb.password=select_123
+gome.stage.jdbc.catb.prefix=uat_catb_6
+
+#catb configuration(master)：
+gome.stage.jdbc.catb.master.jdbcurl=jdbc:oracle:thin:@10.126.53.186:1521:orcl
+gome.stage.jdbc.catb.master.username=UAT_CATB_6
+gome.stage.jdbc.catb.master.password=1351UGjqimy4239
+gome.stage.jdbc.catb.master.prefix=uat_catb_6
+
+
+
+gome.stage.jdbc.mysql.suitsku.jdbcurl=jdbc:mysql://ceshi-mysql1.ec.db:6306/ec_gome_gcc_uat?useUnicode=true&characterEncoding=UTF-8
+gome.stage.jdbc.mysql.suitsku.username=pw_gome_gcc_uat
+gome.stage.jdbc.mysql.suitsku.password=gUOGX6lm5EVKU3dcu9uWjrai2rRF/zsFEe7eMXb04/EZcslKi5yYKVsL5IKqBkrsxvu2lpdEUS4246oJED5/qw==
+gome.stage.jdbc.mysql.gomehome.jdbcurl=jdbc:mysql://ceshi-mysql1.ec.db:6306/ec_gome_home_uat
+gome.stage.jdbc.mysql.gomehome.username=pw_gome_home_uat
+gome.stage.jdbc.mysql.gomehome.password=jA9kUE+wgSNUVt2M/CvV/9NwaytrKf+n6bDd6caUOiqZgnxWx7Uwv0cI2edFL2aEtKu/qUMYJOfgp7GhgIxpsg==
+
+
+
+# catx write configuration
+gome.stage.jdbc.catx.writable.jdbcurl=jdbc:oracle:thin:@10.126.53.186:1521:orcl
+gome.stage.jdbc.catx.writable.username=bbc_catx
+gome.stage.jdbc.catx.writable.password=bbc_catx_123
+gome.stage.jdbc.catx.writable.prefix=bbc_catx
+
+# catx configuration
+gome.stage.jdbc.catx.jdbcurl=jdbc:oracle:thin:@10.126.53.186:1521:orcl
+gome.stage.jdbc.catx.username=ro_select
+gome.stage.jdbc.catx.password=select_123
+gome.stage.jdbc.catx.prefix=bbc_catx
+
+#Atgsys write configuration
+gome.stage.jdbc.atgsys.writable.jdbcurl=jdbc:oracle:thin:@10.126.53.186:1521:orcl
+gome.stage.jdbc.atgsys.writable.username=uat_system_6
+gome.stage.jdbc.atgsys.writable.password=lop1WGjqkmypoi9
+
+#Pub write configuration
+gome.stage.jdbc.pub.writable.jdbcurl=jdbc:oracle:thin:@10.126.53.186:1521:orcl
+gome.stage.jdbc.pub.writable.username=uat_pub_6
+gome.stage.jdbc.pub.writable.password=1381QGjqfmy4235
+
+#catx configuration(master)：
+gome.stage.jdbc.catx.master.jdbcurl=jdbc:oracle:thin:@10.126.53.186:1521:orcl
+gome.stage.jdbc.catx.master.username=bbc_catx
+gome.stage.jdbc.catx.master.password=bbc_catx_123
+gome.stage.jdbc.catx.master.prefix=bbc_catx
+
+# prod configuration
+gome.stage.jdbc.prod.jdbcurl=jdbc:oracle:thin:@10.126.53.186:1521:orcl
+gome.stage.jdbc.prod.username=UAT_PROD_6
+gome.stage.jdbc.prod.password=1391RGjqemy4236
+gome.stage.jdbc.prod.prefix=uat_prod_6
+
+# prod write configuration
+gome.stage.jdbc.prod.writable.jdbcurl=jdbc:oracle:thin:@10.126.53.186:1521:orcl
+gome.stage.jdbc.prod.writable.username=UAT_PROD_6
+gome.stage.jdbc.prod.writable.password=1391RGjqemy4236
+gome.stage.jdbc.prod.writable.prefix=uat_prod_6
+
+# prodx configuration
+gome.stage.jdbc.prodx.jdbcurl=jdbc:oracle:thin:@10.126.53.186:1521:orcl
+# gome.stage.jdbc.prodx.username=Homepage_uat
+# gome.stage.jdbc.prodx.password=Hfv24zbxCzI63zM/
+gome.stage.jdbc.prodx.username=UAT_PRODX_6
+gome.stage.jdbc.prodx.password=Af3poO7LJNMbP2QM
+gome.stage.jdbc.prodx.prefix=uat_prodx_6
+
+# prodx_w configuration
+gome.stage.jdbc.prodx_w.jdbcurl=jdbc:oracle:thin:@10.126.53.186:1521:orcl
+gome.stage.jdbc.prodx_w.username=UAT_PRODX_6
+gome.stage.jdbc.prodx_w.password=Af3poO7LJNMbP2QM
+gome.stage.jdbc.prodx_w.prefix=uat_prodx_6
+
+
+# mysql configuration
+
+gome.stage.jdbc.mysql.jdbcurl=jdbc:mysql://10.126.44.55:6306/ec_topdb_uat
+gome.stage.jdbc.mysql.username=pw_topdb_uat
+gome.stage.jdbc.mysql.password=UNH02leBvlOqmxG8VAfLww5VxE7DrD8Eu+MJqcgaE9RooIAfaKZqEIMXD5Big13fEl+ANvrYBuux3oOyM807SQ==
+
+# mysql configuration
+gome.stage.jdbc.mysql.knowledge.jdbcurl=jdbc:mysql://ceshi-mysql1.ec.db:6306/ec_gome_knowledge_uat
+gome.stage.jdbc.mysql.knowledge.username=pw_knowledge_uat
+gome.stage.jdbc.mysql.knowledge.password=VKyDPNbAzgDlqycB6SONfyAfHMpvKFZJxoOGdhT5kD8YUAlGoAXskejRho4IHrXZIV7nN4XPgLBjY3lDOSMw2g==
+#gome.stage.jdbc.mysql.knowledge.username=ro_ec_gcc
+#gome.stage.jdbc.mysql.knowledge.password=ro_ec_gcc
+
+# mysql configuration helpcenter
+gome.stage.jdbc.mysql.helpcenter.jdbcurl=jdbc:mysql://ceshi-mysql1.ec.db:6306/ec_gome_knowledge_uat
+gome.stage.jdbc.mysql.helpcenter.username=pw_knowledge_uat
+gome.stage.jdbc.mysql.helpcenter.password=ZCxreMp3HHDR3nUl0zYvs3OBHRDzUh+Jnx8aWfeONagzxL1To4xkBlrKC93gOWU1Wh1VsTF6jYmSX6o45nHTsw==
+
+# mysql  c2m configuration
+gome.stage.jdbc.mysql.c2m.jdbcurl=jdbc:mysql://ceshi-mysql1.ec.db:6306/ec_gome_gcc_uat?useUnicode=true&characterEncoding=UTF-8
+gome.stage.jdbc.mysql.c2m.username=pw_gome_gcc_uat
+gome.stage.jdbc.mysql.c2m.password=gUOGX6lm5EVKU3dcu9uWjrai2rRF/zsFEe7eMXb04/EZcslKi5yYKVsL5IKqBkrsxvu2lpdEUS4246oJED5/qw==
+
+# common connection pool configuration
+gome.stage.jdbc.idleconnectiontestperiod=0
+gome.stage.jdbc.statementscachesize=100
+gome.stage.jdbc.releasehelperthreads=3
+
+# oracle connection pool configuration
+gome.stage.jdbc.idlemaxage=1
+#gome.stage.jdbc.idlemaxage=60
+#gome.stage.jdbc.idlemaxage=240
+gome.stage.jdbc.maxconnectionsperpartition=50
+gome.stage.jdbc.minConnectionsperpartition=100
+gome.stage.jdbc.partitioncount=1
+# gome.stage.jdbc.partitioncount=3
+gome.stage.jdbc.acquireincrement=5
+
+# mysql connection pool configuration
+gome.stage.jdbc.mysql.maxconnectionsperpartition=4
+gome.stage.jdbc.mysql.minConnectionsperpartition=2
+gome.stage.jdbc.mysql.partitioncount=1
+gome.stage.jdbc.mysql.acquireincrement=5
+
+# configuration env
+gome.stage.env=uat
+
+# zookeeper configuration
+
+gome.stage.dubbo.member.adress=10.58.57.58:2181,10.58.57.54:2181,10.58.57.48:2181
+
+gome.stage.dubbo.zookeeper.address=10.58.57.58:2181,10.58.57.54:2181
+
+gome.stage.cache.dubbo.zookeeper.address=10.58.57.58:2181,10.58.57.54:2181,10.58.57.48:2181
+
+gome.stage.dubbo.zookeeper.address.appraise=zookeeper://10.126.53.117:2181
+
+#gome.stage.region.dubbo.zookeeper.address=10.58.22.191:2181,10.58.22.192:2181,10.58.22.193:2181,10.58.50.149:2181,10.58.50.150:2181
+gome.stage.region.dubbo.zookeeper.address=10.58.57.58:2181,10.58.57.54:2181,10.58.57.48:2181
+
+gome.stage.smsg.dubbo.zookeeper.address=10.58.57.58:2181,10.58.57.54:2181,10.58.57.48:2181
+
+#gome.atpservice.dubbo.zookeeper.address=10.58.46.60:2181
+
+gome.atpservice.dubbo.zookeeper.address=10.58.57.58:2181,10.58.57.54:2181,10.58.57.48:2181
+
+# dragon.mds
+gome.dragon.mds.dubbo.zookeeper.address=10.58.57.58:2181,10.58.57.54:2181,10.58.57.48:2181
+
+
+#redisson zookeeper 
+gome.stage.redisson.zookeeper.address=10.58.57.58:2181,10.58.57.54:2181,10.58.57.48:2181
+#glockZookeepr
+gome.stage.glock.zookeeper.address=10.58.57.58:2181,10.58.57.54:2181,10.58.57.48:2181
+
+# IDGenerator configuration
+gome.stage.idgen.server=10.58.57.58:2181,10.58.57.54:2181
+
+# mongodb configuration
+gome.stage.mongo.spec.urls=ceshi-mongo.ec.db:27067
+gome.stage.mongo.spec.db=ec_spec_prd_uat
+gome.stage.mongo.spec.username=pw_spec_prd_uat
+gome.stage.mongo.spec.password=uRIIAhIrRf26aqEJ
+gome.stage.mongo.spec.conns=50
+
+gome.stage.mongo.group.urls=ceshi-mongo.ec.db:27067
+gome.stage.mongo.group.db=ec_huodong_uat
+gome.stage.mongo.group.username=pw_huodong_uat
+gome.stage.mongo.group.password=diUMsXzpIZNL3A6B
+gome.stage.mongo.group.conns=50
+
+gome.stage.mongo.appraise.urls=ceshi-mongo.ec.db:27067
+gome.stage.mongo.appraise.db=ec_appraise_uat
+gome.stage.mongo.appraise.username=pw_appraise_uat
+gome.stage.mongo.appraise.password=hSdulNrdqirVJ2CK
+gome.stage.mongo.appraise.conns=100
+
+gome.stage.mongo.newspec.urls=ceshi-mongo.ec.db:27067
+gome.stage.mongo.newspec.db=ec_spec_prd_uat
+gome.stage.mongo.newspec.username=pw_spec_prd_uat
+gome.stage.mongo.newspec.password=uRIIAhIrRf26aqEJ
+gome.stage.mongo.newspec.conns=100
+
+gome.stage.mongo.favorite.urls=10.126.44.51:27027,10.126.44.54:27027
+gome.stage.mongo.favorite.db=ec_favorite_uat
+gome.stage.mongo.favorite.username=uat_pw_favorite
+gome.stage.mongo.favorite.password=7tBptKlJuksa
+gome.stage.mongo.favorite.conns=50
+
+
+# RocketMQ configuration
+gome.stage.rocketmq.address=10.58.57.47:9876;10.58.57.51:9876
+
+gome.stage.rocketmq.bcc.topic=bcc_cache_uat
+gome.stage.rocketmq.bcc.messagemodel=BROADCASTING
+gome.stage.rocketmq.bcc.tag=bcc_invalidateCache_uat
+#Index RocketMQ configuration
+gome.stage.rocketmq.address=10.58.57.47:9876;10.58.57.51:9876
+gome.stage.rocketmq.index.topic=index_prod_sku
+gome.stage.rocketmq.index.messagemodel=BROADCASTING
+gome.stage.rocketmq.index.tag=index_prod_sku
+
+
+gome.stage.rocketmq.indexproduct.topic=index_prod_sku
+gome.stage.rocketmq.index.messagemodel=BROADCASTING
+gome.stage.rocketmq.indexproduct.tag=index_prod_sku
+
+gome.stage.rocketmq.indexprice.topic=index_sku_price
+gome.stage.rocketmq.index.messagemodel=BROADCASTING
+gome.stage.rocketmq.indexprice.tag=index_sku_price
+
+gome.stage.rocketmq.indexcategory.topic=index_category
+gome.stage.rocketmq.index.messagemodel=BROADCASTING
+gome.stage.rocketmq.indexcategory.tag=index_category
+
+gome.stage.rocketmq.indexcategoryfacets.topic=index_categoryfacets
+gome.stage.rocketmq.index.messagemodel=BROADCASTING
+gome.stage.rocketmq.indexcategoryfacets.tag=index_categoryfacets
+
+gome.stage.rocketmq.indexincrementcategory.topic=index_incrementcategory
+gome.stage.rocketmq.index.messagemodel=BROADCASTING
+gome.stage.rocketmq.indexincrementcategory.tag=index_incrementcategory
+
+gome.stage.rocketmq.portionpromo.topic=index_promo_ads
+gome.stage.rocketmq.index.messagemodel=BROADCASTING
+gome.stage.rocketmq.portionpromo.tag=index_promo_ads
+
+#DPC configuration
+gome.stage.rocketmq.dpc.group=rocketmq
+gome.stage.rocketmq.dpc.dataId=url
+gome.stage.rocketmq.dpc.topic=gome_dpc
+gome.stage.rocketmq.dpc.tags=gome_dpc
+gome.stage.dpc.redisson.lock=DPC_CATX_GOME_PRICE_SKUID_LOCK
+
+gome.stage.jdbc.mysql.dpc_shop_price.dbKey=ec_shop_price_uat
+gome.stage.jdbc.mysql.dpc_shop_price.appName=Dpcprice
+gome.stage.jdbc.mysql.dpc_shop_price.prefix = shop_price
+
+gome.stage.dpc.rocketmq_b5_1_topic=atg_goods_b5_1_topic
+gome.stage.dpc.rocketmq_b5_1_tags=atg_goods_b5_1_tag
+gome.stage.dpc.rocketmq_b5_1_groupName=atg_goods_b5_1
+
+gome.stage.dpc.rocketmq_b5_28_topic=atg_goods_b5_28_topic
+gome.stage.dpc.rocketmq_b5_28_tags=atg_goods_b5_28_tag
+gome.stage.dpc.rocketmq_b5_28_groupName=atg_goods_b5_28
+
+#DPC美店、返利
+gome.stage.dpc.gomeplus.topic=ec_plus_manage_uat
+gome.stage.dpc.gomeplus.tags=TagPlusShop || TagPlusProduct || TagPlusRebate
+gome.stage.dpc.gomeplus.model=BROADCASTING
+
+#DPC NPOP 店铺合同消费者
+gome.stage.dpc.pop.mq.topic=dpc_shop_pop_uat
+gome.stage.dpc.pop.mq.group=dpc_shop_pop_uat
+gome.stage.dpc.pop.mq.tags=gomeContractPersistedService
+
+
+gome.stage.rocketmq.gcc.topic=rhino_cache_uat
+gome.stage.rocketmq.gcc.messagemodel=CLUSTERING
+gome.stage.rocketmq.gcc.tag=rhino_increment_uat
+
+gome.stage.rocketmq.spec.topic=specs_increment_uat_test
+gome.stage.rocketmq.spec.messagemodel=BROADCASTING
+gome.stage.rocketmq.spec.tag=specs_increment
+
+gome.stage.rocketmq.kuaixun.topic=newsCount_uat
+gome.stage.rocketmq.kuaixun.messagemodel=CLUSTERING
+gome.stage.rocketmq.kuaixun.tag=newsCount_increment
+
+gome.search.rocketmq.specpublish.topic=specification_uat
+gome.search.rocketmq.specpublish.tag=specification_publish
+gome.search.rocketmq.specpublish.messagemodel=CLUSTERING
+
+gome.stage.rocketmq.price.topic=bcc_price_uat
+gome.stage.rocketmq.price.tag=bcc_price_uat
+gome.stage.rocketmq.price.messagemodel=BROADCASTING
+
+gome.stage.rocketmq.smartbug.topic=smartbug_uat
+gome.stage.rocketmq.smartbug.tag=smartbug_uat
+gome.stage.rocketmq.smartbug.messagemodel=BROADCASTING
+
+gome.stage.rocketmq.io.topic=ec_io_status_product
+gome.stage.rocketmq.io.tag=iostatus_product_uat
+gome.stage.rocketmq.io.messagemodel=CLUSTERING
+gome.stage.rocketmq.io.producergroup=iostatus_product_proGro
+
+# beanstalk configuration
+gome.stage.beanstalk.address=10.58.50.45:11300
+
+# item-app configuration
+gome.stage.item.dubbo.group=
+
+
+# appraise configuration
+
+#MongoDB
+gome.appraise.mongo.urls=ceshi-mongo.ec.db:27067
+gome.appraise.mongo.db=ec_appraise_uat
+gome.appraise.mongo.username=pw_appraise_uat
+gome.appraise.mongo.password=hSdulNrdqirVJ2CK
+gome.appraise.mongo.conns=300
+
+gome.appraise.scheduler=open
+
+gome.appraise.mongo.mongoShard=close
+gome.appraise.mongo.configUrls=
+gome.appraise.mongo.mongoShardKeys=
+gome.appraise.mongo.mongoShardUrls=
+gome.appraise.mongo.mongoConfigDB=
+gome.appraise.mongo.mongoConfigUsername=
+gome.appraise.mongo.mongoConfigPassword=
+
+secSite=atguat.net.cn
+
+#search-protion
+gome.search.beanstalkip=10.58.56.185
+
+#gome-spec(new)
+gome.spec.npopws.address=http://popproxy.bbcuat.com/ws/ATG?wsdl
+
+gome.search.external.topic=index_external_uat
+gome.search.external.subExpression=group_rush_mobile
+gome.search.external.messageModel=CLUSTERING
+
+gome.search.pricecontrol.topic=portion_plan_resouce_uat
+gome.search.pricecontrol.subExpression=plan_resouce_increment
+gome.search.pricecontrol.messageModel=BROADCASTING
+
+gome.search.prohotsell.topic=promotionhotsell_uat
+gome.search.prohotsell.subExpression=promotionhotsell_publish
+gome.search.prohotsell.messageModel=CLUSTERING
+
+gome.search.popjoin.topic=popcoudan_uat
+gome.search.popjoin.subExpression=popcoudan_publish
+gome.search.popjoin.messageModel=CLUSTERING
+
+gome.search.promo.topic=promodesc_uat
+gome.search.promo.subExpression=promodesc_publish
+gome.search.promo.messageModel=CLUSTERING
+
+gome.search.groupcount.topic=index_group_sell
+gome.search.groupcount.subExpression=index_group
+gome.search.groupcount.messageModel=CLUSTERING
+
+gome.search.activity.topic=advert_uat
+gome.search.activity.subExpression=advert_publish
+gome.search.activity.messageModel=CLUSTERING
+
+gome.search.reserve.topic=index_search_reserve_uat
+gome.search.reserve.subExpression=index_search_reserve
+gome.search.reserve.messageModel=CLUSTERING
+
+#search-dispatcher
+gome.search.scheduler=open
+gome.search.rocketmq.group.topic=groupOn_template_uat
+gome.search.rocketmq.group.messagemodel=CLUSTERING
+gome.search.rocketmq.group.tag=groupOn_increment
+
+gome.search.rocketmq.specs.topic=specs_increment_uat_test
+gome.search.rocketmq.specs.messagemodel=CLUSTERING
+gome.search.rocketmq.specs.tag=specs_increment
+
+gome.search.mongo.urls=ceshi-mongo.ec.db:27067
+gome.search.mongo.db=ec_indexDB_uat
+gome.search.mongo.username=pw_indexDB_uat
+gome.search.mongo.password=2PLvPQGZ4Wc6oQew
+gome.search.mongo.conns=100
+# end search-dispatcher
+
+gome.qds.web.solrIndexUrl=http://10.126.56.162:3106/QDS-console
+
+
+gome.stage.dubbo.provider.price=10.126.45.28
+gome.stage.dubbo.provider.product=10.126.45.28
+gome.stage.dubbo.provider.cartPrice=10.126.45.28
+gome.stage.dubbo.provider.cartProduct=10.126.45.28
+gome.stage.dubbo.provider.searchPrice=10.126.45.28
+gome.stage.dubbo.provider.wirelessPrice=10.126.45.28
+
+popGomeCatIds_ServiceTag_Back_NO=cat10000054,cat27221511,cat23941458,cat10000144
+
+
+# ---------------- kafka configuration start ----------------
+gome.stage.kafka.brokerList=10.58.52.199:9092,10.58.52.200:9092,10.58.52.201:9092
+gome.stage.kafka.topic=p_regioncode_log
+gome.stage.kafka.serializerClass=kafka.serializer.StringEncoder
+gome.stage.kafka.requiredAcks=1
+gome.stage.kafka.refreshInterval=5
+gome.stage.kafka.retries=5
+gome.stage.kafka.partitionCount=5
+# ---------------- kafka configuration end ----------------
+
+# ---------------- web-cache configuration start ----------------
+# gome.stage.cache.provider.scheme=redis
+# gome.stage.cache.provider.addr=10.58.50.203:6379
+# ----------------- web-cache configuration end -----------------
+
+
+
+gome.stage.jdbc.druid.initialSize=1
+gome.stage.jdbc.druid.minIdle=1
+gome.stage.jdbc.druid.maxActive=150
+gome.stage.jdbc.druid.maxWait=60000
+gome.stage.jdbc.druid.timeBetweenEvictionRunsMillis=60000
+gome.stage.jdbc.druid.minEvictableIdleTimeMillis=60000
+gome.stage.jdbc.druid.testWhileIdle=true
+gome.stage.jdbc.druid.testOnBorrow=false
+gome.stage.jdbc.druid.testOnReturn=false
+gome.stage.jdbc.druid.poolPreparedStatements=true
+gome.stage.jdbc.druid.maxPoolPreparedStatementPerConnectionSize=20
+
+gome.stage.jdbc.druid.validationQuery.oracle=SELECT 'x' FROM dual
+gome.stage.jdbc.druid.validationQuery.mysql=SELECT 'x'
+
+#redis sentinel address
+gome.stage.sentinel.redis.address=10.126.45.28:26379,10.126.45.29:26379
+gome.stage.sentinel.redis.name=gomehigo
+
+
+# 100759 - GomeStage各子应用更换数据库连接池 start
+gome.stage.jdbc.druid.publickey=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJc1qsVO7o2BI38IJEDZs9xjzD6qbFqHQDzOap1TjpG6KvBM0vf5Bz/5miztIiRbpEAJiMDQIkCFPp21E+LxX8MCAwEAAQ==
+gome.stage.jdbc.druid.publickey.suitsku=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJmQyEfXnkXL4u86nzCoj3fvxEMbi91cxsE0WILfm0FVrG1HbXjO9z7yaZRDSFlmDxV+TGYwuUxQVQ7Bu9PYdy0CAwEAAQ==
+gome.stage.jdbc.druid.publickey.mysql=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJbKz5yjbdQEdQ1QkCpJizTdXzNjFoSM/rMca/YlwhDZbHv/7evs7cs2pkjgn7fghK4jm8WpL6l7iqGCwRL3GXkCAwEAAQ==
+gome.stage.jdbc.druid.publickey.knowledge=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKdU8/XIpwPtOC5BVwCabJo3RCgOo7GQgsO3lxKu72B2sjNCn8J70isvJPJsEqLbC0Es833L9LBb5N9T2tHLSM8CAwEAAQ==
+gome.stage.jdbc.pub.writable.password.encrypted=KugS9SKFi+4PvR8BQzyleWRJ4DZakSWIKKHUDS8264drT9j5L2chIybl7OecaGz8UfeXaGgBKU33+rwGIlX21A==
+gome.stage.jdbc.prodx.password.encrypted=FgADkLHVMl4vONKZbVcciR4JmdrENdiSOYeyRZ3H2u+qAq0FdgvLycCxIzFmlY5GYhXWcp09WGelhRDtxoPBsw==
+gome.stage.jdbc.prod.writable.password.encrypted=TE6Eirvd6nHNiwuEgLrelkFdofI1RJdbqQd/kQzJ0NzSTPL41NMlE9zExnzAKfl58o62l9EgHFDWDUG0ErOLwA==
+gome.stage.jdbc.mysql.gomehome.password.encrypted=jA9kUE+wgSNUVt2M/CvV/9NwaytrKf+n6bDd6caUOiqZgnxWx7Uwv0cI2edFL2aEtKu/qUMYJOfgp7GhgIxpsg==
+gome.stage.jdbc.catx.writable.password.encrypted=PjoOD/hHHsPhosXiBGtwawjyChUVUIcYeJw9rfh1uxzslnG7urzOeaIOjCots6xOou0e2Anv9sUgCQFrZlZylg==
+gome.stage.jdbc.mysql.suitsku.password.encrypted=NtGzZ0D0UdrY7MIcTo60YKny3H9vw/rrLTfn++YYqGTrEpG9q1xJ+Ox3SvXS2ITZu+LkHwjkWZqzfxMnNzQx+w==
+gome.stage.jdbc.prod.password.encrypted=TE6Eirvd6nHNiwuEgLrelkFdofI1RJdbqQd/kQzJ0NzSTPL41NMlE9zExnzAKfl58o62l9EgHFDWDUG0ErOLwA==
+gome.stage.jdbc.mysql.knowledge.password.encrypted=a/rwegH1bV9wo4hMy4NgqZ8jIJ9ocjJGIIc7FkqWm2boffYdSGJHkKBks0fgIWmXim+Xos+b2LrxwZuDwB/F2A==
+gome.stage.jdbc.catb.master.password.encrypted=jP0CxAuWi7Y0HBMHYrGHQOJI/JYFKwCGukAZ08+P+sVIZP5nRrDfoI1B+20IBYspjI73hyXkjxM02HEe0Itj8w==
+gome.stage.jdbc.catx.master.password.encrypted=PjoOD/hHHsPhosXiBGtwawjyChUVUIcYeJw9rfh1uxzslnG7urzOeaIOjCots6xOou0e2Anv9sUgCQFrZlZylg==
+gome.stage.jdbc.mysql.password.encrypted=D58DaMNOFNHLcfbRQN+A/srq1QEyMyiwx1WdB5TgzGH8I5ge3gVgHzJi9HA9au19rm7TBZQAV1gmSmbF//mntA==
+gome.stage.jdbc.atgsys.writable.password.encrypted=AsM+2k2RoACHzMxLjaWrRibLGDoPDk/UAgCOvH/8jHz1MiKEC8gqnL1FyqHNilC39fVldXzkax/tUaGJ8eHU/A==
+gome.stage.jdbc.catx.password.encrypted=UosiEW78QtKISgzgbDIewvyzzG6we92pemZNkuH9s7glgVyUJauJZp/0voCn3SqzLS1WDi/WS1T08nF65whdCQ==
+gome.stage.jdbc.catb.password.encrypted=UosiEW78QtKISgzgbDIewvyzzG6we92pemZNkuH9s7glgVyUJauJZp/0voCn3SqzLS1WDi/WS1T08nF65whdCQ==
+gome.stage.jdbc.prodx_w.password.encrypted=FgADkLHVMl4vONKZbVcciR4JmdrENdiSOYeyRZ3H2u+qAq0FdgvLycCxIzFmlY5GYhXWcp09WGelhRDtxoPBsw==
+gome.stage.jdbc.catb.writable.password.encrypted=jP0CxAuWi7Y0HBMHYrGHQOJI/JYFKwCGukAZ08+P+sVIZP5nRrDfoI1B+20IBYspjI73hyXkjxM02HEe0Itj8w==
+gome.stage.jdbc.mysql.c2m.password.encrypted=NtGzZ0D0UdrY7MIcTo60YKny3H9vw/rrLTfn++YYqGTrEpG9q1xJ+Ox3SvXS2ITZu+LkHwjkWZqzfxMnNzQx+w==
+gome.stage.jdbc.druid.publickey.c2m=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJmQyEfXnkXL4u86nzCoj3fvxEMbi91cxsE0WILfm0FVrG1HbXjO9z7yaZRDSFlmDxV+TGYwuUxQVQ7Bu9PYdy0CAwEAAQ==
+# 100759 - GomeStage各子应用更换数据库连接池 end
+
+gome.stage.hessian.npop.prom.url=http://10.126.45.38:3461/hessian/promotion
+#gome.stage.hessian.npop.prom.url=http://interfaceuat.coupon.coo8.com/hessian/promotion
+
+
+#clover configuration
+gome.clover.systemId=item-restful-UAT
+gome.clover.cloverServerIps=clover.atguat.com.cn
+#smart buy
+gome.smart.beanstalkip=10.58.56.185
+gome.smart.beanstalkip.port=11300
+
+#index-newSearch configuration uat
+index.newsearch.beanstalkip=10.58.56.285
+index.newsearch.catbeanstalkip=10.58.56.285
+index.newsearch.newcatbeanstalkip=10.58.56.185
+index.newsearch.newbeanstalkip=10.58.56.185
+index.newsearch.newpriceip=10.58.56.285
+index.newsearch.newproductip=10.58.56.285
+index.newsearch.port=11300
+index.newsearch.testip=10.58.47.239
+index.newsearch.pre.newcatbeanstalkip=10.58.52.176
+index.newsearch.pre.newbeanstalkip=10.58.52.175,10.58.52.176,10.58.52.178
+index.newsearch.prebeanstalkd=0
+index.newsearch.sendmessage=1
+#index-newSearch configuration mongo uat
+index.newsearch.indexdb.urls=ceshi-mongo.ec.db:27067
+index.newsearch.indexdb.conns=100
+index.newsearch.indexdb.username=pw_indexDB_uat
+index.newsearch.indexdb.password=2PLvPQGZ4Wc6oQew
+index.newsearch.indexdb.db=ec_indexDB_uat
+
+index.newsearch.newspec.urls=ceshi-mongo.ec.db:27067
+index.newsearch.newspec.conns=100
+index.newsearch.newspec.username=pw_spec_prd_uat
+index.newsearch.newspec.password=uRIIAhIrRf26aqEJ
+index.newsearch.newspec.db=ec_spec_prd_uat
+
+gome.smartbuy.search.url=http://api.search.atguat.com.cn/p/smartBuy
+
+# gome.lanquan
+gome.lanquan.reverse.url=http://lanquan.atguat.com.cn
+
+#bainaluoji
+gome.stage.freesale.url=http://10.126.53.61:20803/sale/api.do
+#promotiontypefilter
+gome.stage.constant.needfilterpromotiontype = 1
+# feitian
+
+gome.feitian.dubbo.zookeeper.address=10.58.57.58:2181,10.58.57.54:2181,10.58.57.48:2181
+
+# shop coupon
+shopHessionurl=http://interfaceuat.coupon.coo8.com/hessian/couponBatch
+# isSpecial coupon
+detail.isSpecial = true
+detail.promotionList = P381100
+
+#dpc mongo
+gome.stage.dpc.mongo.url=10.126.44.51:27067
+gome.stage.dpc.mongo.name=pw_gstagedpc_uat
+gome.stage.dpc.mongo.pwd=29xnxS88sghslS
+gome.stage.dpc.mongo.database=ec_gstage_dpc_uat
+gome.stage.dpc.mongo.conns=100
+
+
+gome.stage.jdbc.mysql.suitsku.paswd=kt25miM8u2323
+
+gome.mysql.db.stage-whale.dbKey=stage-whale_channel_uat
+gome.mysql.db.stage-whale.appName=stage-whale
+
+gome.stage.jdbc.catb.dbKey=uat_catb
+gome.stage.jdbc.catb.writable.dbKey=uat_catb
+gome.stage.jdbc.catb.master.dbKey=uat_catb
+
+gome.stage.jdbc.catx.dbKey=uat_catx
+gome.stage.jdbc.catx.writable.dbKey=uat_catx
+gome.stage.jdbc.catx.master.dbKey=uat_catx
+
+gome.stage.jdbc.prod.dbKey=uat_prod
+gome.stage.jdbc.prod.writable.dbKey=uat_prod
+
+gome.stage.jdbc.prodx.dbKey=uat_prodx
+gome.stage.jdbc.prodx_w.dbKey=uat_prodx
+
+gome.stage.jdbc.mysql.dbKey=ec_topdb_uat
+gome.stage.jdbc.mysql.knowledge.dbKey=ec_gome_knowledge_uat
+gome.stage.jdbc.mysql.c2m.dbKey=ec_gome_gcc_uat
+gome.stage.jdbc.mysql.suitsku.dbKey=ec_gome_gcc_uat
+
+#JobClover
+gome.search.portion.systemId=index_portion-UAT
+gome.search.newIndex.systemId=search-newIndex-UAT
+gome.stage.search.newIndex.cloverIp=clover.atguat.com.cn
+
+gome.aiqiyicard.skuShield=sku21380022
+
+
+skuBlackList=sku21380022,pop8001012861
+
+gome.stage.rocketmq.shelfmanage.topic=ec_shelfmanage_uat
+gome.stage.rocketmq.shelfmanage.product.tag=TagU
+
+gome.stage.rocketmq.rebate.plan.topic=ec_plus_manage_uat
+gome.stage.rocketmq.rebate.plan.tag=TagPlusRebate
+
+gome.stage.rocketmq.rebate.product.topic=ec_rebate_prd_uat
+gome.stage.rocketmq.rebate.product.tag=rebate_prd
+
+gome.stage.rocketmq.rebate.storm.topic=ec_rebate_storm_uat
+gome.stage.rocketmq.rebate.storm.tag=rebate_storm
+gome.stage.rocketmq.rebate.storm.messagemodel=CLUSTERING
+
+gome.stage.rocketmq.rebate.index.topic=ec_rebate_index_uat
+gome.stage.rocketmq.rebate.index.tag=rebate_index
+
+gome.stage.rocketmq.rebate.index.messageModel=CLUSTERING
+
+gome.stage.jdbc.mysql.dpc.dbKey=shop_prices

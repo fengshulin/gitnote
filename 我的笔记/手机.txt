@@ -1,0 +1,15 @@
+﻿S/N:N9B7N15511007741
+
+IMei:866655022835106
+
+型号：HUAWEI ALE-CL00
+产品识别码：21353434
+meid: A00000555C7A04
+
+
+您的解锁码为：1956210956111849
+
+
+C:Program FilesJavajdk1.7.0_79bin;C:Program FilesJavajdk1.7.0_79jrebin;D:javaapache-maven-3.2.2bin;C:windowssystem32;C:Program FilesMySQLMySQL Server 5.5bin;D:javaapache-tomcat-7.0.70libservlet-api.jar;C:Program Files (x86)NVIDIA CorporationPhysXCommon
+
+.;%JAVA_HOME%libdt.jar;%JAVA_HOME%jrelib;%JAVA_HOME%libtools.jar;%Tomcat_home%commonlibservlet-api.jar;%Tomcat_home%commonlibjsp-api.jar;D:mysqlmysql-connector-java-5.1.39mysql-connector-java-5.1.39-bin.jar

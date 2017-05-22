@@ -1,0 +1,16 @@
+git常见操作流程：
+
+1.git remote add upstream https://github.com/*****  设置原仓库地址upstream，方便以后操作
+2.git checkout -b develop 创建develop分支
+3.git pull upstream develop 重新拉取原仓库develop分支代码    （不建议这么操作。用以下操作代替）
+4.git fetch upstream develop:tmp 获取最新代码作为一个名为tmp的分支
+5.git diff tmp 对比差异文件，有错误，修改
+6.git merge tmp 合并tmp分支
+7.git branch -d tmp 删除tmp分支
+8.git status 查看当前的修改情况
+8.git checkout -b discuss  创建一个新的需求分支（如果存在多个需求的情况下）
+9.git add 已经修改的文件    添加修改的文件  
+10.git commit -m "提交说明"  给修改的文件添加一个说明，方便以后查看
+11.git checkout develop 切换到develop分支  (11.12如果有两个需求分支的情况下操作)
+12.git checkout merge discuss 将discuss分支合并到develop分支
+13.git push origin develop 提交到自己github远程仓库的develop分支

@@ -1,0 +1,117 @@
+详情页
+
+-----------------------------------------------------------------
+1.面包屑
+	实现：/stage-common/src/main/java/com/gome/item/product/decorator/BreadCrumDecV2.java
+	拼接规则：首页(此项部分商品有) + 一级分类 + 二级分类 + 三级分类 + 品牌名称（非图书）+ 商品名称
+						a.首页
+							名称：写死为“首页”；
+							跳转：到国美首页
+						b.一级分类
+							名称：一级分类名（cat1.getDisplayName()）
+							跳转：分类描述（cat1.getDescription()）
+						c.二级分类
+							名称：二级分类名（cat2.getDisplayName()）
+							跳转：已取消跳转
+						d.三级分类
+							名称：三级分类名（cat3.getDisplayName()）
+							跳转：list开头域名/三级分类ID.html
+						e.品牌（非图书）
+							名称：品牌名称（brand.getBrandName()，Brand可从分类缓存获取）
+							跳转：faceId不为空：list开头域名/三级分类ID/-00-0-4			8-1-0-0-0-1-faceId-0-0-0-0-0-0-0-0.html
+									faceId为空：search开头域名/search?question="encode(brandName)"
+						f.商品名称
+							联营：取Sku的displayName
+							自营：在Rule=1的情况下，取：品牌+型号，否则取Sku的displayName。					
+-----------------------------------------------------------------
+2. 主信息商品大图片
+	实现：/stage-common/src/main/java/com/gome/item/product/decorator/FSGoodsDec.java
+			新图片地址为：gfs开头的域名，	
+			拼接规则：如果imageSize为空：直接返回gfsImgUrl
+								否则：gfsImgUrl + "_" + imageSize + ".jpg"
+								
+								老一套img开头域名	。
+								//img + “skuid最后一位减5的绝对值”（0不算）+ 域名 + /image/hrefURl（_50.jpg 前端拼写）
+ 		
+-----------------------------------------------------------------
+3.商品标题
+	prdinfo.name。取自Sku.displayName(缓存)
+
+-----------------------------------------------------------------
+4.促销语
+	取自Sku与product缓存（字段periodPromoDesc）
+-----------------------------------------------------------------
+5.价格
+	异步
+-----------------------------------------------------------------
+6.销售属性，颜色版本
+	实现：/stage-common/src/main/java/com/gome/item/product/decorator/FSGoodsDec.java
+	
+	销售属性与销售属性值拼写而成（缓存）
+-----------------------------------------------------------------
+7.商品服务标签
+	实现：/stage-common/src/main/java/com/gome/item/product/decorator/ProdServiceTagDec.java
+	  
+	a.服务标签从redis hgetall 31:Servicetag-cat10000049-10000022获取.(三级分类id和品牌id)
+	b.判断是否有merchantId(商家id)，过滤“不支持7天无理由退换”.
+		有merchantId：通过productType判断是海外购则通过本地配置“不支持7天无理由退换”，并配置“海外直供”。实现类：/stage-model/src/main/java/com/gome/stage/item/ServiceTagEnum.java
+									否则为联营：通过PropertyUtils.getString("popGomeCatIds_ServiceTag_Back_NO")从diamond里获取不支持服务标签的三级分类id列表，然后进行不支持筛选。联营均配置“正品保障” ，写死。
+		无merchantId：
+								为GOME自营：配置“不支持7天无理由退换”也通过本地(GCC配置)。
+								
+								
+-----------------------------------------------------------------
+8.店铺服务信息
+	实现：/stage-common/src/main/java/com/gome/item/product/decorator/ProdShopDec.java
+	数据取自缓存：
+		GOME_REDIS_BUSINESS_NAME = "GPRODCACHE"
+ 		key="Shop-" + shopId
+	命令：
+		use GPRODCACHE
+		hget 1X:Shop-shopId（1X为生产命令空间）
+		
+		评分规则由前端控制
+-----------------------------------------------------------------
+9.支持
+	店铺
+-----------------------------------------------------------------
+10.其他类似
+	异步数据
+	大数据提供接口：http://bigd.gome.com.cn/gome/rec?callback=jsonpname_qitaleisi&boxid=box38&pid=A0006072966&area=23030300&cid=148006559884149840&uid=72321134505&imagesize=130&brid=98808270&shopid=80001469&c1id=cat18596268&c3id=cat15985570&sid=pop8009373892&_=1484359289456
+-----------------------------------------------------------------
+11.相关分类
+	自营：page.prdClass 
+		实现：/stage-common/src/main/java/com/gome/item/product/decorator/AssociateCatsDec.java
+		用二级分类下面的子分类ID通过缓存查分类信息。
+	联营：店铺商品分类。shop.getShopCategorys()缓存
+				店铺分类链接拼接规则："//mall.gome.com.cn"（生产）+ "/" + shopno + "/2-" + catid + "-1-0.html"
+	同类其他品牌：	page.relatedBrands
+		实现：com.gome.item.product.decorator.AssociateBrandsDec. 
+		详解：通过三级分类缓存中的thdCat.getAssociateBrands()方法获取相关品牌ID，然后通过品牌ID在缓存中获取品牌信息。 
+-----------------------------------------------------------------
+12.规格参数：page.prdDescSpec
+	实现：/stage-common/src/main/java/com/gome/item/product/decorator/ProdSpecModelDec.java
+-----------------------------------------------------------------
+13.包装清单：page.prdPacks
+	实现：/stage-common/src/main/java/com/gome/item/product/decorator/ProdPackingDec.java
+	取自Product缓存。product.getPackingList()
+-----------------------------------------------------------------
+14.浏览该商品的用户最终购买
+	大数据接口：
+	http://bigd.gome.com.cn/gome/rec?callback=cb_729931728538403&boxid=box13&pid=9133620229&cid=148006559884149840&uid=73157793587&area=31010100&brid=240608265&imagesize=160&c1id=cat31665542&c3id=cat10005424&shopid=&sid=1122410160&_=1487153501809
+-----------------------------------------------------------------
+15.根据浏览猜你喜欢
+	大数据接口：
+	http://bigd.gome.com.cn/gome/rec?callback=cb_501246217809016&boxid=box37&pid=9133620229&area=31010100&cid=148006559884149840&uid=73157793587&imagesize=130&brid=240608265&shopid=&c1id=cat31665542&c3id=cat10005424&sid=1122410160&_=1487154369616
+-----------------------------------------------------------------
+16.小助手：page.prdHelper
+	
+	
+#搭配购
+	自营是在gcc后台配置的
+	联营是在pop后台配置的
+-----------------------------------------------------------------
+
+
+use GCC_VIRTUAL_PACKAGE
+hgetall 41:VIRTUAL_PACKAGE_FRONT_tz10001668

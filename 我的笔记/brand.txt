@@ -1,0 +1,44 @@
+private String itemId;
+
+/** 品牌 id */
+private String brandId;
+
+/** 品牌名称 */
+private String brandName;
+
+/** 品牌英文名称 */
+private String enName;
+
+/** 品牌code */
+private String brandCode;
+
+/** 品牌别名 */
+private String brandOtherName;
+
+/** 是否使用 */
+private String used;
+
+/** 备注 */
+private String remark;
+
+/** 品牌logo id */
+private String logoImageId;
+
+/** 更新时间 */
+private Timestamp modifyTime;
+
+/** 更新人 */
+private String modifyUser;
+
+/** 是否配置有品牌专区页 */
+private Integer haveZonePage;
+
+/** 首字母 */
+private String firstCharacter;
+
+/** 状态 */
+private String status;
+
+private String facetId;
+
+private String logUrl;

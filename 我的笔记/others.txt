@@ -1,0 +1,49 @@
+itemseo-web ftp地址：
+http://bin.ds.gome.com.cn/atg_poc/gome-stage/itemseo-web/itemseo-web_1.0.0.2.482240.tar.gz
+
+itemseo-web 4344 服务器：10.58.22.35   端口3071
+itemseo-web UAT 服务器：10.58.57.96
+
+gome_detail_service_seo 4344 服务器：10.58.22.35:9020
+
+部署机器
+stage_web_seo
+	10.58.50.166,10.58.50.167,10.58.50.168,10.58.50.169,10.58.50.170,10.58.50.174
+
+gome_detail_service_seo
+	10.58.50.166,10.58.50.167
+
+海外购税费字段
+salesRate vatRate taxModel taxUnit taxQuantity amount
+	
+大家好：
+	2017年3月的打车报销单可以开始提了。
+	1、OA“加班车费报销”单子中，“部门费用上报人员”写我的名字（寿安新）；
+	2、贴发票可多人贴一张A4纸（个人发票少的情况下,需写明每个人的基本信息）。基本信息包括：部门、工号、姓名、银行卡号（兴业银行）、合计（所有发票总额），贴好后给我；
+	
+	注：a.需要胶水的可以到我这里拿
+			b.加班打车费用中"预约叫车费"不在报销范围内
+			c.纸质发票总额需与OA提报总额一致
+
+http://10.58.22.35:3071/detail/pid-skuid
+http://10.58.22.35:3071/detail/9134265515-1123200849
+
+com.gome.stage.interfaces.whale.ICategoryDBService.getCountPageMultiCategoryBySiteId
+getPageMultiCategoryBySiteId
+getFirstCategoriesBySiteId
+getSubCategoryInfoByCategoryId
+getBrandIdByCategoryIdList
+getKnowledges
+getSiteIdByCoo8CatId
+getCategoryByCatId
+getGomeCategoryByCoo8CatId
+getParentCategoryByCatId
+findCategoryNameByCategoryIds
+getCategoryByCategoryId
+
+invoke com.gome.stage.interfaces.whale.ICategoryDBService.getCategoryByCategoryId("clearAllCache")
+invoke com.gome.stage.interfaces.whale.ICategoryDBService.getCategoryByCategoryId("homeStoreRootCategory")
+invoke com.gome.stage.interfaces.whale.ICategoryDBService.getCategoryByCategoryId("cat31665542")
+
+prod21010080  sku20910017 
+prod25420042  sku20950015 

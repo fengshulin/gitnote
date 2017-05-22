@@ -1,0 +1,44 @@
+﻿
+
+
+scm			库名
+    ├─branches		存放分支的地方
+    ├─tags		存放标签的地方
+    └─trunk		项目的开发主干
+
+
+
+
+https://repo.ds.gome.com.cn:8443/svn/atg_poc/30_Coding/NewDevMode/trunk/gome-gcc/gome-gcc-web/pom.xml
+https ---- http加入ssl层防止明文传输
+repo.ds.gome.com.cn:8443 ---- 域名及端口
+atg_poc ---- 产品名
+30_Coding/NewDevMode --- 分支开发目录
+trunk ---- 主干
+gome-gcc/gome-gcc-web ---- 父目录+模块名
+
+https://域名/产品名/开发方式/模块名/(分支或tag名)/目录/文件
+
+
+https://repo.ds.gome.com.cn:8443/svn/atg_poc/30_Coding/NewDevMode/branches/gome-gcc/gome-gcc-web/gome-gcc-web_1.0.6_BR/pom.xml
+https ---- http加入ssl层防止明文传输
+repo.ds.gome.com.cn:8443 ---- 域名及端口
+atg_poc ---- 产品名
+30_Coding/NewDevMode --- 分支开发目录
+trunk ---- 主干
+gome-gcc/gome-gcc-web ---- 父目录+模块名
+gome-gcc-web_1.0.6_BR ---- 分支名称
+
+https://域名/产品名/开发方式/模块名/(分支或tag名)/目录/文件
+
+
+分支
+	例： gome-gcc-web_1.0.6_BR是atg_poc/gome-gcc/gome-gcc-web模块的分支
+	gome-gcc-web是模块名
+	1.0.6是版本号
+	BR代表分支，branch的缩写
+Tag
+	例：gome-gcc-web_1.0.6.1_BL
+	gome-gcc-web是模块名
+	1.0.6.1是从分支1.0.6创建的tag，.1是build版本号，每次编译自增1
+	BL代表tag，是baseline的缩写

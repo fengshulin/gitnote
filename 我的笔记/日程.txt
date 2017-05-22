@@ -1,0 +1,159 @@
+2017年02月20日
+Bug 139046  
+应用版本：gome-detail-service 1.0.5.38
+服务标签:增加15天无理由退换货并修改文案
+
+文案：7天无理由退货、不支持7天无理由退货、15天无理由退货（对应修改：/stage-model/src/main/java/com/gome/stage/item/ServiceTagEnum.java）
+
+详情页：gome-detail-service
+修改：
+修饰类：/stage-common/src/main/java/com/gome/item/product/decorator/ProdServiceTagDec.java
+/stage-common/src/main/java/com/gome/item/util/ProductUtils.java 文件中修改方法：filterServiceTag（），增加自营15天无理由，如果后台15天与7天均配置，则删除7天
+
+
+=============================================================================
+
+2017年03月3日
+
+需求：
+美信商品信息（o2m与xpop）直接写入缓存，商品状态为归档；
+主要的需求就是能展示出商品详情页
+
+问题：1.某些对应NPOP品牌在缓存里面没有（如：03245）(处理：没有的不予对应，O2M没有给出品牌与分类对应。)
+      2.某些对应NPOP分类在缓存里面没有（如：cat18001178）
+      3.图片地址不支持“_800”与"_360"，支持 "_50"
+      4.规格参数从mongo里面获取（不知道如何写入）
+      5.“该商品已下柜，非常抱歉！”由于大数据的接口无法获取三级分类的相关推荐，无法显示。
+      
+      1.面包屑不展示
+
+      GFS系统生产token：d6ba5cf7b35e4fe894ab84597080c932（借用平台系统）
+      Uat："token","348ea98ae2a840cbb754701a4ebf93cb"
+
+      总结：1.对于比较耗时的操作最好不要在生产上跑，风险大，本地完成耗时的操作。如：
+                  a.通过Coo8分类获取gome分类需要调用Dubbo接口（com.gome.stage.interfaces.whale.ICategoryDBService），会消耗一定时间，选用本地转换,转接生产机器进行转换
+                  b.将美信图片信息转为Gfs，需要通过http请求获取图片流，然后经过gfs系统进行生成，会消耗大量时间。选用本地操作，调用生产gfs系统进行生成图片地址。并采用多线程减少时间。
+            2.对于比较常用的东西形成工具类，方便日后使用。
+==============================================================================
+2017年3月17日
+
+需求：辅助系统开发
+负责部分：商品管理（文件均以product开头）
+具体：1.增量：销售组织增量、商家合同增量、商品视频广告信息增量、TDK规则增量、合约机信息增量、店铺模板增量、分类增量、品牌增量、店铺增量、Sku增量、Product增量
+      2.缓存：Product缓存、Sku缓存、分类缓存、品牌缓存、店铺缓存、TDK规则缓存、搭配购缓存、服务标签缓存、套装缓存、小助手缓存
+      3.同步数据
+项目名称：toolbox 
+bug号：141249
+uat jenkins地址：http://10.58.57.207:8080/view/%E5%89%8D%E5%8F%B0%E5%89%8D%E7%AB%AFUAT1/job/toolbox/    
+4344 jenkins地址：http://10.58.62.119:8080/view/%E5%89%8D%E5%8F%B0-4344/job/4344-toolbox/
+
+部署机器：端口号3247
+uat：10.58.57.99
+4344：10.58.70.126
+=============================================================================
+2017年4月10日
+需求：辅助系统添加真划算模块
+ use PROM_TQ_DATA（businessName）
+ hgetall N:Q8800381459
+这个是查团抢信息 根据团抢id：Q8800381459
+
+
+查询团抢屏蔽信息
+use TWOELEMENT
+get 1g:9134230121_1123170217
+
+Bug号：Bug 143526 - 辅助系统增加真划算模块
+=============================================================================
+2017年4月10日
+
+看了还看：
+http://bigd.gome.com.cn/gome/rec?callback=jQuery17105745944961942187_1491820614590&pid=9134076288&size=9&boxid=box74&area=11010200&cid=78950533791797056&uid=&brid=10000008&shopid=&c1id=cat10000004&c3id=cat10000062&sid=100381119&imagesize=160&callbackparam=jsonpname_reskim&_=1491820616102
+http://bigd.gome.com.cn/gome/rec?callback=&pid=9134076288&size=9&boxid=box74&area=11010200&cid=78950533791797056&uid=&brid=10000008&shopid=&c1id=cat10000004&c3id=cat10000062&sid=100381119&imagesize=160&callbackparam=jsonpname_reskim&_=1491820616102
+
+
+http://bigd.gome.com.cn/gome/rec?callback=rec&boxid=box08&pid=9134047593&cid=1416967293973036&uid=72667545408&area=31020200&brid=10000098&imagesize=100&c1id=cat31665542&c3id=cat10000070&shopid=&sid=1123040399&_=1477295639826
+http://bigd.gome.com.cn/gome/rec?callback=rec&boxid=box08&pid=9134076288&cid=1416967293973036&uid=72667545408&area=31020200&brid=10000008&c1id=cat10000004&c3id=cat10000062&shopid=&sid=1123050522
+
+
+==========================================================================================
+2017年5月8号
+更改店铺logo url拼接规则
+店铺号 80013137，80013125 该商家已设置好店铺logo，PC端显示正常，但移动端不显示，请帮忙处理，谢谢~
+com.gome.stage.interfaces.item.IShopService#getShopInfoByShopId
+bug号：143935
+发版：gome-product-service 1.0.8.63
+==========================================================================================
+2017年4月25日
+需求:
+seo增加评价同步数据
+
+http接口：http://ss.gome.com.cn/item/v1/prdevajsonp/appraiseNew/9130670025/1/all/1/flag/appraise/all?callback=all&_=149274513914
+
+调用方法：
+productDetailsAppraiseService.getPublicAppraiseJson(productId, type, pageNum);
+参数：type all      pageNum 1
+dubbo配置：
+invoke com.gome.qiantai.service.IProductDetailsAppraiseService.getPublicAppraiseJson("9140021155","all","1")
+没有group
+
+Bug号：Bug 143047 - SEO详情页新增评价同步数据
+=============================================================================================================
+2017年5月2日
+
+需求：
+       爬虫详情页排行榜由box07将替换为box09
+更改说明：提供给前端的字段名称不变，内容由3个展位改为一个展位。
+大数据接口：http://bigd.gome.com.cn/gome/rec?pid=9134300267&imagesize=260&boxid=box09&sid=1123231295&cid=1441764828439535&area=11010200&shopid=&brid=&uid=&c1n=&c2n=&c3n=&c1id=&c3id=&c2id=&callback=rec&_=1483934934842			
+
+Bug号： bug 143531 爬虫详情页排行榜由box07将替换为box09
+发版：发版标签：gome-detail-service-seo 版本号：1.0.3.11
+=============================================================================================================
+没有开售的真划算，收藏之后，应该不会显示已购数据
+
+更改：对未开始抢购的商品，将已购数量设置为0.
+Bug号：143270
+
+查询所有收藏：
+http://ss.gome.com.cn/item/v1/groupon/72356161762/flag/tuan/collec  （参数为userID）
+=============================================================================================================
+2017年5月9日
+SEO大图页TDK规则改版
+
+Bug号：143952
+================================================================================================================
+2017年5月11日
+真划算抢购改版
+
+变动： 1.“限时抢”改名为“美日必抢”；
+      2.场次增加到5场：8-12、12-16、16-20、20-24、24-8
+      3.增加“超级秒杀”展位
+      4.每个场次的商品不再限制为16个，业务可配置多个
+      5.抢购页上方增加18个分类
+
+排期：
+前端：杜佳桧（5.9号-5.22号）
+前台：寿安新、周天挺（5.11号-5.19）
+联调：5月23号
+测试：陈莹（5.24号-6.5号）
+计划发版时间：6月6号
+
+
+===================================================================================================================
+2017年5月18日
+
+seo域名更换
+      需要新增一个环境变量:  uat ：gomeplusDomain=.gome.com.cn（此处新域名上线后要更改成.gomeplus.com）   live：gomeplusDomain=.gomeplus.com  
+其他的环境变量:  uat: .atguat.com.cn 变更成.uatplus.com   live：.gome.com.cn 更换成 .gomeplus.com
+测试环境uat   dspAdv=//dsp.uatplus.com; 生产live   dspAdv=//trp.gomeplus.com
+
+bug号：144638
+
+======================================================================================================================
+排行榜改版
+
+排期：2017.05.15-2017.06.24
+
+
+stage-rsp  Dubbo（stage-rsp_1.0.8_BR）
+appraise-scheduler  定时任务（appraise-scheduler_1.0.7_BR）
+

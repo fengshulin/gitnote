@@ -1,0 +1,15 @@
+private String itemId;
+
+private String modelId;
+private String modelName;
+/** 同一下父类ID下不能有相同模块关键字 */
+private String keyWord;
+/** 源路径 */
+private String url;
+/** 生成模块路径 */
+private String pageUrl;
+/** 1：商品 2:二元素 3:大文本以下适用轮播广告类型 【222】【213】 【231】【 233】 */
+private String modelType;
+private String upModelId;
+private String sequence;
+private String isTimePublish;

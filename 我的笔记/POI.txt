@@ -1,0 +1,543 @@
+﻿一、 POI简介
+
+            Apache POI是Apache软件基金会的开放源码函式库，POI提供API给Java程序对Microsoft Office格式档案读和写的功能。
+二、 HSSF概况
+
+            HSSF 是Horrible SpreadSheet Format的缩写，通过HSSF，你可以用纯Java代码来读取、写入、修改Excel文件。HSSF 为读取操作提供了两类API：usermodel和eventusermodel，即“用户模型”和“事件-用户模型”。
+三、 POI EXCEL文档结构类
+
+            HSSFWorkbook excel文档对象
+
+            HSSFSheet excel的sheet HSSFRow excel的行
+
+            HSSFCell excel的单元格 HSSFFont excel字体
+
+            HSSFName 名称 HSSFDataFormat 日期格式
+
+            HSSFHeader sheet头
+
+            HSSFFooter sheet尾
+
+            HSSFCellStyle cell样式
+
+            HSSFDateUtil 日期
+
+            HSSFPrintSetup 打印
+
+            HSSFErrorConstants 错误信息表
+四、 EXCEL常用操作方法
+  1、 得到Excel常用对象           
+[c-sharp] view plaincopyprint?
+
+    POIFSFileSystem fs=newPOIFSFileSystem(new FileInputStream("d:/test.xls"));   
+    //得到Excel工作簿对象    
+    HSSFWorkbook wb = new HSSFWorkbook(fs);  
+    //得到Excel工作表对象    
+    HSSFSheet sheet = wb.getSheetAt(0);   
+    //得到Excel工作表的行    
+    HSSFRow row = sheet.getRow(i);  
+    //得到Excel工作表指定行的单元格    
+    HSSFCell cell = row.getCell((short) j);  
+    cellStyle = cell.getCellStyle();//得到单元格样式  
+
+ 2、建立Excel常用对象
+[c-sharp] view plaincopyprint?
+
+    HSSFWorkbook wb = new HSSFWorkbook();//创建Excel工作簿对象   
+    HSSFSheet sheet = wb.createSheet("new sheet");//创建Excel工作表对象     
+    HSSFRow row = sheet.createRow((short)0); //创建Excel工作表的行   
+    cellStyle = wb.createCellStyle();//创建单元格样式   
+    row.createCell((short)0).setCellStyle(cellStyle); //创建Excel工作表指定行的单元格   
+    row.createCell((short)0).setCellValue(1); //设置Excel工作表的值  
+
+3、设置sheet名称和单元格内容
+[c-sharp] view plaincopyprint?
+
+    wb.setSheetName(1, "第一张工作表",HSSFCell.ENCODING_UTF_16);          
+    cell.setEncoding((short) 1);      
+    cell.setCellValue("单元格内容");  
+
+4、取得sheet的数目 
+[c-sharp] view plaincopyprint?
+
+    wb.getNumberOfSheets()   
+
+5、  根据index取得sheet对象
+[c-sharp] view plaincopyprint?
+
+    HSSFSheet sheet = wb.getSheetAt(0);  
+
+6、取得有效的行数
+[c-sharp] view plaincopyprint?
+
+    int rowcount = sheet.getLastRowNum();  
+
+7、取得一行的有效单元格个数
+[c-sharp] view plaincopyprint?
+
+    row.getLastCellNum();    
+
+8、单元格值类型读写
+
+[c-sharp] view plaincopyprint?
+
+    cell.setCellType(HSSFCell.CELL_TYPE_STRING); //设置单元格为STRING类型   
+    cell.getNumericCellValue();//读取为数值类型的单元格内容  
+
+ 
+
+9、设置列宽、行高
+
+[c-sharp] view plaincopyprint?
+
+    sheet.setColumnWidth((short)column,(short)width);      
+    row.setHeight((short)height);    
+
+ 
+
+10、添加区域，合并单元格
+
+[c-sharp] view plaincopyprint?
+
+    Region region = new Region((short)rowFrom,(short)columnFrom,(short)rowTo  
+    ,(short)columnTo);//合并从第rowFrom行columnFrom列   
+    sheet.addMergedRegion(region);// 到rowTo行columnTo的区域      
+    //得到所有区域       
+    sheet.getNumMergedRegions()   
+
+ 
+
+11、保存Excel文件
+
+[c-sharp] view plaincopyprint?
+
+    FileOutputStream fileOut = new FileOutputStream(path);   
+    wb.write(fileOut);   
+
+ 
+
+12、根据单元格不同属性返回字符串数值
+
+[c-sharp] view plaincopyprint?
+
+    public String getCellStringValue(HSSFCell cell) {      
+            String cellValue = "";      
+            switch (cell.getCellType()) {      
+            case HSSFCell.CELL_TYPE_STRING://字符串类型   
+                cellValue = cell.getStringCellValue();      
+                if(cellValue.trim().equals("")||cellValue.trim().length()<=0)      
+                    cellValue=" ";      
+                break;      
+            case HSSFCell.CELL_TYPE_NUMERIC: //数值类型   
+                cellValue = String.valueOf(cell.getNumericCellValue());      
+                break;      
+            case HSSFCell.CELL_TYPE_FORMULA: //公式   
+                cell.setCellType(HSSFCell.CELL_TYPE_NUMERIC);      
+                cellValue = String.valueOf(cell.getNumericCellValue());      
+                break;      
+            case HSSFCell.CELL_TYPE_BLANK:      
+                cellValue=" ";      
+                break;      
+            case HSSFCell.CELL_TYPE_BOOLEAN:      
+                break;      
+            case HSSFCell.CELL_TYPE_ERROR:      
+                break;      
+            default:      
+                break;      
+            }      
+            return cellValue;      
+        }     
+
+ 
+
+13、常用单元格边框格式
+
+[c-sharp] view plaincopyprint?
+
+    HSSFCellStyle style = wb.createCellStyle();      
+    style.setBorderBottom(HSSFCellStyle.BORDER_DOTTED);//下边框        
+    style.setBorderLeft(HSSFCellStyle.BORDER_DOTTED);//左边框        
+    style.setBorderRight(HSSFCellStyle.BORDER_THIN);//右边框        
+    style.setBorderTop(HSSFCellStyle.BORDER_THIN);//上边框    
+
+ 
+
+14、设置字体和内容位置
+
+[c-sharp] view plaincopyprint?
+
+    HSSFFont f  = wb.createFont();      
+    f.setFontHeightInPoints((short) 11);//字号       
+    f.setBoldweight(HSSFFont.BOLDWEIGHT_NORMAL);//加粗       
+    style.setFont(f);      
+    style.setAlignment(HSSFCellStyle.ALIGN_CENTER);//左右居中       
+    style.setVerticalAlignment(HSSFCellStyle.VERTICAL_CENTER);//上下居中       
+    style.setRotation(short rotation);//单元格内容的旋转的角度       
+    HSSFDataFormat df = wb.createDataFormat();      
+    style1.setDataFormat(df.getFormat("0.00%"));//设置单元格数据格式       
+    cell.setCellFormula(string);//给单元格设公式       
+    style.setRotation(short rotation);//单元格内容的旋转的角度   
+
+ 
+
+15、插入图片
+
+[c-sharp] view plaincopyprint?
+
+    //先把读进来的图片放到一个ByteArrayOutputStream中，以便产生ByteArray       
+          ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();      
+          BufferedImage bufferImg = ImageIO.read(new File("ok.jpg"));      
+          ImageIO.write(bufferImg,"jpg",byteArrayOut);      
+    //读进一个excel模版       
+    FileInputStream fos = new FileInputStream(filePathName+"/stencil.xlt");       
+    fs = new POIFSFileSystem(fos);      
+    //创建一个工作薄       
+    HSSFWorkbook wb = new HSSFWorkbook(fs);      
+    HSSFSheet sheet = wb.getSheetAt(0);      
+    HSSFPatriarch patriarch = sheet.createDrawingPatriarch();      
+    HSSFClientAnchor anchor = new HSSFClientAnchor(0,0,1023,255,(short) 0,0,(short)10,10);           
+    patriarch.createPicture(anchor , wb.addPicture(byteArrayOut.toByteArray(),HSSFWorkbook.PICTURE_TYPE_JPEG));    
+
+ 
+
+16、调整工作表位置
+
+[c-sharp] view plaincopyprint?
+
+    HSSFWorkbook wb = new HSSFWorkbook();     
+    HSSFSheet sheet = wb.createSheet("format sheet");     
+    HSSFPrintSetup ps = sheet.getPrintSetup();     
+    sheet.setAutobreaks(true);     
+    ps.setFitHeight((short)1);     
+    ps.setFitWidth((short)1);   
+
+  
+
+ 
+
+17、设置打印区域
+
+[c-sharp] view plaincopyprint?
+
+    HSSFSheet sheet = wb.createSheet("Sheet1");     
+    wb.setPrintArea(0, "$A$1:$C$2");    
+
+ 
+
+18、标注脚注
+
+[c-sharp] view plaincopyprint?
+
+    HSSFSheet sheet = wb.createSheet("format sheet");     
+    HSSFFooter footer = sheet.getFooter()     
+    footer.setRight( "Page " + HSSFFooter.page() + " of " + HSSFFooter.numPages() );   
+
+ 
+
+19、在工作单中清空行数据，调整行位置
+
+[c-sharp] view plaincopyprint?
+
+    HSSFWorkbook wb = new HSSFWorkbook();     
+    HSSFSheet sheet = wb.createSheet("row sheet");     
+    // Create various cells and rows for spreadsheet.      
+    // Shift rows 6 - 11 on the spreadsheet to the top (rows 0 - 5)      
+    sheet.shiftRows(5, 10, -5);    
+
+ 
+
+20、选中指定的工作表
+
+[c-sharp] view plaincopyprint?
+
+    HSSFSheet sheet = wb.createSheet("row sheet");     
+    heet.setSelected(true);     
+
+ 
+
+21、工作表的放大缩小
+
+ 
+[c-sharp] view plaincopyprint?
+
+    HSSFSheet sheet1 = wb.createSheet("new sheet");     
+    sheet1.setZoom(1,2);   // 50 percent magnification    
+
+ 
+
+22、头注和脚注
+
+[c-sharp] view plaincopyprint?
+
+    HSSFSheet sheet = wb.createSheet("new sheet");     
+    HSSFHeader header = sheet.getHeader();     
+    header.setCenter("Center Header");     
+    header.setLeft("Left Header");     
+    header.setRight(HSSFHeader.font("Stencil-Normal", "Italic") +     
+    HSSFHeader.fontSize((short) 16) + "Right w/ Stencil-Normal Italic font and size 16");  
+
+ 
+
+23、自定义颜色
+
+[c-sharp] view plaincopyprint?
+
+    HSSFCellStyle style = wb.createCellStyle();     
+    style.setFillForegroundColor(HSSFColor.LIME.index);     
+    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);     
+    HSSFFont font = wb.createFont();     
+    font.setColor(HSSFColor.RED.index);     
+    style.setFont(font);     
+    cell.setCellStyle(style);     
+
+24、填充和颜色设置
+
+[c-sharp] view plaincopyprint?
+
+    HSSFCellStyle style = wb.createCellStyle();     
+    style.setFillBackgroundColor(HSSFColor.AQUA.index);     
+    style.setFillPattern(HSSFCellStyle.BIG_SPOTS);     
+    HSSFCell cell = row.createCell((short) 1);     
+    cell.setCellValue("X");     
+    style = wb.createCellStyle();     
+    style.setFillForegroundColor(HSSFColor.ORANGE.index);     
+    style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);     
+    cell.setCellStyle(style);   
+
+25、强行刷新单元格公式
+
+[c-sharp] view plaincopyprint?
+
+    HSSFFormulaEvaluator eval=new HSSFFormulaEvaluator((HSSFWorkbook) wb);    
+    private static void updateFormula(Workbook wb,Sheet s,int row){     
+            Row r=s.getRow(row);     
+            Cell c=null;     
+            FormulaEcaluator eval=null;     
+            if(wb instanceof HSSFWorkbook)     
+                eval=new HSSFFormulaEvaluator((HSSFWorkbook) wb);     
+            else if(wb instanceof XSSFWorkbook)     
+                eval=new XSSFFormulaEvaluator((XSSFWorkbook) wb);     
+            for(int i=r.getFirstCellNum();i<r.getLastCellNum();i++){     
+                c=r.getCell(i);     
+                if(c.getCellType()==Cell.CELL_TYPE_FORMULA)     
+                    eval.evaluateFormulaCell(c);     
+            }     
+        }    
+
+说明：FormulaEvaluator提供了evaluateFormulaCell(Cell cell)方法，计算公式保存结果，但不改变公式。而evaluateInCell(Cell cell) 方法是计算公式，并将原公式替换为计算结果，也就是说该单元格的类型不在是Cell.CELL_TYPE_FORMULA而是Cell.CELL_TYPE_NUMBERIC。HSSFFormulaEvaluator提供了静态方法evaluateAllFormulaCells(HSSFWorkbook wb) ，计算一个Excel文件的所有公式，用起来很方便。 
+
+ 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------poi方法总结
+
+-.设置不显示excel网格线 
+  sheet.setDisplayGridlines(false);其中sheet是Sheet对象 
+2.设置excel单元格中的内容换行 
+  cellStyle.setWrapText(true);其中cellStyle是WorkBook创建的CellStyle对象,然后将cellStyle设置到要换行的Cell对象,最后在要换行的对象(一般为字符串)加入"/r/n"。如 
+topTile.append("/r/n" +"cellContent"); 
+
+3.单元格的合并 
+  sheet.addMergedRegion(new CellRangeAddress(0, 4, 0, 2));本示例为合并4行2列 
+
+4.设置页眉和页脚的页数 
+    HSSFHeader header = sheet.getHeader(); 
+    header.setCenter("Center Header"); 
+    header.setLeft("Left Header"); 
+    header.setRight(HSSFHeader.font("Stencil-Normal", "Italic") + 
+    HSSFHeader.fontSize((short) 16) + "Right w/ Stencil-Normal Italic font and size 16"); 
+
+  HSSFFooter footer = (HSSFFooter )sheet.getFooter() 
+  footer.setRight( "Page " + HSSFFooter.page() + " of " + HSSFFooter.numPages() ); 
+
+5.使得一个Sheet适合一页 
+  sheet.setAutobreaks(true); 
+6.设置放大属性(Zoom被明确为一个分数，例如下面的75%使用3作为分子，4作为分母) 
+  sheet.setZoom(3,4);   
+
+7.设置打印 
+  HSSFPrintSetup print = (HSSFPrintSetup) sheet.getPrintSetup(); 
+  print.setLandscape(true);//设置横向打印 
+  print.setScale((short) 70);//设置打印缩放70% 
+  print.setPaperSize(HSSFPrintSetup.A4_PAPERSIZE);//设置为A4纸张 
+  print.setLeftToRight(true);//設置打印顺序先行后列,默认为先列行            
+  print.setFitHeight((short) 10);设置缩放调整为10页高 
+  print.setFitWidth((short) 10);设置缩放调整为宽高 
+
+  sheet.setAutobreaks(false); 
+  if (i != 0 && i % 30 == 0) 
+      sheet.setRowBreak(i);//設置每30行分頁打印 
+
+8.反复的行和列（设置打印标题） 
+  HSSFWorkbook wb = new HSSFWorkbook(); 
+  wb.setRepeatingRowsAndColumns(0, 0, 12, 1, 6);//设置1到12列,行1到6每一页重复打印 
+
+9.调整单元格宽度 
+　　sheet.setAutobreaks(true); 
+　　sheet.setColumnWidth((short)i,colsWidth[i]); //设定单元格长度 
+    sheet.autoSizeColumn((short) i);//自动根据长度调整单元格长度
+    
+    
+10.关闭网络线
+sheet.setDisplayGridlines(false);
+
+
+11、插入图片
+
+    //先把读进来的图片放到一个ByteArrayOutputStream中，以便产生ByteArray       
+          ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();      
+          BufferedImage bufferImg = ImageIO.read(new File("ok.jpg"));      
+          ImageIO.write(bufferImg,"jpg",byteArrayOut);      
+    //读进一个excel模版       
+    FileInputStream fos = new FileInputStream(filePathName+"/stencil.xlt");       
+    fs = new POIFSFileSystem(fos);      
+    //创建一个工作薄       
+    HSSFWorkbook wb = new HSSFWorkbook(fs);      
+    HSSFSheet sheet = wb.getSheetAt(0);      
+    HSSFPatriarch patriarch = sheet.createDrawingPatriarch();      
+    HSSFClientAnchor anchor = new HSSFClientAnchor(0,0,1023,255,(short) 0,0,(short)10,10);           
+    patriarch.createPicture(anchor , wb.addPicture(byteArrayOut.toByteArray(),HSSFWorkbook.PICTURE_TYPE_JPEG));    
+
+12、标注脚注
+
+    HSSFSheet sheet = wb.createSheet("format sheet");     
+    HSSFFooter footer = sheet.getFooter()     
+    footer.setRight( "Page " + HSSFFooter.page() + " of " + HSSFFooter.numPages() );   
+
+13、显示标题头
+	sheet.setDisplayRowColHeadings(false);
+	
+	
+	
+	5.使用图形
+(1)画线
+
+    HSSFSheet sheet = workbook.createSheet("Test");// 创建工作表(Sheet)
+    HSSFPatriarch patriarch=sheet.createDrawingPatriarch();
+    HSSFClientAnchor anchor = new HSSFClientAnchor(0, 0, 0, 0, (short)1, 0,(short)4, 4);
+    HSSFSimpleShape line = patriarch.createSimpleShape(anchor);
+    line.setShapeType(HSSFSimpleShape.OBJECT_TYPE_LINE);//设置图形类型
+    line.setLineStyle(HSSFShape.LINESTYLE_SOLID);//设置图形样式
+    line.setLineWidth(6350);//在POI中线的宽度12700表示1pt,所以这里是0.5pt粗的线条。
+
+    通常，利用POI画图主要有以下几个步骤：
+        1. 创建一个Patriarch（注意，一个sheet中通常只创建一个Patriarch对象）；
+        2. 创建一个Anchor，以确定图形的位置；
+        3. 调用Patriarch创建图形；
+        4. 设置图形类型(直线，矩形，圆形等)及样式（颜色，粗细等）。
+    关于HSSFClientAnchor(dx1,dy1,dx2,dy2,col1,row1,col2,row2)的参数，有必要在这里说明一下：
+        dx1：起始单元格的x偏移量，如例子中的0表示直线起始位置距B1单元格左侧的距离；
+        dy1：起始单元格的y偏移量，如例子中的0表示直线起始位置距B1单元格上侧的距离；
+        dx2：终止单元格的x偏移量，如例子中的0表示直线起始位置距E5单元格左侧的距离；
+        dy2：终止单元格的y偏移量，如例子中的0表示直线起始位置距E5单元格上侧的距离；
+        col1：起始单元格列序号，从0开始计算；
+        row1：起始单元格行序号，从0开始计算，如例子中col1=1,row1=0就表示起始单元格为B1；
+        col2：终止单元格列序号，从0开始计算；
+        row2：终止单元格行序号，从0开始计算，如例子中col2=4,row2=4就表示起始单元格为E5；
+    最后，关于LineStyle属性，有如下一些可选值，对应的效果分别如图所示：
+(2)画矩形
+
+    HSSFSheet sheet = workbook.createSheet("Test");// 创建工作表(Sheet)
+    HSSFPatriarch patriarch=sheet.createDrawingPatriarch();
+    HSSFClientAnchor anchor = new HSSFClientAnchor(255,122, 255, 122, (short)1, 0,(short)4, 3);
+    HSSFSimpleShape rec = patriarch.createSimpleShape(anchor);
+    rec.setShapeType(HSSFSimpleShape.OBJECT_TYPE_RECTANGLE);
+    rec.setLineStyle(HSSFShape.LINESTYLE_DASHGEL);//设置边框样式
+    rec.setFillColor(255, 0, 0);//设置填充色
+    rec.setLineWidth(25400);//设置边框宽度
+    rec.setLineStyleColor(0, 0, 255);//设置边框颜色
+
+(3)画圆形
+    更改上例的代码如下：
+        rec.setShapeType(HSSFSimpleShape.OBJECT_TYPE_OVAL);//设置图片类型
+ 
+(4)画Grid
+    在POI中，本身没有画Grid(网格)的方法。但我们知道Grid其实就是由横线和竖线构成的，所在我们可以通过画线的方式来模拟画Grid。代码如下：
+
+    HSSFSheet sheet = workbook.createSheet("Test");// 创建工作表(Sheet)
+    HSSFRow row = sheet.createRow(2);
+    row.createCell(1);
+    row.setHeightInPoints(240);
+    sheet.setColumnWidth(2, 9000);
+    int linesCount = 20;
+    HSSFPatriarch patriarch = sheet.createDrawingPatriarch();
+    //因为HSSFClientAnchor中dx只能在0-1023之间,dy只能在0-255之间，这里采用比例的方式
+    double xRatio = 1023.0 / (linesCount * 10);
+    double yRatio = 255.0 / (linesCount * 10);
+    // 画竖线
+    int x1 = 0;
+    int y1 = 0;
+    int x2 = 0;
+    int y2 = 200;
+    for (int i = 0; i < linesCount; i++)
+    {
+    HSSFClientAnchor a2 = new HSSFClientAnchor();
+    a2.setAnchor((short) 2, 2, (int) (x1 * xRatio),
+    (int) (y1 * yRatio), (short) 2, 2, (int) (x2 * xRatio),
+    (int) (y2 * yRatio));
+    HSSFSimpleShape shape2 = patriarch.createSimpleShape(a2);
+    shape2.setShapeType(HSSFSimpleShape.OBJECT_TYPE_LINE);
+    x1 += 10;
+    x2 += 10;
+    }
+    // 画横线
+    x1 = 0;
+    y1 = 0;
+    x2 = 200;
+    y2 = 0;
+    for (int i = 0; i < linesCount; i++)
+    {
+    HSSFClientAnchor a2 = new HSSFClientAnchor();
+    a2.setAnchor((short) 2, 2, (int) (x1 * xRatio),
+    (int) (y1 * yRatio), (short) 2, 2, (int) (x2 * xRatio),
+    (int) (y2 * yRatio));
+    HSSFSimpleShape shape2 = patriarch.createSimpleShape(a2);
+    shape2.setShapeType(HSSFSimpleShape.OBJECT_TYPE_LINE);
+    y1 += 10;
+    y2 += 10;
+    }
+
+ 
+(5)插入图片
+
+    HSSFSheet sheet = workbook.createSheet("Test");// 创建工作表(Sheet)
+    FileInputStream stream=new FileInputStream("d:POIApache.gif");
+    byte[] bytes=new byte[(int)stream.getChannel().size()];
+    stream.read(bytes);//读取图片到二进制数组
+    int pictureIdx = workbook.addPicture(bytes, HSSFWorkbook.PICTURE_TYPE_JPEG);
+    HSSFPatriarch patriarch = sheet.createDrawingPatriarch();
+    HSSFClientAnchor anchor = new HSSFClientAnchor(0, 0, 0, 0, (short)0, 0, (short)5, 5);
+    HSSFPicture pict = patriarch.createPicture(anchor, pictureIdx);
+    //pict.resize();//自动调节图片大小,图片位置信息可能丢失
+
+(6)从Excel文件提取图片
+
+    InputStream inp = new FileInputStream(filePath);
+    HSSFWorkbook workbook = new HSSFWorkbook(inp);//读取现有的Excel文件
+    List<HSSFPictureData> pictures = workbook.getAllPictures();
+    for(int i=0;i<pictures.size();i++)
+    {
+    HSSFPictureData pic=pictures.get(i);
+    String ext = pic.suggestFileExtension();
+    if (ext.equals("png"))//判断文件格式
+    {
+    FileOutputStream png=new FileOutputStream("d:POIApache.png");
+    png.write(pic.getData());
+    png.close();//保存图片
+    }
+    }
+
+重命名工作表
+
+	workbook.setSheetName(2, "1234");//重命名工作表
+
+自动判断
+
+	读取可以采取
+	wb = WorkbookFactory.create(ins);
+	让API自己来判断是使用HSSFWorkbook 还是 XSSFWorkbook
+	
+	
+	
+1、公式 - 定义名称 - 输入自定义的名称：shname，在引用位置中输入公式：
+
+    =MID(GET.WORKBOOK(1),FIND("]",GET.WORKBOOK(1))+1,99)&T(NOW())

@@ -1,0 +1,96 @@
+private String itemId;
+/** 商品id */
+private String id;
+
+/** 商品显示名称 */
+private String displayName;
+
+/** 商品创建日期 */
+private Timestamp creationDate;
+
+/** 商品上架时间 */
+private Timestamp startDate;
+
+/** 商品下架时间 */
+private Timestamp endDate;
+
+/** 是否允许退货 */
+private String  nonReturnAble;
+
+/** 商品类型 */
+private Integer productType;
+
+/** 商品描述 */
+private String prodDesc;
+
+/** 长描述（商品介绍） */
+private String longDesc;
+
+/** 广告语 */
+private String promoDesc;
+
+/** 阶段性促销语 */
+private String periodPromoDesc;
+
+/** 阶段性促销语有效开始时间 */
+private Timestamp ppdStartDate;
+
+/** 阶段性促销语有效结束时间 */
+private Timestamp ppdEndDate;
+
+/** 是否支持货到付款 */
+private Integer isCashDelivery;
+
+/** 包装清单 */
+private String packingList;
+
+/** 售后服务 */
+private String service;
+
+/** 商品对应sku对象 id */
+private String skuItemIds;
+
+
+/** 商品对应店铺对象 id */
+private String shopItemId;
+
+/** 商品对应品牌对象 id */
+private String brandItemId;
+
+/** 商品对应Gome一级分类对象 id */
+private String firstCatItemId;
+
+/** 商品对应Gome二级分类对象 id */
+private String secCatItemId;
+
+/** 商品对应Gome三级分类对象 id */
+private String thridCatItemId;
+
+/** 商品对应Coo8一级分类对象 id */
+private String firstCoo8CatItemId;
+
+/** 商品对应Coo8二级分类对象 id */
+private String secCatCoo8ItemId;
+
+/** 商品对应Coo8三级分类对象 id */
+private String thridCatCoo8ItemId;
+
+/** 商品对应根分类 id */
+private String rootCatId;
+
+private String rootCoo8CatId;
+
+/** 合约机商品id，list的josn格式字符串 */
+private String contractProdIds;
+
+/** 商品对应的tdk model id */
+private String tdkModelId;
+
+/** 商品模板id */
+private String templateId;
+
+/** 枚举值为1、2、3，分别表示在线、海外购自营、海外购联营 */
+private String shopFlag;
+
+/** 虚拟套装 */
+private String suit;

@@ -1,0 +1,1543 @@
+
+{
+    "relatedBrands": [
+        {
+            "title": "西门子（siemens）",
+            "text": "siemens",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/1avA-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "小天鹅(LittleSwan)",
+            "text": "LittleSwan",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/1avF-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "海尔（Haier）",
+            "text": "Haier",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/134D-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "LG",
+            "text": "LG",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/1avD-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "美的（Midea）",
+            "text": "Midea",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/10Rl-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "格兰仕（Galanz）",
+            "text": "Galanz",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/12fx-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "三洋（SANYO）",
+            "text": "SANYO",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/1avC-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "松下（Panasonic）",
+            "text": "Panasonic",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/15L2-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "统帅",
+            "text": "Leader",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/14jF-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "博世（BOSCH）",
+            "text": "BOSCH",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/1avz-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "三星（SAMSUNG）",
+            "text": "SAMSUNG",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/11st-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "卡迪（CANDY）",
+            "text": "CANDY",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/14Wq-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "荣事达（Royalstar）",
+            "text": "Royalstar",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/14WK-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "卡萨帝（casarte）",
+            "text": "casarte",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/10Mn-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "海信（Hisense）",
+            "text": "Hisense",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/14WN-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "康佳（KONKA）",
+            "text": "KONKA",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/13ie-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "TCL",
+            "text": "TCL",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/147G-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "日普（Ripu）",
+            "text": "Ripu",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/126a-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "金羚（JINLING）",
+            "text": "JINLING",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/16nX-cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "倍科（BEKO）",
+            "text": "BEKO",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//brand.gome.com.cn/11B7-cat10000058.html",
+            "urlParam": null
+        }
+    ],
+    "prdDescSpec": [
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "海尔洗衣机XQB75-Z12699T    7.5公斤智能全自动波轮洗衣机",
+            "modeTxt": "商品名称"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "海尔（Haier）",
+            "modeTxt": "品牌"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "波轮洗衣机",
+            "modeTxt": "商品属性"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "XQB75-Z12699T",
+            "modeTxt": "商品型号"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "灰",
+            "modeTxt": "颜色"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "全自动",
+            "modeTxt": "自动化程度"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "顶开式",
+            "modeTxt": "开门方式"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "下排水",
+            "modeTxt": "排水方式"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "普通电机",
+            "modeTxt": "电机类型"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "定频",
+            "modeTxt": "定频/变频"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "三级",
+            "modeTxt": "能效等级"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "7.5",
+            "modeTxt": "洗涤容量（kg）"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "/",
+            "modeTxt": "箱体材质"
+        },
+        {
+            "modeTit": null,
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "不锈钢",
+            "modeTxt": "内筒材质"
+        }
+    ],
+    "preDetailGoodsInfo": null,
+    "secCategoryName": {
+        "title": "洗衣机",
+        "text": "洗衣机",
+        "linkOtherAttr": {},
+        "wapHref": null,
+        "target": null,
+        "breadSign": false,
+        "textOtherAttr": {},
+        "href": null,
+        "urlParam": null
+    },
+    "prdClass": [
+        {
+            "title": "干衣机",
+            "text": "干衣机",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "_blank",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//list.gome.com.cn/cat10000060.html",
+            "urlParam": null
+        },
+        {
+            "title": "洗衣机配件",
+            "text": "洗衣机配件",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "_blank",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//list.gome.com.cn/cat10000263.html",
+            "urlParam": null
+        },
+        {
+            "title": "洗衣机",
+            "text": "洗衣机",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "_blank",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//list.gome.com.cn/cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "双缸洗衣机",
+            "text": "双缸洗衣机",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "_blank",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//list.gome.com.cn/cat10000059.html",
+            "urlParam": null
+        },
+        {
+            "title": "迷你洗衣机",
+            "text": "迷你洗衣机",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "_blank",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//list.gome.com.cn/cat10000061.html",
+            "urlParam": null
+        }
+    ],
+    "gomeC2MItem": null,
+    "brandId": "10000009",
+    "categoryName": {
+        "title": "电视 冰箱 洗衣机 空调",
+        "text": "电视 冰箱 洗衣机 空调",
+        "linkOtherAttr": {},
+        "wapHref": null,
+        "target": null,
+        "breadSign": false,
+        "textOtherAttr": {},
+        "href": null,
+        "urlParam": null
+    },
+    "prodVideoInfo": null,
+    "title": "【海尔XQB75-Z12699T洗衣机】海尔洗衣机XQB75-Z12699T    7.5公斤智能全自动波轮洗衣机【图片 价格 品牌 报价】-国美在线",
+    "brandCode": "00095",
+    "prdService": {
+        "modeTit": null,
+        "knowledgeClub": null,
+        "modeData": null,
+        "modeInfo": "全国联保，享受三包服务，质保期为：三年质保本产品提供上门安装调试、提供上门检测和维修等售后服务，凭厂商提供的故障检测报告，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！售后电话：4006999999",
+        "modeTxt": null
+    },
+    "bread": [
+        {
+            "title": "首页",
+            "text": "首页",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//www.gome.com.cn/",
+            "urlParam": null
+        },
+        {
+            "title": "电视 冰箱 洗衣机 空调",
+            "text": "电视 冰箱 洗衣机 空调",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://electronic.gome.com.cn/",
+            "urlParam": null
+        },
+        {
+            "title": "洗衣机",
+            "text": "洗衣机",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "",
+            "urlParam": null
+        },
+        {
+            "title": "洗衣机",
+            "text": "洗衣机",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//list.gome.com.cn/cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "海尔（Haier）",
+            "text": "海尔（Haier）",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "",
+            "breadSign": true,
+            "textOtherAttr": {},
+            "href": "//list.gome.com.cn/cat10000058-00-0-48-1-0-0-0-1-134D-0-0-0-0-0-0-0-0.html",
+            "urlParam": null
+        },
+        {
+            "title": "海尔XQB75-Z12699T",
+            "text": "海尔XQB75-Z12699T",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//item.gome.com.cn/9134265515-1123200849.html",
+            "urlParam": null
+        }
+    ],
+    "description": "国美在线(gome.com.cn)为您提供海尔洗衣机的购买信息，如海尔XQB75-Z12699T洗衣机的图片、报价、促销等，购买海尔XQB75-Z12699T洗衣机就到国美在线",
+    "categoryRank": null,
+    "skuId": "1123200849",
+    "vipShopFlag": "0",
+    "wapShowLinks": [
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9134162752-1123110209.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9132871202-1121740204.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9133627799-1122390119.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9132947555-1121900441.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9133898692-1122910583.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9133898685-1122910494.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9130470882-1119240241.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9133930625-1122411117.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9123392665-1112530025.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9134361031-1123301183.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9130470881-1119240239.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9129330135-1118370016.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9132462230-1121440196.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9134063817-1123050122.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        },
+        {
+            "title": null,
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": "http://m.gome.com.cn/product-9134160038-1123050123.html",
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": null,
+            "urlParam": null
+        }
+    ],
+    "coo8thirdCategoryId": null,
+    "seoAdvice": null,
+    "seoShowLinks": [
+        {
+            "title": "海尔XQG80-BDX14686L",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9134162752-1123110209.html",
+            "urlParam": null
+        },
+        {
+            "title": "LGWD-T12412DG",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9132871202-1121740204.html",
+            "urlParam": null
+        },
+        {
+            "title": "海尔XQS75-BZ1328",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9133627799-1122390119.html",
+            "urlParam": null
+        },
+        {
+            "title": "小天鹅TG80-1229EDS",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9132947555-1121900441.html",
+            "urlParam": null
+        },
+        {
+            "title": "海尔EG8012B29WG",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9133898692-1122910583.html",
+            "urlParam": null
+        },
+        {
+            "title": "海尔XQB55-M1258",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9133898685-1122910494.html",
+            "urlParam": null
+        },
+        {
+            "title": "小天鹅TB63-V1068",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9130470882-1119240241.html",
+            "urlParam": null
+        },
+        {
+            "title": "海尔XQG70-BS1286AM",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9133930625-1122411117.html",
+            "urlParam": null
+        },
+        {
+            "title": "海尔XQB70-M1269S",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9123392665-1112530025.html",
+            "urlParam": null
+        },
+        {
+            "title": "海尔XQG80-B1226AG",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9134361031-1123301183.html",
+            "urlParam": null
+        },
+        {
+            "title": "小天鹅TB55-V1068",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9130470881-1119240239.html",
+            "urlParam": null
+        },
+        {
+            "title": "格兰仕XQG60-A708C",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9129330135-1118370016.html",
+            "urlParam": null
+        },
+        {
+            "title": "荣事达RB5006S",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9132462230-1121440196.html",
+            "urlParam": null
+        },
+        {
+            "title": "现代XQB50-515WSA",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9134063817-1123050122.html",
+            "urlParam": null
+        },
+        {
+            "title": "海尔XQG70-BX12636",
+            "text": null,
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": null,
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://item.gome.com.cn/9134160038-1123050123.html",
+            "urlParam": null
+        }
+    ],
+    "breadCrumbs": [
+        {
+            "title": "首页",
+            "text": "首页",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//www.gome.com.cn/",
+            "urlParam": null
+        },
+        {
+            "title": "电视 冰箱 洗衣机 空调",
+            "text": "电视 冰箱 洗衣机 空调",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "http://electronic.gome.com.cn/",
+            "urlParam": null
+        },
+        {
+            "title": "洗衣机",
+            "text": "洗衣机",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "",
+            "urlParam": null
+        },
+        {
+            "title": "洗衣机",
+            "text": "洗衣机",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//list.gome.com.cn/cat10000058.html",
+            "urlParam": null
+        },
+        {
+            "title": "海尔（Haier）",
+            "text": "海尔（Haier）",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "",
+            "breadSign": true,
+            "textOtherAttr": {},
+            "href": "//list.gome.com.cn/cat10000058-00-0-48-1-0-0-0-1-134D-0-0-0-0-0-0-0-0.html",
+            "urlParam": null
+        },
+        {
+            "title": "海尔XQB75-Z12699T",
+            "text": "海尔XQB75-Z12699T",
+            "linkOtherAttr": {},
+            "wapHref": null,
+            "target": "",
+            "breadSign": false,
+            "textOtherAttr": {},
+            "href": "//item.gome.com.cn/9134265515-1123200849.html",
+            "urlParam": null
+        }
+    ],
+    "prdHelper": [
+        {
+            "modeTit": "品牌故事",
+            "knowledgeClub": null,
+            "modeData": null,
+            "modeInfo": "海尔品牌1984年创立于青岛。锐意进取的海尔文化、不拘泥于现有的家电行业的产品与服务形式，是海尔公司一直秉承的服务理念。目前海尔已发展成为全球白电第一品牌，在中国乃至世界大家电行业产生巨大的影响力。从家电生产到优化生活，创新是海尔文化的核心，生活中引领现代生活方式的新潮流，以创新独到的方式全面优化环境质量。海尔集团开辟的现代生活解决方案也会给我们带来全新的产品、全新的技术、全新的文化生活。 n",
+            "modeTxt": null
+        }
+    ],
+    "prdInfo": {
+        "goodsImgs": [
+            {
+                "template": null,
+                "imgOtherAttr": {},
+                "tolink": null,
+                "extend": null,
+                "elemenlDescribe": null,
+                "elemenlSequence": null,
+                "elemenlTitle": null,
+                "type": null,
+                "endTime": null,
+                "urlParam": null,
+                "imgUrl": null,
+                "id": null,
+                "modelId": null,
+                "content": null,
+                "startTime": null,
+                "targetSource": null,
+                "title": null,
+                "linkOtherAttr": {},
+                "alt": null,
+                "target": null,
+                "src": "//gfs1.gomein.net.cn/T1BmCTBgxT1RCvBVdK",
+                "promoName": null,
+                "href": "//item.gome.com.cn/bigimage/9134265515-1123200849.html"
+            },
+            {
+                "template": null,
+                "imgOtherAttr": {},
+                "tolink": null,
+                "extend": null,
+                "elemenlDescribe": null,
+                "elemenlSequence": null,
+                "elemenlTitle": null,
+                "type": null,
+                "endTime": null,
+                "urlParam": null,
+                "imgUrl": null,
+                "id": null,
+                "modelId": null,
+                "content": null,
+                "startTime": null,
+                "targetSource": null,
+                "title": null,
+                "linkOtherAttr": {},
+                "alt": null,
+                "target": null,
+                "src": "//gfs.gomein.net.cn/T1eEbTBX_v1RCvBVdK",
+                "promoName": null,
+                "href": "//item.gome.com.cn/bigimage/9134265515-1123200849.html"
+            },
+            {
+                "template": null,
+                "imgOtherAttr": {},
+                "tolink": null,
+                "extend": null,
+                "elemenlDescribe": null,
+                "elemenlSequence": null,
+                "elemenlTitle": null,
+                "type": null,
+                "endTime": null,
+                "urlParam": null,
+                "imgUrl": null,
+                "id": null,
+                "modelId": null,
+                "content": null,
+                "startTime": null,
+                "targetSource": null,
+                "title": null,
+                "linkOtherAttr": {},
+                "alt": null,
+                "target": null,
+                "src": "//gfs.gomein.net.cn/T1Ck_TBsVT1RCvBVdK",
+                "promoName": null,
+                "href": "//item.gome.com.cn/bigimage/9134265515-1123200849.html"
+            },
+            {
+                "template": null,
+                "imgOtherAttr": {},
+                "tolink": null,
+                "extend": null,
+                "elemenlDescribe": null,
+                "elemenlSequence": null,
+                "elemenlTitle": null,
+                "type": null,
+                "endTime": null,
+                "urlParam": null,
+                "imgUrl": null,
+                "id": null,
+                "modelId": null,
+                "content": null,
+                "startTime": null,
+                "targetSource": null,
+                "title": null,
+                "linkOtherAttr": {},
+                "alt": null,
+                "target": null,
+                "src": "//gfs.gomein.net.cn/T1yECTB7Dv1RCvBVdK",
+                "promoName": null,
+                "href": "//item.gome.com.cn/bigimage/9134265515-1123200849.html"
+            },
+            {
+                "template": null,
+                "imgOtherAttr": {},
+                "tolink": null,
+                "extend": null,
+                "elemenlDescribe": null,
+                "elemenlSequence": null,
+                "elemenlTitle": null,
+                "type": null,
+                "endTime": null,
+                "urlParam": null,
+                "imgUrl": null,
+                "id": null,
+                "modelId": null,
+                "content": null,
+                "startTime": null,
+                "targetSource": null,
+                "title": null,
+                "linkOtherAttr": {},
+                "alt": null,
+                "target": null,
+                "src": "//gfs4.gomein.net.cn/T1mCATBXJv1RCvBVdK",
+                "promoName": null,
+                "href": "//item.gome.com.cn/bigimage/9134265515-1123200849.html"
+            },
+            {
+                "template": null,
+                "imgOtherAttr": {},
+                "tolink": null,
+                "extend": null,
+                "elemenlDescribe": null,
+                "elemenlSequence": null,
+                "elemenlTitle": null,
+                "type": null,
+                "endTime": null,
+                "urlParam": null,
+                "imgUrl": null,
+                "id": null,
+                "modelId": null,
+                "content": null,
+                "startTime": null,
+                "targetSource": null,
+                "title": null,
+                "linkOtherAttr": {},
+                "alt": null,
+                "target": null,
+                "src": "//gfs4.gomein.net.cn/T1v5hTB7_v1RCvBVdK",
+                "promoName": null,
+                "href": "//item.gome.com.cn/bigimage/9134265515-1123200849.html"
+            },
+            {
+                "template": null,
+                "imgOtherAttr": {},
+                "tolink": null,
+                "extend": null,
+                "elemenlDescribe": null,
+                "elemenlSequence": null,
+                "elemenlTitle": null,
+                "type": null,
+                "endTime": null,
+                "urlParam": null,
+                "imgUrl": null,
+                "id": null,
+                "modelId": null,
+                "content": null,
+                "startTime": null,
+                "targetSource": null,
+                "title": null,
+                "linkOtherAttr": {},
+                "alt": null,
+                "target": null,
+                "src": "//gfs3.gomein.net.cn/T1L5JTB5Yv1RCvBVdK",
+                "promoName": null,
+                "href": "//item.gome.com.cn/bigimage/9134265515-1123200849.html"
+            },
+            {
+                "template": null,
+                "imgOtherAttr": {},
+                "tolink": null,
+                "extend": null,
+                "elemenlDescribe": null,
+                "elemenlSequence": null,
+                "elemenlTitle": null,
+                "type": null,
+                "endTime": null,
+                "urlParam": null,
+                "imgUrl": null,
+                "id": null,
+                "modelId": null,
+                "content": null,
+                "startTime": null,
+                "targetSource": null,
+                "title": null,
+                "linkOtherAttr": {},
+                "alt": null,
+                "target": null,
+                "src": "//gfs2.gomein.net.cn/T1FZCTBsbv1RCvBVdK",
+                "promoName": null,
+                "href": "//item.gome.com.cn/bigimage/9134265515-1123200849.html"
+            },
+            {
+                "template": null,
+                "imgOtherAttr": {},
+                "tolink": null,
+                "extend": null,
+                "elemenlDescribe": null,
+                "elemenlSequence": null,
+                "elemenlTitle": null,
+                "type": null,
+                "endTime": null,
+                "urlParam": null,
+                "imgUrl": null,
+                "id": null,
+                "modelId": null,
+                "content": null,
+                "startTime": null,
+                "targetSource": null,
+                "title": null,
+                "linkOtherAttr": {},
+                "alt": null,
+                "target": null,
+                "src": "//gfs2.gomein.net.cn/T1dVbTB4Lv1RCvBVdK",
+                "promoName": null,
+                "href": "//item.gome.com.cn/bigimage/9134265515-1123200849.html"
+            },
+            {
+                "template": null,
+                "imgOtherAttr": {},
+                "tolink": null,
+                "extend": null,
+                "elemenlDescribe": null,
+                "elemenlSequence": null,
+                "elemenlTitle": null,
+                "type": null,
+                "endTime": null,
+                "urlParam": null,
+                "imgUrl": null,
+                "id": null,
+                "modelId": null,
+                "content": null,
+                "startTime": null,
+                "targetSource": null,
+                "title": null,
+                "linkOtherAttr": {},
+                "alt": null,
+                "target": null,
+                "src": "//gfs2.gomein.net.cn/T1OZbTB4hv1RCvBVdK",
+                "promoName": null,
+                "href": "//item.gome.com.cn/bigimage/9134265515-1123200849.html"
+            }
+        ],
+        "skuVersion": null,
+        "skuBlackList": false,
+        "brandId": "10000009",
+        "detailHref": "//item.gome.com.cn/9134265515-1123200849.html",
+        "bztKey": null,
+        "productType": "jydq-prd",
+        "amount": null,
+        "shelfCtgy": "AI01",
+        "salesProperty": [
+            {
+                "booleanPic": "true",
+                "hidden": "false",
+                "chinesename": "版本",
+                "booleanMainsale": "true",
+                "skutions": [
+                    {
+                        "id": "cffed033e5574f3bad",
+                        "imgOtherAttr": {},
+                        "title": "7.5公斤智能自由洗",
+                        "linkOtherAttr": {},
+                        "weight": "1",
+                        "alt": "75公斤智能自由洗",
+                        "target": "cur",
+                        "src": "//gfs1.gomein.net.cn/T1BmCTBgxT1RCvBVdK"
+                    }
+                ],
+                "salesNameNo": "c80c62c4448d"
+            },
+            {
+                "booleanPic": "false",
+                "hidden": "false",
+                "chinesename": "洗涤容积",
+                "booleanMainsale": "false",
+                "skutions": [
+                    {
+                        "id": "2865318cc6664c2697",
+                        "imgOtherAttr": {},
+                        "title": "7.5",
+                        "linkOtherAttr": {},
+                        "weight": "1",
+                        "alt": "75",
+                        "target": "cur",
+                        "src": null
+                    }
+                ],
+                "salesNameNo": "e6e3b4e70eed"
+            }
+        ],
+        "skuType": "ZSP",
+        "threeDxmlParam": null,
+        "description": "海尔洗衣机XQB75-Z12699T",
+        "skuId": "1123200849",
+        "buyWay": [],
+        "taxQuantity": null,
+        "operADHref": "",
+        "salesPromotionTitle": null,
+        "threeDflag": false,
+        "sku": "1123200849",
+        "bztType": -1,
+        "price": 1199,
+        "htmlHref": "//desc.gome.com.cn/html/prodhtml/productDesc/descHtml/201612/desc1222-161/1123200849.html",
+        "skuNo": "100400550",
+        "goodsColor": [],
+        "shopName": "",
+        "goodsModel": [],
+        "selltype": "1",
+        "skuNoMap": {
+            "1123200849": "100400550"
+        },
+        "stats": 1,
+        "energyState": 0,
+        "suitSku": [],
+        "tariffRate": null,
+        "programId": "111111111",
+        "brandCode": "00095",
+        "name": "海尔洗衣机XQB75-Z12699T    7.5公斤智能全自动波轮洗衣机",
+        "manualImg": null,
+        "vipShopFlag": "0",
+        "hwgTaxRatePercent": null,
+        "gomePrice": 1199,
+        "bztText": null,
+        "salesModel": null,
+        "shopNo": "",
+        "hwgTaxRate": null,
+        "vatRate": null,
+        "salesRate": null,
+        "productId": "9134265515",
+        "threeDmodel": null,
+        "templateId": "m10004",
+        "taxModel": 1,
+        "sapSkuType": "ZSP",
+        "taxUnit": null,
+        "brand": "海尔（Haier）",
+        "affixAttr": {
+            "75公斤智能自由洗&75": "1123200849",
+            "coo8Sign": "true"
+        },
+        "shopFlag": null,
+        "channel": ""
+    },
+    "seoAppraisal": null,
+    "firstCategoryId": "cat10000004",
+    "serviceTags": {
+        "genuine": "正品保障",
+        "back": "7天无理由退货"
+    },
+    "keywords": "海尔XQB75-Z12699T洗衣机",
+    "breadName": {
+        "title": "cat10000058",
+        "text": "海尔（Haier）",
+        "linkOtherAttr": {},
+        "wapHref": null,
+        "target": "10000009",
+        "breadSign": false,
+        "textOtherAttr": {},
+        "href": "洗衣机",
+        "urlParam": null
+    },
+    "rankinglist": null,
+    "contractInfos": null,
+    "storeConfiguration": null,
+    "telecomContract": null,
+    "secondCategoryId": "cat10000009",
+    "shopCategory": null,
+    "prdDescription": null,
+    "suitInfo": null,
+    "productId": "9134265515",
+    "merchantInfo": null,
+    "prdPacks": null,
+    "flagshipShop": null,
+    "prdPack": {
+        "modeTit": null,
+        "knowledgeClub": null,
+        "modeData": null,
+        "modeInfo": "主机*1，说明书*1，保修卡*1，水管*1，合格证*1",
+        "modeTxt": null
+    },
+    "prdSpec": [
+        {
+            "modeTit": "主体",
+            "knowledgeClub": null,
+            "modeData": [
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "海尔（Haier）",
+                    "modeTxt": "品牌"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "波轮洗衣机",
+                    "modeTxt": "商品属性"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "XQB75-Z12699T",
+                    "modeTxt": "商品型号"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "灰",
+                    "modeTxt": "颜色"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "全自动",
+                    "modeTxt": "自动化程度"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "LED数码显示",
+                    "modeTxt": "显示方式"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "电脑控制",
+                    "modeTxt": "控制方式"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "顶开式",
+                    "modeTxt": "开门方式"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "下排水",
+                    "modeTxt": "排水方式"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "普通电机",
+                    "modeTxt": "电机类型"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "定频",
+                    "modeTxt": "定频/变频"
+                }
+            ],
+            "modeInfo": null,
+            "modeTxt": null
+        },
+        {
+            "modeTit": "特色功能",
+            "knowledgeClub": null,
+            "modeData": [
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "支持",
+                    "modeTxt": "脱水功能"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "/",
+                    "modeTxt": "防缠绕"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "/",
+                    "modeTxt": "儿童安全锁"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "支持",
+                    "modeTxt": "预约功能"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "/",
+                    "modeTxt": "干衣功能"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "/",
+                    "modeTxt": "夜间洗"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "/",
+                    "modeTxt": "电辅加热烘干"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "/",
+                    "modeTxt": "电辅加热洗涤"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "支持",
+                    "modeTxt": "中途添衣"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "支持",
+                    "modeTxt": "自动断电"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "/",
+                    "modeTxt": "智能断电记忆"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "/",
+                    "modeTxt": "进水阀漏水保护"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "/",
+                    "modeTxt": "排水阀漏水保护"
+                }
+            ],
+            "modeInfo": null,
+            "modeTxt": null
+        },
+        {
+            "modeTit": "规格",
+            "knowledgeClub": null,
+            "modeData": [
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "三级",
+                    "modeTxt": "能效等级"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "7.1-7.9KG",
+                    "modeTxt": "总容积"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "7.5",
+                    "modeTxt": "洗涤容量（kg）"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "7.5",
+                    "modeTxt": "脱水容量（kg）"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "/",
+                    "modeTxt": "箱体材质"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "不锈钢",
+                    "modeTxt": "内筒材质"
+                },
+                {
+                    "modeTit": null,
+                    "knowledgeClub": null,
+                    "modeData": null,
+                    "modeInfo": "220V/50Hz",
+                    "modeTxt": "电源规格"
+                }
+            ],
+            "modeInfo": null,
+            "modeTxt": null
+        }
+    ],
+    "presellFlag": false,
+    "imPackages": null,
+    "seoNoShowLinks": [],
+    "thirdCategoryId": "cat10000058"
+}
+
+
+org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 59; schema_reference.4: Failed to read schema document 'http://code.alibabatech.com/schem
+a/dubbo/dubbo.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>
